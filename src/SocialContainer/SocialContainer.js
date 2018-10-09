@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import SocialButtons from "../SocialButtons/SocialButtons";
+import "./SocialContainer.css";
 
 export default class SocialContainer extends Component {
   constructor() {
@@ -9,24 +10,21 @@ export default class SocialContainer extends Component {
       socialClass: ["social-toggle", "inactive"].join(" "),
       buttons: "inactive"
     };
-
     this.toggleSocialButtons = this.toggleSocialButtons.bind(this);
   }
-
   toggleSocialButtons() {
-    if (this.state.socioalClass === ["social-toggle", "inactive"].join("")) {
+    if (this.state.socialClass === ["social-toggle", "inactive"].join(" ")) {
       this.setState({
-        socialClass: ["social-toggle", "active"].join(""),
+        socialClass: ["social-toggle", "active"].join(" "),
         buttons: "active"
       });
     } else {
       this.setState({
-        socialClass: ["social-toggle", "inactive"].join(""),
+        socialClass: ["social-toggle", "inactive"].join(" "),
         buttons: "inactive"
       });
     }
   }
-
   render() {
     return (
       <div className="social-container">
