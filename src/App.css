@@ -44,7 +44,7 @@ h1 {
 p {
   color: #ffd700;
   position: absolute;
-  animation: ⭐ 120s linear 4s infinite;
+  animation: ⭐ 120s linear infinite;
 }
 
 @keyframes ⭐ {
