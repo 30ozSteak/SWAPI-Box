@@ -1,17 +1,17 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-function SocialButtons(props) {
+function MenuButtons(props) {
   return (
     <li>
-      <a href={props.data.link} target="_blank">
+      <a href={props.data.link}>
         <i className={`fa fa-${props.data.service}`} />
       </a>
     </li>
   );
 }
-export default SocialButtons;
+export default MenuButtons;
 
-SocialButtons.propTypes = {
+MenuButtons.propTypes = {
   data: PropTypes.array
 };

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import SocialContainer from "./SocialContainer/SocialContainer";
+import Menu from "./Menu/Menu";
 
 class App extends Component {
   constructor() {
@@ -11,7 +11,7 @@ class App extends Component {
     };
   }
   render() {
-    const socialContents = [
+    const menuContents = [
       {
         service: "facebook",
         link: "https://www.facebook.com/kevin.simpson.547"
@@ -46,7 +46,7 @@ class App extends Component {
             </p>
           </div>
         </header>
-        <SocialContainer data={socialContents} />
+        <Menu data={menuContents} />
       </div>
     );
   }
