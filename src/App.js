@@ -16,7 +16,10 @@ class App extends Component {
         service: "facebook",
         link: "https://www.facebook.com/kevin.simpson.547"
       },
-      { service: "twitter", link: "https://twitter.com/relasine" },
+      {
+        service: "twitter",
+        link: "https://twitter.com/relasine"
+      },
       {
         service: "linkedin",
         link: "https://www.linkedin.com/in/kevinjohnsimpson"
