@@ -52,7 +52,7 @@
   top: -0%;
   left: -120%;
   transition-delay: 0s;
-  background: center url(../Assets/millennium-falcon.svg);
+  background: center url(../Assets/boba-fett.png);
   background-size: 30px;
   background-repeat: no-repeat;
 }
@@ -61,7 +61,7 @@
   top: -110%;
   left: -60%;
   transition-delay: 0.2s;
-  background: center url(../Assets/boba-fett.png);
+  background: center url(../Assets/death-star.svg);
   background-size: 30px;
   background-repeat: no-repeat;
 }
@@ -70,7 +70,7 @@
   top: -110%;
   left: 60%;
   transition-delay: 0.4s;
-  background: center url(../Assets/death-star.svg);
+  background: center url(../Assets/millennium-falcon.svg);
   background-size: 30px;
   background-repeat: no-repeat;
 }
