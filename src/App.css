@@ -15,7 +15,7 @@
 }
 
 .App-header {
-  min-height: 100vh;
+  height: 88vh;
   font-size: calc(10px + 2vmin);
 }
 
@@ -44,7 +44,7 @@ h1 {
 p {
   color: #ffd700;
   position: absolute;
-  animation: ⭐ 120s linear 4s infinite;
+  animation: ⭐ 120s linear infinite;
 }
 
 @keyframes ⭐ {

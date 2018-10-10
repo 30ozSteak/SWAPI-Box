@@ -1,0 +1,109 @@
+@import "/Users/imsteaky/Turing/mod3/swapibox/src/fontawesome-free-5.3.1-web";
+
+.menu {
+  align-self: center;
+  margin: 3rem auto 0 auto;
+  transform: rotate(0deg);
+  width: 50px;
+  height: 50px;
+}
+
+.menu ul {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.menu li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  list-style: none;
+  width: 100%;
+  height: 100%;
+  background: black;
+  border: 1px solid rgba(255, 215, 0, 1);
+  transition: 0.5s;
+  overflow: hidden;
+  transform: scale(0);
+  border-radius: 50%;
+}
+
+.menu ul.active li {
+  transform: scale(0.95);
+}
+
+.menu ul.active li:nth-child(1) {
+  top: -0%;
+  left: -120%;
+  transition-delay: 0s;
+  background: center url(../Assets/boba-fett.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.menu ul.active li:nth-child(2) {
+  top: -110%;
+  left: -60%;
+  transition-delay: 0.2s;
+  background: center url(../Assets/death-star.svg);
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.menu ul.active li:nth-child(3) {
+  top: -110%;
+  left: 60%;
+  transition-delay: 0.4s;
+  background: center url(../Assets/millennium-falcon.svg);
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.menu ul.active li:nth-child(4) {
+  top: -0%;
+  left: 120%;
+  transition-delay: 0.6s;
+  background: center url(../Assets/mark-as-favorite-star.svg);
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.menu-button {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  z-index: 1;
+  cursor: pointer;
+  transition: 0.5s;
+  border: 1px solid rgba(255, 215, 0, 1);
+  border-radius: 50%;
+  animation: ❤️ 1.5s linear infinite;
+  background: center url(../Assets/rebel-alliancewhite.svg);
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+@keyframes ❤️ {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 217, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 3px rgb(255, 217, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 5px rgba(255, 217, 0, 0);
+  }
+}
+
+.menu-button:hover {
+  background: center url(../Assets/rebel-allianceblack.svg);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-color: #ffd700;
+}
