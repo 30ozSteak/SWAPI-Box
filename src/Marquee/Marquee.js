@@ -11,6 +11,7 @@ const Marquee = ({films}) => {
   )
   }
   catch {
+    console.log('failed')
     return (<div>Loading...</div>)
   }  
 }

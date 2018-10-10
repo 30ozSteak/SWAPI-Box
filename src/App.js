@@ -8,7 +8,8 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      films: []
+      films: [],
+      homeState: "active-main home-main"
     }
   }
 
@@ -26,14 +27,6 @@ class App extends Component {
   }
 
 
-class App extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      homeState: "active-main home-main"
-    };
-  }
   render() {
     const menuContents = [
       {
@@ -57,6 +50,7 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>swapi-box</h1>
+          <Marquee films={this.state.films}/>
         </header>
         <Menu data={menuContents} />
       </div>
