@@ -1,25 +1,35 @@
 import React, { Component } from "react";
 import "./App.css";
 import logo from "./Assets/logo.png";
+import Marquee from "./Marquee/Marquee"
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      films: []
+    }
+  }
+
+  componentDidMount() {
+    this.fetchFilm()
+  }
+
+  fetchFilm = async () => {
+    const url = 'https://swapi.co/api/films/'
+    const data = await fetch(url)
+    const filmData = await data.json()
+    this.setState({
+      films: filmData
+    })
+  }
+
   render() {
     return (
       <div className="App">
         <header className="App-header">
           <h1>swapi-box</h1>
-          <div className="marquee-block">
-            <p>
-              The FIRST ORDER reigns. Having decimated the peaceful Republic,
-              Supreme Leader Snoke now deploys his merciless legions to seize
-              military control of the galaxy. Only General Leia Organa's band of
-              RESISTANCE fighters stand against the rising tyranny, certain that
-              Jedi Master Luke Skywalker will return and restore a spark of hope
-              to the fight. But the Resistance has been exposed. As the First
-              Order speeds toward the rebel base, the brave heroes mount a
-              desperate escape....
-            </p>
-          </div>
+          <Marquee films={this.state.films}/>
         </header>
       </div>
     );
