@@ -13,20 +13,20 @@ class App extends Component {
   render() {
     const menuContents = [
       {
-        service: "facebook",
-        link: "https://www.facebook.com/kevin.simpson.547"
+        service: "People",
+        link: "#"
       },
       {
-        service: "twitter",
-        link: "https://twitter.com/relasine"
+        service: "Planets",
+        link: "#"
       },
       {
-        service: "linkedin",
-        link: "https://www.linkedin.com/in/kevinjohnsimpson"
+        service: "Vehicles",
+        link: "#"
       },
       {
-        service: "instagram",
-        link: "https://www.instagram.com/kevinjohnsimpson/"
+        service: "Favorites",
+        link: "#"
       }
     ];
     return (

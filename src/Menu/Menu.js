@@ -13,18 +13,17 @@ export default class Menu extends Component {
     this.toggleMenuButtons = this.toggleMenuButtons.bind(this);
   }
   toggleMenuButtons() {
-    if (this.state.menuClass === ["menu-button", "inactive"].join(" ")) {
-      this.setState({
-        menuClass: ["menu-button", "active"].join(" "),
-        buttons: "active"
-      });
-    } else {
-      this.setState({
-        menuClass: ["menu-button", "inactive"].join(" "),
-        buttons: "inactive"
-      });
-    }
+    this.state.menuClass === ["menu-button", "inactive"].join(" ")
+      ? this.setState({
+          menuClass: ["menu-button", "active"].join(" "),
+          buttons: "active"
+        })
+      : this.setState({
+          menuClass: ["menu-button", "inactive"].join(" "),
+          buttons: "inactive"
+        });
   }
+
   render() {
     return (
       <div className="menu">

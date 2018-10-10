@@ -35,24 +35,11 @@
   transform: scale(0.95);
 }
 
-.menu ul li a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 50px;
-  font-size: 20px;
-  color: #262626;
-  transition: 0.5s;
-}
-
 .menu ul.active li:nth-child(1) {
   top: -0%;
   left: -120%;
   transition-delay: 0s;
-  background: center url(../Assets/millennium-falcon.svg);
+  background: center url(../Assets/boba-fett.png);
   background-size: 30px;
   background-repeat: no-repeat;
 }
@@ -61,7 +48,7 @@
   top: -110%;
   left: -60%;
   transition-delay: 0.2s;
-  background: center url(../Assets/boba-fett.png);
+  background: center url(../Assets/death-star.svg);
   background-size: 30px;
   background-repeat: no-repeat;
 }
@@ -70,7 +57,7 @@
   top: -110%;
   left: 60%;
   transition-delay: 0.4s;
-  background: center url(../Assets/death-star.svg);
+  background: center url(../Assets/millennium-falcon.svg);
   background-size: 30px;
   background-repeat: no-repeat;
 }
@@ -97,6 +84,9 @@
   border: 1px solid rgba(255, 215, 0, 1);
   border-radius: 50%;
   animation: ❤️ 1.5s linear infinite;
+  background: center url(../Assets/rebel-alliancewhite.svg);
+  background-size: 30px;
+  background-repeat: no-repeat;
 }
 
 @keyframes ❤️ {
@@ -111,29 +101,9 @@
   }
 }
 
-.menu-button i {
-  color: #ffd700;
-}
-
 .menu-button:hover {
+  background: center url(../Assets/rebel-allianceblack.svg);
+  background-size: 30px;
+  background-repeat: no-repeat;
   background-color: #ffd700;
-}
-
-.menu-button:before {
-  font-family: fontAwesome;
-  color: #fff;
-  content: "\f1e0";
-  font-size: 20px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  text-align: center;
-  line-height: 50px;
-}
-
-.menu-button.active:before {
-  font-family: fontAwesome;
-  content: "\f00d";
 }
