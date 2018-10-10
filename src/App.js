@@ -24,11 +24,7 @@ class App extends Component {
       {
         service: "instagram",
         link: "https://www.instagram.com/kevinjohnsimpson/"
-      },
-      { service: "soundcloud", link: "https://soundcloud.com/spekkiomusic" },
-      { service: "github", link: "https://www.github.com/relasine" },
-      { service: "twitch", link: "https://www.twitch.tv/relasine" },
-      { service: "codepen", link: "https://codepen.io/relasine/" }
+      }
     ];
     return (
       <div className="App">
