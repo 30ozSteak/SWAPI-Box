@@ -33,7 +33,6 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>swapi-box</h1>
-
           <div className="marquee-block">
             <p>
               The FIRST ORDER reigns. Having decimated the peaceful Republic,
@@ -46,8 +45,8 @@ class App extends Component {
               desperate escape....
             </p>
           </div>
-          <SocialContainer data={socialContents} />
         </header>
+        <SocialContainer data={socialContents} />
       </div>
     );
   }
