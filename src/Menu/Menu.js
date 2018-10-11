@@ -18,13 +18,9 @@ export default class Menu extends Component {
   };
 
   render() {
-    const { buttonActive: active } = { ...this.state };
     return (
       <div className="menu">
-        <div
-          className={"menu-button " + (active ? "active" : "")}
-          onClick={this.toggleActive}
-        >
+        <div className="menu-button" onClick={this.toggleActive}>
           <ul className={this.state.buttonState}>
             {this.props.data.map(account => {
               return <MenuButtons key={account.service} data={account} />;
