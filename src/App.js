@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Marquee from "./Marquee/Marquee";
 import Menu from "./Menu/Menu";
+import fetchFilm from "./Fetch/Fetch"
 
 class App extends Component {
   constructor(props) {
@@ -12,18 +13,12 @@ class App extends Component {
     };
   }
 
-  componentDidMount() {
-    this.fetchFilm();
-  }
-
-  fetchFilm = async () => {
-    const url = "https://swapi.co/api/films/";
-    const data = await fetch(url);
-    const filmData = await data.json();
+  async componentDidMount () {
+    const filmData =  await fetchFilm();
     this.setState({
-      films: filmData
-    });
-  };
+       films: filmData
+    })
+  }
 
   render() {
     const menuContents = [
