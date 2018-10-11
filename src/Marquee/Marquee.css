@@ -5,11 +5,11 @@
 .marquee-block {
   position: absolute;
   width: 100%;
-  bottom: 15rem;
+  bottom: 12rem;
   font-size: 7.3vw;
   transform-origin: 50% 100%;
   transform: perspective(300px) rotateX(25deg);
-  height: 35rem;
+  height: 36rem;
   text-align: justify;
   overflow: hidden;
 }
@@ -17,7 +17,7 @@
 .marquee-literal {
   color: #ffd700;
   position: absolute;
-  animation: ⭐ 90s linear infinite;
+  animation: ⭐ 80s linear infinite;
 }
 
 .marquee-title-block {
@@ -29,7 +29,7 @@
 }
 
 .film-crawl {
-  padding-top: 10rem;
+  padding-top: 3rem;
 }
 
 @keyframes ⭐ {
@@ -37,6 +37,6 @@
     top: 100%;
   }
   100% {
-    top: -200%;
+    top: -450%;
   }
 }
