@@ -33,5 +33,5 @@ export default class Menu extends Component {
 }
 
 Menu.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.object
 };
