@@ -2,8 +2,11 @@ import React, { Component } from "react";
 import "./App.css";
 import Marquee from "./Marquee/Marquee";
 import Menu from "./Menu/Menu";
+import People from "./People/People"
+
 import fetchFilm, {
   fetchPeople,
+  // fetchEverything,
   fetchVehicles,
   fetchPlanets
 } from "./Fetch/Fetch";
@@ -60,6 +63,7 @@ class App extends Component {
 
         <div className="marquee-container">
           <Marquee films={this.state.films} />
+
         </div>
         <Menu data={menuContents} />
       </div>
