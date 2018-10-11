@@ -14,7 +14,7 @@ describe('Menu', () => {
 
   it('should have a default state', () => {
     const mockProps = [{service: 'people'}, {service: 'planets'}]
-    const wrapper = shallow(<Menu data={mockProps} />)
+    const wrapper = shallow( <Menu data={mockProps} />)
     const expected = { buttonState: '' }
     expect(wrapper.state()).toEqual(expected)
   })
@@ -22,7 +22,7 @@ describe('Menu', () => {
   it('should have a class of inactive as default', () => {
     const mockProps = [{service: 'people'}, {service: 'planets'}]
     const mockToggle = jest.fn()
-    const wrapper = shallow(<Menu mockToggle={mockToggle} data={mockProps} inactive={true} />)
+    const wrapper = shallow( <Menu mockToggle={mockToggle} data={mockProps} inactive={true} />)
     expect(wrapper.is('.active')).toBe(false)
   })
 
