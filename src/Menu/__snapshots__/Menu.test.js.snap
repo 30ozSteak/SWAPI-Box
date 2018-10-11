@@ -1,0 +1,278 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Menu should match the screenshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Menu
+    data={
+      Array [
+        Object {
+          "service": "people",
+        },
+        Object {
+          "service": "planets",
+        },
+      ]
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": <div
+        className="menu-button"
+        onClick={[Function]}
+      >
+        <ul
+          className=""
+        >
+          <MenuButtons
+            data={
+              Object {
+                "service": "people",
+              }
+            }
+          />
+          <MenuButtons
+            data={
+              Object {
+                "service": "planets",
+              }
+            }
+          />
+        </ul>
+      </div>,
+      "className": "menu",
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <ul
+          className=""
+        >
+          <MenuButtons
+            data={
+              Object {
+                "service": "people",
+              }
+            }
+          />
+          <MenuButtons
+            data={
+              Object {
+                "service": "planets",
+              }
+            }
+          />
+        </ul>,
+        "className": "menu-button",
+        "onClick": [Function],
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <MenuButtons
+              data={
+                Object {
+                  "service": "people",
+                }
+              }
+            />,
+            <MenuButtons
+              data={
+                Object {
+                  "service": "planets",
+                }
+              }
+            />,
+          ],
+          "className": "",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "data": Object {
+                "service": "people",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "data": Object {
+                "service": "planets",
+              },
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "ul",
+      },
+      "type": "div",
+    },
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": <div
+          className="menu-button"
+          onClick={[Function]}
+        >
+          <ul
+            className=""
+          >
+            <MenuButtons
+              data={
+                Object {
+                  "service": "people",
+                }
+              }
+            />
+            <MenuButtons
+              data={
+                Object {
+                  "service": "planets",
+                }
+              }
+            />
+          </ul>
+        </div>,
+        "className": "menu",
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <ul
+            className=""
+          >
+            <MenuButtons
+              data={
+                Object {
+                  "service": "people",
+                }
+              }
+            />
+            <MenuButtons
+              data={
+                Object {
+                  "service": "planets",
+                }
+              }
+            />
+          </ul>,
+          "className": "menu-button",
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <MenuButtons
+                data={
+                  Object {
+                    "service": "people",
+                  }
+                }
+              />,
+              <MenuButtons
+                data={
+                  Object {
+                    "service": "planets",
+                  }
+                }
+              />,
+            ],
+            "className": "",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "data": Object {
+                  "service": "people",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "data": Object {
+                  "service": "planets",
+                },
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "ul",
+        },
+        "type": "div",
+      },
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
