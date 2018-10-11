@@ -32,7 +32,7 @@
 }
 
 .menu ul.active li {
-  transform: scale(0.95);
+  transform: scale(1);
 }
 
 .menu ul.active li:nth-child(1) {
