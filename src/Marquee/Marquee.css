@@ -14,23 +14,22 @@
   overflow: hidden;
 }
 
-p,
-h2 {
+.marquee-literal {
   color: #ffd700;
   position: absolute;
-  animation: ⭐ 20s linear infinite;
+  animation: ⭐ 90s linear infinite;
+}
+
+.marquee-title-block {
+  text-align: center;
 }
 
 .film-title {
   text-align: center;
 }
 
-.film-number {
-  bottom: 5rem;
-}
-
 .film-crawl {
-  padding-top: 20rem;
+  padding-top: 10rem;
 }
 
 @keyframes ⭐ {
