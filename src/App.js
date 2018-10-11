@@ -2,22 +2,35 @@ import React, { Component } from "react";
 import "./App.css";
 import Marquee from "./Marquee/Marquee";
 import Menu from "./Menu/Menu";
-import fetchFilm from "./Fetch/Fetch"
+import fetchFilm, {
+  fetchPeople,
+  fetchVehicles,
+  fetchPlanets
+} from "./Fetch/Fetch";
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
       films: [],
+      people: [],
+      vehicles: [],
+      planets: [],
       homeState: "active-main home-main"
     };
   }
 
-  async componentDidMount () {
-    const filmData =  await fetchFilm();
+  async componentDidMount() {
+    const filmData = await fetchFilm();
+    const peopleData = await fetchPeople();
+    const vehicleData = await fetchVehicles();
+    const planetData = await fetchPlanets();
     this.setState({
-       films: filmData
-    })
+      films: filmData,
+      people: peopleData,
+      vehicles: vehicleData,
+      planets: planetData
+    });
   }
 
   render() {

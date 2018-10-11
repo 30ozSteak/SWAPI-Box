@@ -40,5 +40,3 @@ export const parseVehicles = (result, vehicle) => {
   };
   return modifiedObj;
 };
-
-// parseVehicles
