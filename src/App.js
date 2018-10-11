@@ -29,19 +29,19 @@ class App extends Component {
   render() {
     const menuContents = [
       {
-        service: "People",
+        swLink: "People",
         link: "#"
       },
       {
-        service: "Planets",
+        swLink: "Planets",
         link: "#"
       },
       {
-        service: "Vehicles",
+        swLink: "Vehicles",
         link: "#"
       },
       {
-        service: "Favorites",
+        swLink: "Favorites",
         link: "#"
       }
     ];
