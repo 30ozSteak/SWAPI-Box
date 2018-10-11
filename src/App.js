@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import logo from "./Assets/logo.png";
-import Marquee from "./Marquee/Marquee"
+import Marquee from "./Marquee/Marquee";
 import Menu from "./Menu/Menu";
 
 class App extends Component {

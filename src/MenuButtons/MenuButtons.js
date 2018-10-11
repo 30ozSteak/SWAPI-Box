@@ -13,5 +13,5 @@ function MenuButtons(props) {
 export default MenuButtons;
 
 MenuButtons.propTypes = {
-  data: PropTypes.array
+  data: PropTypes.object
 };
