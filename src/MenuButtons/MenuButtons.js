@@ -4,9 +4,7 @@ import PropTypes from "prop-types";
 function MenuButtons(props) {
   return (
     <li>
-      <a href={props.data.link}>
-        <i className={`fa fa-${props.data.service}`} />
-      </a>
+      <a href={props.data.link} />
     </li>
   );
 }

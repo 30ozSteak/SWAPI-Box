@@ -7,35 +7,30 @@ export default class Menu extends Component {
   constructor() {
     super();
     this.state = {
-      menuClass: ["menu-button", "inactive"].join(" "),
-      buttons: "inactive"
+      buttonState: ""
     };
-    this.toggleMenuButtons = this.toggleMenuButtons.bind(this);
-  }
-  toggleMenuButtons() {
-    this.state.menuClass === ["menu-button", "inactive"].join(" ")
-      ? this.setState({
-          menuClass: ["menu-button", "active"].join(" "),
-          buttons: "active"
-        })
-      : this.setState({
-          menuClass: ["menu-button", "inactive"].join(" "),
-          buttons: "inactive"
-        });
   }
 
+  toggleActive = () => {
+    this.state.buttonState === ""
+      ? this.setState({ buttonState: "active" })
+      : this.setState({ buttonState: "" });
+  };
+
   render() {
+    const { buttonActive: active } = { ...this.state };
     return (
       <div className="menu">
         <div
-          className={this.state.menuClass}
-          onClick={this.toggleMenuButtons}
-        />
-        <ul className={this.state.buttons}>
-          {this.props.data.map(account => {
-            return <MenuButtons key={account.service} data={account} />;
-          })}
-        </ul>
+          className={"menu-button " + (active ? "active" : "")}
+          onClick={this.toggleActive}
+        >
+          <ul className={this.state.buttonState}>
+            {this.props.data.map(account => {
+              return <MenuButtons key={account.service} data={account} />;
+            })}
+          </ul>
+        </div>
       </div>
     );
   }
