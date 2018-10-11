@@ -1,0 +1,39 @@
+.marquee-container {
+  height: 50vh;
+}
+
+.marquee-block {
+  position: absolute;
+  width: 100%;
+  bottom: 10rem;
+  font-size: 7.3vw;
+  transform-origin: 50% 100%;
+  transform: perspective(300px) rotateX(15deg);
+  height: 35rem;
+  text-align: justify;
+  overflow: hidden;
+}
+
+p,
+h2 {
+  color: #ffd700;
+  position: absolute;
+  animation: ⭐ 120s linear infinite;
+}
+
+.film-title {
+  text-align: center;
+}
+
+.film-crawl {
+  padding-top: 15rem;
+}
+
+@keyframes ⭐ {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -200%;
+  }
+}
