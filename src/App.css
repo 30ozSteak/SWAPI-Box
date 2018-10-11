@@ -12,10 +12,10 @@
 .App {
   text-align: center;
   background-color: black;
+  height: 100vh;
 }
 
 .App-header {
-  height: 88vh;
   font-size: calc(10px + 2vmin);
 }
 
@@ -27,31 +27,4 @@ h1 {
   color: #ffd700;
   font-family: starWar;
   font-size: 5rem;
-}
-
-.marquee-block {
-  position: absolute;
-  transform-origin: 50% 100%;
-  width: 100%;
-  bottom: 10rem;
-  font-size: 7.3vw;
-  text-align: justify;
-  transform: perspective(300px) rotateX(25deg);
-  height: 50rem;
-  overflow: hidden;
-}
-
-p {
-  color: #ffd700;
-  position: absolute;
-  animation: ⭐ 120s linear infinite;
-}
-
-@keyframes ⭐ {
-  0% {
-    top: 100%;
-  }
-  100% {
-    top: -300%;
-  }
 }

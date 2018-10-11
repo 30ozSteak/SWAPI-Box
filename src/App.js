@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "./App.css";
-import logo from "./Assets/logo.png";
 import Marquee from "./Marquee/Marquee";
 import Menu from "./Menu/Menu";
 
@@ -49,8 +48,11 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <h1>swapi-box</h1>
-          <Marquee films={this.state.films} />
         </header>
+
+        <div className="marquee-container">
+          <Marquee films={this.state.films} />
+        </div>
         <Menu data={menuContents} />
       </div>
     );
