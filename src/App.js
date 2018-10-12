@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Marquee from "./Marquee/Marquee";
 import Menu from "./Menu/Menu";
+
 import People from "./People/People"
 import fetchData from "./Fetch/Fetch";
 import filmData from './Fetch/fetchFilm'
@@ -9,6 +10,8 @@ import getPeopleData from './Fetch/fetchPeople'
 import fetchPlanets from './Fetch/fetchPlanets'
 import vehicleData from './Fetch/fetchVehicles'
 import getSpeciesData from './Fetch/fetchSpecies'
+import Header from "./Header/Header";
+import Loading from "./Loading/Loading";
 
 class App extends Component {
   constructor(props) {
@@ -40,13 +43,6 @@ class App extends Component {
     });
   }
 
-  // static async getDerivedStateFromProps() {
-  //   const peopleData =  await fetchData('https://swapi.co/api/people');
-  //     this.setState({
-  //     people: peopleData
-  //   })
-  // }
-
   render() {
     const menuContents = [
       {
@@ -71,6 +67,13 @@ class App extends Component {
         <header className="App-header">
           <h1>swapi-box</h1>
         </header>
+
+        <div className="header-block">
+          <Header />
+          {/* <Loading /> */}
+        </div>
+        <div className="twinkle" />
+
         <div className="marquee-container">
           <Marquee films={this.state.films} />
           <People people={this.state.people} planets={this.state.planets} species={this.state.species}/>

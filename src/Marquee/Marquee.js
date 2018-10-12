@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Marquee.css";
+import Loading from "../Loading/Loading";
 
 const Marquee = ({ films }) => {
   try {
@@ -7,10 +8,12 @@ const Marquee = ({ films }) => {
     return (
       <div className="marquee-block">
         <div className="marquee-literal">
-          <h2 className="film-title">{films.results[randomnumber].title}</h2>
-          <h2 clasSName="film-number">
-            {films.results[randomnumber].episode_id}
-          </h2>
+          <div className="marquee-title-block">
+            <h3 clasSName="film-number">
+              Episode: {films.results[randomnumber].episode_id}
+            </h3>
+            <h2 className="film-title">{films.results[randomnumber].title}</h2>
+          </div>
           <p className="film-crawl">
             {films.results[randomnumber].opening_crawl}
           </p>
@@ -19,7 +22,7 @@ const Marquee = ({ films }) => {
     );
   } catch {
     console.log("failed");
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 };
 
