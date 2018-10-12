@@ -55,7 +55,9 @@ class App extends Component {
     ];
     return (
       <div className="App">
-        <Header />
+        <div className="header-block">
+          <Header />
+        </div>
         <div className="twinkle" />
         <div className="marquee-container">
           <Marquee films={this.state.films} />
