@@ -5,7 +5,6 @@ let mapOver = people.results.map(person => {
 
  let personName = person.name
  let personWorld = person.homeworld
- // console.log(personWorld)
  for(let planet in planets){
   let planetPage = planets[planet]
   for(let aPlanet in planetPage){
@@ -17,8 +16,6 @@ let mapOver = people.results.map(person => {
   
  }
 })
-// console.log(mapOver)
-// console.log('values', Object.values(mapOver))
 
  const peopleStats = mapOver.map(data => {
   return ( 
