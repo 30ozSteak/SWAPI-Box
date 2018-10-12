@@ -21,6 +21,7 @@
   display: block;
   position: relative;
 }
+
 .twinkle {
   position: absolute;
   top: 0;
@@ -35,12 +36,12 @@
 .twinkle {
   background: transparent url(./Assets/twinkling.png) repeat top center;
   z-index: 0;
-  animation: move-twink-back 900s linear infinite;
+  animation: 🌟 900s linear infinite;
 }
 
-@keyframes move-twink-back {
+@keyframes 🌟 {
   from {
-    background-position: 0 0;
+    background-position: 11000 22022;
   }
   to {
     background-position: -1000px 20000px;
