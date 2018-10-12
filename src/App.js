@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import "./App.css";
 import Marquee from "./Marquee/Marquee";
 import Menu from "./Menu/Menu";
-
 import People from "./People/People"
 import fetchData from "./Fetch/Fetch";
 import filmData from './Fetch/fetchFilm'
@@ -39,7 +38,8 @@ class App extends Component {
       films: filmData,
       people: peopleData,
       vehicles: vehicleData,
-      planets: planetData
+      planets: planetData,
+      species: speciesData
     });
   }
 
