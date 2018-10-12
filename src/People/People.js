@@ -1,15 +1,24 @@
-// import React, { Component } from "react";
-// import PeopleCard from "../PeopleCard/PeopleCard"
+import React, { Component } from "react";
+import PeopleCard from "../PeopleCard/PeopleCard"
 
 
-// const People = ({people}) => {
-//   console.log({people})
-//   const peopleCard = people.map(person => <PeopleCard people={people}/>);
-//   return (
-//     <div className="people-container">
-//       { peopleCard }
-//     </div>
-//   );
-// }
+const People = ({people, planets}) => {
+  try {
+console.log('this is in the try block', {people})
+  const characters = people.results.map(person => <PeopleCard people={people} planets={planets}/>);
+  return (
+    <div className="people-container">
+      { characters }
+    </div>
+  );
 
-// export default People;
+} catch {
+  console.log('this is in the catch block', {people})
+  return (
+    <div>
+      <h1>Loading People</h1>
+    </div>
+  )
+}
+}
+export default People;
