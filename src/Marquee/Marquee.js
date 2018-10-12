@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Marquee.css";
+import Loading from "../Loading/Loading";
 
 const Marquee = ({ films }) => {
   try {
@@ -21,7 +22,7 @@ const Marquee = ({ films }) => {
     );
   } catch {
     console.log("failed");
-    return <div>Loading...</div>;
+    return <Loading />;
   }
 };
 

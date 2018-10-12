@@ -58,11 +58,11 @@ class App extends Component {
       <div className="App">
         <div className="header-block">
           <Header />
-          <Loading />
+          {/* <Loading /> */}
         </div>
         <div className="twinkle" />
         <div className="marquee-container">
-          {/* <Marquee films={this.state.films} /> */}
+          <Marquee films={this.state.films} />
         </div>
         <Menu data={menuContents} />
       </div>

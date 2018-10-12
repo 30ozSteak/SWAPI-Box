@@ -6,6 +6,8 @@
 .loading-box * {
   font-family: loadingWar;
   color: #ffd700;
+  position: relative;
+  z-index: 2;
 }
 
 .loading-box {
@@ -15,6 +17,7 @@
   margin: 0 auto;
   text-align: center;
   width: 30rem;
+  margin-top: 10rem;
 }
 
 .loader {
