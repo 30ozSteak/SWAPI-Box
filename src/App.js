@@ -7,6 +7,8 @@ import fetchFilm, {
   fetchVehicles,
   fetchPlanets
 } from "./Fetch/Fetch";
+import Header from "./Header/Header";
+import Loading from "./Loading/Loading";
 
 class App extends Component {
   constructor(props) {
@@ -54,10 +56,11 @@ class App extends Component {
     ];
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>swapi-box</h1>
-        </header>
-
+        <div className="header-block">
+          <Header />
+          {/* <Loading /> */}
+        </div>
+        <div className="twinkle" />
         <div className="marquee-container">
           <Marquee films={this.state.films} />
         </div>

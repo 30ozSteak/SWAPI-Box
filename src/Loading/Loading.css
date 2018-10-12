@@ -1,0 +1,69 @@
+@font-face {
+  font-family: loadingWar;
+  src: url(../Fonts/Starjedi.ttf);
+}
+
+.loading-box * {
+  font-family: loadingWar;
+  color: #ffd700;
+  position: relative;
+  z-index: 2;
+}
+
+.loading-box {
+  font-family: loadingWar;
+  font-size: 1rem;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+  width: 30rem;
+  margin-top: 10rem;
+}
+
+.loader {
+  width: 3px;
+  height: 3px;
+  background-color: #ffd700;
+  margin: 0 2px;
+  display: inline-block;
+  animation: 💤 1000ms infinite ease-in-out;
+}
+
+.dot1 {
+  animation-delay: 400ms;
+}
+.dot2 {
+  animation-delay: 600ms;
+}
+.dot3 {
+  animation-delay: 800ms;
+}
+
+@keyframes 💤 {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading-box h1,
+h2 {
+  padding: 0;
+  margin: 0;
+  font-family: loadingWar;
+}
+
+.loading-box h1 {
+  font-size: 3rem;
+}
+
+.loading-box h2 {
+  text-align: right;
+  font-size: 1rem;
+  padding-right: 2rem;
+}
