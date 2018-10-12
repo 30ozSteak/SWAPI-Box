@@ -4,7 +4,7 @@ import "./Header.css";
 const Header = () => {
   return (
     <div>
-      <h1>swapi-box</h1>;
+      <h1>swapi-box</h1>
     </div>
   );
 };
