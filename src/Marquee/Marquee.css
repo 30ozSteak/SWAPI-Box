@@ -33,8 +33,9 @@
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.film-title {
+.film-title .film-number {
   text-align: center;
+  color: #ffd700;
 }
 
 .film-crawl {
