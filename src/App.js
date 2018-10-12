@@ -2,11 +2,14 @@ import React, { Component } from "react";
 import "./App.css";
 import Marquee from "./Marquee/Marquee";
 import Menu from "./Menu/Menu";
-import fetchFilm, {
-  fetchPeople,
-  fetchVehicles,
-  fetchPlanets
-} from "./Fetch/Fetch";
+
+import People from "./People/People"
+import fetchData from "./Fetch/Fetch";
+import filmData from './Fetch/fetchFilm'
+import getPeopleData from './Fetch/fetchPeople'
+import fetchPlanets from './Fetch/fetchPlanets'
+import vehicleData from './Fetch/fetchVehicles'
+import getSpeciesData from './Fetch/fetchSpecies'
 import Header from "./Header/Header";
 import Loading from "./Loading/Loading";
 
@@ -14,19 +17,24 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      films: [],
+      films: filmData,
       people: [],
       vehicles: [],
       planets: [],
+      species: [],
       homeState: "active-main home-main"
     };
   }
 
   async componentDidMount() {
-    const filmData = await fetchFilm();
-    const peopleData = await fetchPeople();
-    const vehicleData = await fetchVehicles();
-    const planetData = await fetchPlanets();
+    const peopleData = await getPeopleData()
+  
+    const planetData = await fetchPlanets ()
+
+    const speciesData = await getSpeciesData()
+
+    const filmData = await fetchData('https://swapi.co/api/films/')
+    const vehicleData = await fetchData('https://swapi.co/api/vehicles')
     this.setState({
       films: filmData,
       people: peopleData,
@@ -56,13 +64,19 @@ class App extends Component {
     ];
     return (
       <div className="App">
+        <header className="App-header">
+          <h1>swapi-box</h1>
+        </header>
+
         <div className="header-block">
           <Header />
           {/* <Loading /> */}
         </div>
         <div className="twinkle" />
+
         <div className="marquee-container">
           <Marquee films={this.state.films} />
+          <People people={this.state.people} planets={this.state.planets} species={this.state.species}/>
         </div>
         <Menu data={menuContents} />
       </div>
