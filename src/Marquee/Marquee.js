@@ -21,7 +21,6 @@ const Marquee = ({ films }) => {
       </div>
     );
   } catch {
-    console.log("failed");
     return <Loading />;
   }
 };

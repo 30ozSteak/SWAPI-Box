@@ -4,7 +4,6 @@ import PeopleCard from "../PeopleCard/PeopleCard"
 
 const People = ({people, planets, species}) => {
   try {
-console.log('this is in the try block', {people})
   const characters = people.results.map(person => <PeopleCard people={people} species={species} planets={planets}/>);
   return (
     <div className="people-container">
@@ -13,7 +12,6 @@ console.log('this is in the try block', {people})
   );
 
 } catch {
-  console.log('this is in the catch block', {people})
   return (
     <div>
       <h1>Loading People</h1>
