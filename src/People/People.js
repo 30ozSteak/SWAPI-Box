@@ -5,9 +5,10 @@ import PeopleCard from "../PeopleCard/PeopleCard"
 const People = ({people, planets, species}) => {
   try {
   const characters = people.results.map(person => <PeopleCard people={people} species={species} planets={planets}/>);
+  let charactersToRender = characters.slice(0, 1)
   return (
     <div className="people-container">
-      { characters }
+      { charactersToRender}
     </div>
   );
 
