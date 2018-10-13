@@ -30,7 +30,6 @@
 
 .menu ul.active li {
   transform: scale(1);
-  background-color: black;
 }
 
 .menu ul.active li:nth-child(1) {
