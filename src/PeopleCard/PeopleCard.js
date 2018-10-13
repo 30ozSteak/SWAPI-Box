@@ -28,10 +28,10 @@ const PeopleCard = ({ people, planets, species }) => {
   const peopleStats = mapOver.map(data => {
     return (
       <div className="people-card-literal">
-        <h3>Name: {data.name}</h3>
-        <h3>HomeWorld: {data.location}</h3>
-        <h3>Species: {data.species}</h3>
-        <h3>Population: {data.population}</h3>
+        <h2>{data.name}</h2>
+        <h4>HomeWorld: {data.location}</h4>
+        <h4>Species: {data.species}</h4>
+        <h4>Population: {data.population}</h4>
       </div>
     );
   });
