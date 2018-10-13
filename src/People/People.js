@@ -2,10 +2,10 @@ import React, { Component } from "react";
 import PeopleCard from "../PeopleCard/PeopleCard"
 
 
-const People = ({people, planets}) => {
+const People = ({people, planets, species}) => {
   try {
 console.log('this is in the try block', {people})
-  const characters = people.results.map(person => <PeopleCard people={people} planets={planets}/>);
+  const characters = people.results.map(person => <PeopleCard people={people} species={species} planets={planets}/>);
   return (
     <div className="people-container">
       { characters }
