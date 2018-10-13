@@ -1,0 +1,9 @@
+.people-card-literal {
+  border: 1px solid white;
+  background-color: red;
+  width: 20rem;
+  height: 25rem;
+  border-radius: 5px;
+  position: relative;
+  z-index: 4;
+}
