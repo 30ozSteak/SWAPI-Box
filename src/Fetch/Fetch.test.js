@@ -12,9 +12,7 @@ describe('FetchCall', () => {
       ok: true, json: () => Promise.resolve(mockPeople)}))
 
   const expected = 'https://swapi.co/api/people';
-
   await fetchData(expected)
-
   expect(window.fetch).toHaveBeenCalledWith(expected)
 })
 
@@ -26,11 +24,8 @@ describe('FetchCall', () => {
       ok: true, json: () => Promise.resolve(expected)}))
 
   const URL = 'https://swapi.co/api/people';
-
   const result = await fetchData(URL)
-
   expect(result).toEqual(expected) 
-
  })
 
 })
