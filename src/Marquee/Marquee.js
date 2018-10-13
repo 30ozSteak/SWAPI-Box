@@ -9,7 +9,7 @@ const Marquee = ({ films }) => {
       <div className="marquee-block">
         <div className="marquee-literal">
           <div className="marquee-title-block">
-            <h3 clasSName="film-number">
+            <h3 className="film-number">
               Episode: {films.results[randomnumber].episode_id}
             </h3>
             <h2 className="film-title">{films.results[randomnumber].title}</h2>
