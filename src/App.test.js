@@ -12,13 +12,13 @@ it('renders without crashing', () => {
 
 it('should match the screenshot', () => {
     const wrapper = shallow(<App />)
-
     expect(wrapper).toMatchSnapshot()
   })
-})
 
-  it('should have a default state', () => {
+it('should have a default state', async () => {
     const wrapper = shallow(<App />)
-    const expected = { films: [], homeState: 'active-main home-main' }
+    const expected = { films: [], homeState: 'active-main home-main', people: [], vehicles: [], planets: [], species: [] }
     expect(wrapper.state()).toEqual(expected)
   })
+
+})  

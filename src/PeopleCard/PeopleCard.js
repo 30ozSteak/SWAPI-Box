@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-const PeopleCard = ({people, planets}) => {
+const PeopleCard = ({people, planets, species}) => {
 let mapOver = people.results.map(person => {
 
  let personName = person.name
@@ -10,10 +10,13 @@ let mapOver = people.results.map(person => {
   for(let aPlanet in planetPage){
     let planetName = planetPage[aPlanet].name
     if(personWorld === planetPage[aPlanet].url){
-      return {name: personName, location: planetName}
+      for(let i in species){
+        if(species[i].people.includes(person.url)){
+          return {name: personName, location: planetName, species: species[i].name, population: planetPage[aPlanet].population }
+        }
+      }
     }
   }
-  
  }
 })
 
@@ -22,6 +25,8 @@ let mapOver = people.results.map(person => {
     <div>
       <h3>Name: {data.name}</h3> 
       <h3>HomeWorld: {data.location}</h3>
+      <h3>Species: {data.species}</h3>
+      <h3>Population: {data.population}</h3>
     </div>
     )
 })
