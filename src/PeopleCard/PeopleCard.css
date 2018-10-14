@@ -10,10 +10,9 @@
   border-radius: 5px;
   margin-bottom: 2rem;
   position: relative;
-  background-color: rgba(255, 255, 255, 0.171);
+  background-color: rgba(20, 20, 20, 0.705);
   text-align: right;
   padding-right: 5px;
-  align-content: last baseline;
   overflow: hidden;
 }
 
