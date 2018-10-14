@@ -2,30 +2,34 @@ import React, { Component } from "react";
 import "./PeopleCard.css";
 
 const PeopleCard = ({ people, planets, species }) => {
-  let mapOver = people.results.map(person => {
-    let personName = person.name;
-    let personWorld = person.homeworld;
-    for (let planet in planets) {
+let characterArray = [];
+
+let answer = people.results.map(person => {
+  let personName = person.name;
+  let personWorld = person.homeworld;
+  for (let planet in planets) {
       let planetPage = planets[planet];
-      for (let aPlanet in planetPage) {
-        let planetName = planetPage[aPlanet].name;
-        if (personWorld === planetPage[aPlanet].url) {
+      planetPage.map(index => {
+        let indexNum = planetPage.indexOf(index)
+        let planetName = planetPage[indexNum].name
+        if (personWorld === planetPage[indexNum].url) {
           for (let i in species) {
             if (species[i].people.includes(person.url)) {
-              return {
+                let peopleObject = {
                 name: personName,
                 location: planetName,
                 species: species[i].name,
-                population: planetPage[aPlanet].population
-              };
+                population: planetPage[indexNum].population
+              }
+              characterArray.push(peopleObject)
             }
           }
         }
-      }
-    }
-  });
+      })
+  }
+})
 
-  const peopleStats = mapOver.map(data => {
+  const peopleStats = characterArray.map(data => {
     return (
       <div className="people-card-literal">
         <h2>{data.name}</h2>
