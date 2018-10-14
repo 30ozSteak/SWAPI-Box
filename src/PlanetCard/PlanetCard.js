@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import "./PlanetCard.css";
 
-// missing residents
-const PlanetCard = ({ planets, terrain, population, climate }) => {
+const PlanetCard = ({ planets}) => {
   let planetArray = [];
+  console.log(planets)
 
-  let answer = planets.results.map(planet => {
+  let answer = planets[0].map(planet => {
+    console.log(planet.name)
     let planetName = planet.name;
     let planetWeather = planet.climate;
     let planetTerrain = planet.terrain;

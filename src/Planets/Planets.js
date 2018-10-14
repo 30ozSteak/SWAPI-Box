@@ -3,18 +3,14 @@ import PlanetCard from "../PlanetCard/PlanetCard";
 import Loading from "../Loading/Loading";
 import "./Planet.css";
 
-const Planet = ({ planets, terrain, population, climate }) => {
+const Planet = ({planets}) => {
   try {
-    const planets = planets.results.map(planet => (
+    const planetData = planets[0].map(planet => (
       <PlanetCard
-        planet={planet}
-        terrain={terrain}
-        population={population}
-        climate={climate}
-        // residents={residents}
+        planets={planets}
       />
     ));
-    let planetsToRender = planets.slice(0, 1);
+    let planetsToRender = planetData.slice(0, 1);
     return <div className="people-container">{planetsToRender}</div>;
   } catch {
     return (
