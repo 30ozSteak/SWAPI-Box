@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PeopleCard from "../PeopleCard/PeopleCard";
 import Loading from "../Loading/Loading";
-import "./People.css";
 
 const People = ({ people, planets, species }) => {
   try {

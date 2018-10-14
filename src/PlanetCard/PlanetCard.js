@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import "./PlanetCard.css";
+import "../PeopleCard/PeopleCard.css";
 
-const PlanetCard = ({ planets}) => {
+const PlanetCard = ({ planets }) => {
   let planetArray = [];
-  console.log(planets)
 
   let answer = planets[0].map(planet => {
-    console.log(planet.name)
     let planetName = planet.name;
     let planetWeather = planet.climate;
     let planetTerrain = planet.terrain;
@@ -24,7 +22,7 @@ const PlanetCard = ({ planets}) => {
 
   const planetStats = planetArray.map(data => {
     return (
-      <div>
+      <div className="card-literal">
         <h2>{data.name}</h2>
         <h4> Climate: {data.climate}</h4>
         <h4> Terrain: {data.terrain}</h4>
