@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import fetchData from './Fetch'
+import fetchData from "./Fetch";
 
+const vehicleData = fetchData("https://swapi.co/api/vehicles");
 
-const vehicleData = fetchData('https://swapi.co/api/vehicles')
-
-export default vehicleData
+export default vehicleData;
