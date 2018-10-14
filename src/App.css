@@ -11,7 +11,7 @@
 
 .App {
   text-align: center;
-  height: 600vh;
+  height: 200vh;
   background: #000 url(./Assets/stars.png) repeat top center;
 }
 
@@ -27,8 +27,8 @@
   left: 0;
   right: 0;
   bottom: 0;
+  height: 200vh;
   background: transparent url(./Assets/twinkling.png) repeat top center;
-  height: 600vh;
   animation: 🌟 900s linear infinite;
 }
 
