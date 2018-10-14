@@ -9,6 +9,7 @@
   right: 0;
   margin: 0 auto;
   bottom: 5%;
+  z-index: 1000;
 }
 
 .menu li {
@@ -24,6 +25,7 @@
   overflow: hidden;
   transform: scale(0);
   border-radius: 50%;
+  background-color: black;
 }
 
 .menu ul.active li {
@@ -37,6 +39,7 @@
   background: center url(../Assets/boba-fett.png);
   background-size: 30px;
   background-repeat: no-repeat;
+  background-color: black;
 }
 
 .menu ul.active li:nth-child(2) {
@@ -46,6 +49,7 @@
   background: center url(../Assets/death-star.svg);
   background-size: 30px;
   background-repeat: no-repeat;
+  background-color: black;
 }
 
 .menu ul.active li:nth-child(3) {
@@ -55,6 +59,7 @@
   background: center url(../Assets/millennium-falcon.svg);
   background-size: 30px;
   background-repeat: no-repeat;
+  background-color: black;
 }
 
 .menu ul.active li:nth-child(4) {
@@ -63,6 +68,7 @@
   transition-delay: 0.6s;
   background: center url(../Assets/mark-as-favorite-star.svg);
   background-size: 30px;
+  background-color: black;
   background-repeat: no-repeat;
 }
 
@@ -71,7 +77,6 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: #000000;
   z-index: 1;
   cursor: pointer;
   transition: 0.5s;
@@ -81,6 +86,7 @@
   background: center url(../Assets/rebel-alliancewhite.svg);
   background-size: 30px;
   background-repeat: no-repeat;
+  background-color: black;
 }
 
 @keyframes ❤️ {

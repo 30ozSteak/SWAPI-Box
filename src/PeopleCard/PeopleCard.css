@@ -1,0 +1,49 @@
+@font-face {
+  font-family: loadingWar;
+  src: url(../Fonts/Starjedi.ttf);
+}
+
+.people-card-literal {
+  border: 3px solid #ffd700;
+  width: 20rem;
+  height: 25rem;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.171);
+  text-align: right;
+  padding-right: 5px;
+  align-content: last baseline;
+  overflow: hidden;
+}
+
+.people-card-literal::after {
+  background: rgba(255, 255, 255, 0.137);
+  content: "";
+  height: 100%;
+  left: -22%;
+  bottom: 0;
+  position: absolute;
+  transition: 0.5s;
+  transform: skewX(-10deg);
+  height: 18%;
+  width: 10%;
+}
+
+.people-card-literal:hover:after {
+  left: 110%;
+}
+
+.people-card-literal h2 {
+  color: #ffd700;
+  text-transform: lowercase;
+  letter-spacing: 2px;
+  margin-top: 19.5rem;
+}
+
+.people-card-literal h4 {
+  display: inline-block;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  color: #ffd700;
+}
