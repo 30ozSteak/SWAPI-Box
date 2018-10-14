@@ -80,11 +80,9 @@ class App extends Component {
             planets={this.state.planets}
             species={this.state.species}
           />
-          {/* <Planet
+          { <Planet
             planets={this.state.planets}
-            climate={this.state.climate}
-            terrain={this.state.terrain}
-          /> */}
+          /> }
         </div>
         <Menu data={menuContents} />
       </div>
