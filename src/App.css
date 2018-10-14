@@ -12,7 +12,8 @@
 .App {
   text-align: center;
   height: 200vh;
-  background: #000 url(./Assets/stars.png) repeat top center;
+  background: #000 center / cover url(./Assets/stars.png);
+  min-height: fill-available;
 }
 
 .header-block {

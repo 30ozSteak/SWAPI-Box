@@ -2,32 +2,32 @@ import React, { Component } from "react";
 import "./PeopleCard.css";
 
 const PeopleCard = ({ people, planets, species }) => {
-let characterArray = [];
+  let characterArray = [];
 
-let answer = people.results.map(person => {
-  let personName = person.name;
-  let personWorld = person.homeworld;
-  for (let planet in planets) {
+  let answer = people.results.map(person => {
+    let personName = person.name;
+    let personWorld = person.homeworld;
+    for (let planet in planets) {
       let planetPage = planets[planet];
       planetPage.map(index => {
-        let indexNum = planetPage.indexOf(index)
-        let planetName = planetPage[indexNum].name
+        let indexNum = planetPage.indexOf(index);
+        let planetName = planetPage[indexNum].name;
         if (personWorld === planetPage[indexNum].url) {
           for (let i in species) {
             if (species[i].people.includes(person.url)) {
-                let peopleObject = {
+              let peopleObject = {
                 name: personName,
                 location: planetName,
                 species: species[i].name,
                 population: planetPage[indexNum].population
-              }
-              characterArray.push(peopleObject)
+              };
+              characterArray.push(peopleObject);
             }
           }
         }
-      })
-  }
-})
+      });
+    }
+  });
 
   const peopleStats = characterArray.map(data => {
     return (

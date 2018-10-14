@@ -11,6 +11,7 @@ import vehicleData from "./Fetch/fetchVehicles";
 import getSpeciesData from "./Fetch/fetchSpecies";
 import Header from "./Header/Header";
 import Loading from "./Loading/Loading";
+import Planet from "./Planets/Planets";
 
 class App extends Component {
   constructor(props) {
@@ -21,7 +22,9 @@ class App extends Component {
       vehicles: [],
       planets: [],
       species: [],
-      homeState: "active-main home-main"
+      homeState: "active-main home-main",
+      terrain: [],
+      climate: []
     };
   }
 
@@ -62,6 +65,7 @@ class App extends Component {
         link: "#"
       }
     ];
+
     return (
       <div className="App">
         <div className="header-block">
@@ -76,6 +80,11 @@ class App extends Component {
             planets={this.state.planets}
             species={this.state.species}
           />
+          {/* <Planet
+            planets={this.state.planets}
+            climate={this.state.climate}
+            terrain={this.state.terrain}
+          /> */}
         </div>
         <Menu data={menuContents} />
       </div>
