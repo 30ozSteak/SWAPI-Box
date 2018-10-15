@@ -11,9 +11,9 @@
 
 .App {
   text-align: center;
-  height: 200vh;
+  height: 100vh;
   background: #000 center / cover url(./Assets/stars.png);
-  min-height: fill-available;
+  overflow: scroll;
 }
 
 .header-block {
@@ -28,7 +28,6 @@
   left: 0;
   right: 0;
   bottom: 0;
-  height: 200vh;
   background: transparent url(./Assets/twinkling.png) repeat top center;
   animation: 🌟 900s linear infinite;
 }

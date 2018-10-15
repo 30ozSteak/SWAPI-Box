@@ -31,7 +31,7 @@ const PeopleCard = ({ people, planets, species }) => {
 
   const peopleStats = characterArray.map(data => {
     return (
-      <div className="people-card-literal">
+      <div className="card-literal">
         <h2>{data.name}</h2>
         <h4> Species: {data.species} | </h4>
         <h4>HomeWorld: {data.location}</h4>

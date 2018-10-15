@@ -75,14 +75,14 @@ class App extends Component {
           <Header />
         </div>
         <div className="twinkle" />
-
         <div className="marquee-container">
-          {/* <Marquee films={this.state.films} /> */}
+          {/* <Marquee films={this.state.films} />
           <People
             people={this.state.people}
             planets={this.state.planets}
             species={this.state.species}
-          />
+          /> */}
+
           { <Planet
             planets={this.state.planets}
             residents={this.state.residents}
