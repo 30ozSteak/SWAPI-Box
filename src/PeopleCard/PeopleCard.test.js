@@ -16,8 +16,6 @@ describe.skip("PeopleCard", () => {
   it("should match the screenshot", () => {
     const people = [{results: [{name: "Luke"}, {name: 'Darth Vador'}]}]
 
-  console.log(people.results)
-
     const mockPlanets = [{homeworld: "Moon"}]
     const mockSpecies = [{species: "driod"}]
     const characterArray = [people, mockPlanets, mockSpecies] 

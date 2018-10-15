@@ -29,10 +29,9 @@ ShallowWrapper {
         <div
           className="marquee-container"
         >
-          <People
-            people={Array []}
+          <Planet
             planets={Array []}
-            species={Array []}
+            residents={Array []}
           />
         </div>,
         <Menu
@@ -98,10 +97,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <People
-            people={Array []}
+          "children": <Planet
             planets={Array []}
-            species={Array []}
+            residents={Array []}
           />,
           "className": "marquee-container",
         },
@@ -111,9 +109,8 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "function",
           "props": Object {
-            "people": Array [],
             "planets": Array [],
-            "species": Array [],
+            "residents": Array [],
           },
           "ref": null,
           "rendered": null,
@@ -170,10 +167,9 @@ ShallowWrapper {
           <div
             className="marquee-container"
           >
-            <People
-              people={Array []}
+            <Planet
               planets={Array []}
-              species={Array []}
+              residents={Array []}
             />
           </div>,
           <Menu
@@ -239,10 +235,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <People
-              people={Array []}
+            "children": <Planet
               planets={Array []}
-              species={Array []}
+              residents={Array []}
             />,
             "className": "marquee-container",
           },
@@ -252,9 +247,8 @@ ShallowWrapper {
             "key": undefined,
             "nodeType": "function",
             "props": Object {
-              "people": Array [],
               "planets": Array [],
-              "species": Array [],
+              "residents": Array [],
             },
             "ref": null,
             "rendered": null,
