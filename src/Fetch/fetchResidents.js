@@ -10,6 +10,9 @@ const getResidentData = async () => {
     let value = await fetchData(url + pageNumbers[page])
     dataResults.push(value)
   }
+  return dataResults
 }
+
+console.log(dataResults)
 
 export default getResidentData

@@ -18,7 +18,7 @@ it('should match the screenshot', () => {
 
 it('should have a default state', async () => {
     const wrapper = shallow(<App />)
-    const expected = { films: [], homeState: 'active-main home-main', people: [], vehicles: [], planets: [], species: [] }
+    const expected = { films: [], homeState: 'active-main home-main', people: [], vehicles: [], planets: [], residents: [], species: [] }
     expect(wrapper.state()).toEqual(expected)
   })
 
