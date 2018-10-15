@@ -9,6 +9,7 @@ import getPeopleData from "./Fetch/fetchPeople";
 import fetchPlanets from "./Fetch/fetchPlanets";
 import vehicleData from "./Fetch/fetchVehicles";
 import getSpeciesData from "./Fetch/fetchSpecies";
+import getResidentData from "./Fetch/fetchResidents";
 import Header from "./Header/Header";
 import Loading from "./Loading/Loading";
 import Planet from "./Planets/Planets";
@@ -19,12 +20,11 @@ class App extends Component {
     this.state = {
       films: [],
       people: [],
+      residents: [],
       vehicles: [],
       planets: [],
       species: [],
-      homeState: "active-main home-main",
-      terrain: [],
-      climate: []
+      homeState: "active-main home-main"
     };
   }
 
@@ -32,6 +32,8 @@ class App extends Component {
     const peopleData = await getPeopleData();
 
     const planetData = await fetchPlanets();
+
+    const residentData = await getResidentData();
 
     const speciesData = await getSpeciesData();
 
@@ -42,7 +44,8 @@ class App extends Component {
       people: peopleData,
       vehicles: vehicleData,
       planets: planetData,
-      species: speciesData
+      species: speciesData,
+      residents: residentData,
     });
   }
 
@@ -79,7 +82,11 @@ class App extends Component {
             planets={this.state.planets}
             species={this.state.species}
           /> */}
-          <Planet planets={this.state.planets} />
+
+          { <Planet
+            planets={this.state.planets}
+            residents={this.state.residents}
+          /> }
         </div>
         <Menu data={menuContents} />
       </div>
