@@ -1,24 +1,31 @@
 import React, { Component } from "react";
 import "../PeopleCard/PeopleCard.css";
 
-const PlanetCard = ({ planets }) => {
+const PlanetCard = ({ planets, residents }) => {
   let planetArray = [];
 
-  let answer = planets[0].map(planet => {
-    let planetName = planet.name;
-    let planetWeather = planet.climate;
-    let planetTerrain = planet.terrain;
-    let planetPop = planet.population;
-    // let residents - this is where our nested api call for planets will go. right?
+ let homeworldUrl = residents.map( resident => {
+  return {url: resident.homeworld, name: resident.name}
+ })
 
-    let planetObject = {
-      name: planetName,
-      climate: planetWeather,
-      terrain: planetTerrain,
-      population: planetPop
-    };
-    planetArray.push(planetObject);
-  });
+  const AllPlanets = planets[0];
+  console.log(AllPlanets)
+  for (let planet in AllPlanets ){
+    let planetInfo = AllPlanets[planet]
+    for (let url in homeworldUrl){
+      let individualURLs = homeworldUrl[url].url
+       if (planetInfo.url === individualURLs){
+        let planetObj = {
+        residents: homeworldUrl[url].name || 'none',
+        name: planetInfo.name,
+        climate: planetInfo.climate,
+        terrain: planetInfo.terrain,
+        population: planetInfo.population
+        }
+        planetArray.push(planetObj)
+      }  
+    }
+  }
 
   const planetStats = planetArray.map(data => {
     return (
@@ -27,6 +34,7 @@ const PlanetCard = ({ planets }) => {
         <h4> Climate: {data.climate}</h4>
         <h4> Terrain: {data.terrain}</h4>
         <h4> Population: {data.population}</h4>
+        <h4> Residents: {data.residents} </h4>
       </div>
     );
   });
