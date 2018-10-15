@@ -28,7 +28,8 @@ class App extends Component {
     };
   }
 
-  async componentDidMount() {
+
+  async fetchAllData () {
     const peopleData = await getPeopleData();
 
     const planetData = await fetchPlanets();
@@ -39,14 +40,20 @@ class App extends Component {
 
     const filmData = await fetchData("https://swapi.co/api/films/");
     const vehicleData = await fetchData("https://swapi.co/api/vehicles");
-    this.setState({
+
+    return Promise.all([peopleData, planetData, residentData, speciesData, filmData, vehicleData]).then( 
+      this.setState({
       films: filmData,
       people: peopleData,
       vehicles: vehicleData,
       planets: planetData,
       species: speciesData,
       residents: residentData,
-    });
+    }))
+  }
+
+  async componentDidMount() {
+    await this.fetchAllData();
   }
 
   render() {
