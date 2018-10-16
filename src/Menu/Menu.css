@@ -12,7 +12,13 @@
   z-index: 1000;
 }
 
-.menu li {
+.active {
+  color: red;
+  background-color: red;
+  width: 50rem;
+}
+
+.menu a {
   position: absolute;
   top: 0;
   left: 0;
@@ -28,11 +34,11 @@
   background-color: black;
 }
 
-.menu ul.active li {
+.menu ul.active a {
   transform: scale(1);
 }
 
-.menu ul.active li:nth-child(1) {
+.menu ul.active a:nth-child(1) {
   top: -0%;
   left: -120%;
   transition-delay: 0s;
@@ -42,7 +48,7 @@
   background-color: black;
 }
 
-.menu ul.active li:nth-child(2) {
+.menu ul.active a:nth-child(2) {
   top: -110%;
   left: -60%;
   transition-delay: 0.2s;
@@ -52,7 +58,7 @@
   background-color: black;
 }
 
-.menu ul.active li:nth-child(3) {
+.menu ul.active a:nth-child(3) {
   top: -110%;
   left: 60%;
   transition-delay: 0.4s;
@@ -62,7 +68,7 @@
   background-color: black;
 }
 
-.menu ul.active li:nth-child(4) {
+.menu ul.active a:nth-child(4) {
   top: -0%;
   left: 120%;
   transition-delay: 0.6s;
@@ -94,7 +100,7 @@
     box-shadow: 0 0 0 0 rgba(255, 217, 0, 0);
   }
   50% {
-    box-shadow: 0 0 0 3px rgb(255, 217, 0);
+    box-shadow: 0 0 0 1px rgb(255, 217, 0);
   }
   100% {
     box-shadow: 0 0 0 5px rgba(255, 217, 0, 0);

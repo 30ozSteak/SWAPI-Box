@@ -12,7 +12,9 @@ import getSpeciesData from "./Fetch/fetchSpecies";
 import getResidentData from "./Fetch/fetchResidents";
 import Header from "./Header/Header";
 import Loading from "./Loading/Loading";
-import Planet from "./Planets/Planets";
+import Planets from "./Planets/Planets";
+import Vehicles from "./Vehicles/Vehicles";
+import { Route, NavLink, Link } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -28,8 +30,7 @@ class App extends Component {
     };
   }
 
-
-  async fetchAllData () {
+  async fetchAllData() {
     const peopleData = await getPeopleData();
 
     const planetData = await fetchPlanets();
@@ -41,15 +42,23 @@ class App extends Component {
     const filmData = await fetchData("https://swapi.co/api/films/");
     const vehicleData = await fetchData("https://swapi.co/api/vehicles");
 
-    return Promise.all([peopleData, planetData, residentData, speciesData, filmData, vehicleData]).then( 
+    return Promise.all([
+      peopleData,
+      planetData,
+      residentData,
+      speciesData,
+      filmData,
+      vehicleData
+    ]).then(
       this.setState({
-      films: filmData,
-      people: peopleData,
-      vehicles: vehicleData,
-      planets: planetData,
-      species: speciesData,
-      residents: residentData,
-    }))
+        films: filmData,
+        people: peopleData,
+        vehicles: vehicleData,
+        planets: planetData,
+        species: speciesData,
+        residents: residentData
+      })
+    );
   }
 
   async componentDidMount() {
@@ -60,19 +69,19 @@ class App extends Component {
     const menuContents = [
       {
         swLink: "People",
-        link: "#"
+        link: "/people"
       },
       {
         swLink: "Planets",
-        link: "#"
+        link: "/planets"
       },
       {
         swLink: "Vehicles",
-        link: "#"
+        link: "/vehicles"
       },
       {
         swLink: "Favorites",
-        link: "#"
+        link: "/favorites"
       }
     ];
 
@@ -83,17 +92,37 @@ class App extends Component {
         </div>
         <div className="twinkle" />
         <div className="marquee-container">
-          {/* <Marquee films={this.state.films} />
-          <People
-            people={this.state.people}
-            planets={this.state.planets}
-            species={this.state.species}
-          /> */}
-
-          { <Planet
-            planets={this.state.planets}
-            residents={this.state.residents}
-          /> }
+          <Route
+            exact
+            path="/"
+            render={() => <Marquee films={this.state.films} />}
+          />
+          <Route
+            exact
+            path="/people"
+            render={() => (
+              <People
+                people={this.state.people}
+                planets={this.state.planets}
+                species={this.state.species}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/planets"
+            render={() => (
+              <Planets
+                planets={this.state.planets}
+                residents={this.state.residents}
+              />
+            )}
+          />
+          <Route
+            exact
+            path="/vehicles"
+            render={() => <Vehicles vehicles={this.state.vehicles} />}
+          />
         </div>
         <Menu data={menuContents} />
       </div>

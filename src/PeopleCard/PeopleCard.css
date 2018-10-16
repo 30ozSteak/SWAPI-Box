@@ -39,3 +39,19 @@
   font-size: 0.7rem;
   color: #ffd700;
 }
+
+.fave {
+  background: center / cover url(../Assets/mark-as-favorite-star.svg);
+  height: 2rem;
+  width: 2rem;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  filter: opacity(20%);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.fave:hover {
+  filter: opacity(100%);
+}
