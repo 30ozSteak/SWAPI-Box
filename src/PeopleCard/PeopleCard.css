@@ -17,6 +17,10 @@
   transition: 0.2s;
 }
 
+.card-literal:last-child {
+  margin-bottom: 10rem;
+}
+
 .card-literal:hover {
   filter: brightness(110%);
 }
