@@ -1,17 +1,8 @@
 import React from "react";
-import PeopleCard from "./PeopleCard";
+import PlanetCard from "./PlanetCard";
 import { shallow } from "enzyme";
 
 describe.skip("PeopleCard", () => {
-
-  it.skip('should exist', () => {
-    const people = [{results: [{name: "Luke"}, {name: 'Darth Vador'}]}]
-    const mockPlanets = [{homeworld: "Moon"}]
-    const mockSpecies = [{species: "driod"}]
-    const wrapper = shallow(<PeopleCard people={people} planets={mockPlanets} species={mockSpecies} />);
-    expect(wrapper).toBeDefined();
-  });
-
 
   it("should match the screenshot", () => {
     const people = [{results: [{name: "Luke"}, {name: 'Darth Vador'}]}]

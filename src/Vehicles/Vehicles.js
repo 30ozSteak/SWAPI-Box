@@ -7,7 +7,7 @@ const Vehicles = ({ vehicles }) => {
     const vroomVrooms = vehicles.results.map(vehicle => (
       <VehicleCard vehicle={vehicles} />
     ));
-    let vehiclesToRender = vroomVrooms;
+    let vehiclesToRender = vroomVrooms.slice(0, 1);
     return <div className="people-container">{vehiclesToRender}</div>;
   } catch {
     return (

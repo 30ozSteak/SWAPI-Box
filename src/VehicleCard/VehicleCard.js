@@ -1,14 +1,8 @@
 import React, { Component } from "react";
 import "../PeopleCard/PeopleCard.css";
 
-const VehicleCard = ({
-  vehicles,
-  model,
-  vehicle_class,
-  capacity,
-  toggleFaves
-}) => {
-  let vehicleArray = [];
+const VehicleCard = ({ vehicle }) => {
+  let vehicleArray = vehicle.results 
 
   const vehicleStats = vehicleArray.map(data => {
     return (

@@ -16,7 +16,7 @@ const PlanetCard = ({ planets, residents, toggleFaves }) => {
       let individualURLs = homeworldUrl[url].url;
       if (planetInfo.url === individualURLs) {
         let planetObj = {
-          residents: homeworldUrl[url].name || "none",
+          residents: homeworldUrl[url].name,
           name: planetInfo.name,
           climate: planetInfo.climate,
           terrain: planetInfo.terrain,
@@ -27,7 +27,9 @@ const PlanetCard = ({ planets, residents, toggleFaves }) => {
     }
   }
 
+
   const planetStats = planetArray.map(data => {
+    console.log('this is data', data)
     return (
       <div className="card-literal">
         <h2>{data.name}</h2>

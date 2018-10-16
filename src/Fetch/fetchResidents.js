@@ -13,6 +13,4 @@ const getResidentData = async () => {
   return dataResults
 }
 
-console.log(dataResults)
-
 export default getResidentData
