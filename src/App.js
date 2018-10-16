@@ -12,7 +12,7 @@ import getSpeciesData from "./Fetch/fetchSpecies";
 import getResidentData from "./Fetch/fetchResidents";
 import Header from "./Header/Header";
 import Loading from "./Loading/Loading";
-import Planet from "./Planets/Planets";
+import Planets from "./Planets/Planets";
 import { Route, NavLink, Link } from "react-router-dom";
 
 class App extends Component {
@@ -72,15 +72,15 @@ class App extends Component {
       },
       {
         swLink: "Planets",
-        link: "#"
+        link: "/planets"
       },
       {
         swLink: "Vehicles",
-        link: "#"
+        link: "/vehicles"
       },
       {
         swLink: "Favorites",
-        link: "#"
+        link: "/favorites"
       }
     ];
 
@@ -109,9 +109,9 @@ class App extends Component {
           />
           <Route
             exact
-            path="/planet"
+            path="/planets"
             render={() => (
-              <Planet
+              <Planets
                 planet={this.state.planets}
                 residents={this.state.residents}
               />
@@ -119,8 +119,6 @@ class App extends Component {
           />
         </div>
         <Menu data={menuContents} />
-
-        {/* <Route exact path="/planets" component={Puppies} /> */}
       </div>
     );
   }

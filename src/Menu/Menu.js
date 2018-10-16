@@ -22,9 +22,11 @@ export default class Menu extends Component {
       <div className="menu">
         <div className="menu-button" onClick={this.toggleActive}>
           <ul className={this.state.buttonState}>
-            {this.props.data.map(swRoutes => {
-              return <MenuButtons key={swRoutes.swLink} data={swRoutes} />;
-            })}
+            <div>
+              {this.props.data.map(swRoutes => {
+                return <MenuButtons key={swRoutes.swLink} data={swRoutes} />;
+              })}
+            </div>
           </ul>
         </div>
       </div>

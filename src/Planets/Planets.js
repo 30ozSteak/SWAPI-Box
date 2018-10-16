@@ -3,13 +3,10 @@ import PlanetCard from "../PlanetCard/PlanetCard";
 import Loading from "../Loading/Loading";
 import "./Planet.css";
 
-const Planet = ({planets, residents}) => {
+const Planets = ({ planets, residents }) => {
   try {
     const planetData = planets[0].map(planet => (
-      <PlanetCard
-        planets={planets}
-        residents={residents}
-      />
+      <PlanetCard planets={planets} residents={residents} />
     ));
     let planetsToRender = planetData.slice(0, 1);
     return <div className="people-container">{planetsToRender}</div>;
@@ -21,4 +18,4 @@ const Planet = ({planets, residents}) => {
     );
   }
 };
-export default Planet;
+export default Planets;
