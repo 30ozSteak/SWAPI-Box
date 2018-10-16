@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "../PeopleCard/PeopleCard.css";
 
-const PlanetCard = ({ planets, residents }) => {
+const PlanetCard = ({ planets, residents, toggleFaves }) => {
   let planetArray = [];
 
   let homeworldUrl = residents.map(resident => {
