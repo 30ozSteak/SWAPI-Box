@@ -32,10 +32,6 @@
   transform: scale(1);
 }
 
-.menu ul.active a:hover {
-  background-color: red;
-}
-
 .menu ul.active a:nth-child(1) {
   top: -0%;
   left: -120%;

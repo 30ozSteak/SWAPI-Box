@@ -112,7 +112,7 @@ class App extends Component {
             path="/planets"
             render={() => (
               <Planets
-                planet={this.state.planets}
+                planets={this.state.planets}
                 residents={this.state.residents}
               />
             )}
