@@ -15,23 +15,11 @@
   display: inline-block;
   overflow: hidden;
   margin: 1rem;
+  transition: 0.2s;
 }
 
-.card-literal::after {
-  background: rgba(255, 255, 255, 0.137);
-  content: "";
-  height: 100%;
-  left: -22%;
-  bottom: 0;
-  position: absolute;
-  transition: 0.5s;
-  transform: skewX(-10deg);
-  height: 18%;
-  width: 10%;
-}
-
-.card-literal:hover:after {
-  left: 110%;
+.card-literal:hover {
+  filter: brightness(110%);
 }
 
 .card-literal h2 {
