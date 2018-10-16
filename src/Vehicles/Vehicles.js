@@ -5,15 +5,10 @@ import Loading from "../Loading/Loading";
 const Vehicles = ({ vehicles }) => {
   try {
     const vroomVrooms = vehicles.results.map(vehicle => (
-      <VehicleCard
-        vehicle={vehicle}
-        model={model}
-        class={vehicle_class}
-        passengers={passengers}
-      />
+      <VehicleCard vehicle={vehicles} />
     ));
-    let vehiclesToRender = vehicles.slice(0, 1);
-    return <div className="vehicle-container">{vehiclesToRender}</div>;
+    let vehiclesToRender = vroomVrooms;
+    return <div className="people-container">{vehiclesToRender}</div>;
   } catch {
     return (
       <div>

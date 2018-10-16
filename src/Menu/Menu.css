@@ -12,6 +12,12 @@
   z-index: 1000;
 }
 
+.active {
+  color: red;
+  background-color: red;
+  width: 50rem;
+}
+
 .menu a {
   position: absolute;
   top: 0;

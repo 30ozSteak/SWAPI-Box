@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import PlanetCard from "../PlanetCard/PlanetCard";
 import Loading from "../Loading/Loading";
-import "./Planet.css";
 
 const Planets = ({ planets, residents }) => {
   try {

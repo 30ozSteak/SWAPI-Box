@@ -13,6 +13,7 @@ import getResidentData from "./Fetch/fetchResidents";
 import Header from "./Header/Header";
 import Loading from "./Loading/Loading";
 import Planets from "./Planets/Planets";
+import Vehicles from "./Vehicles/Vehicles";
 import { Route, NavLink, Link } from "react-router-dom";
 
 class App extends Component {
@@ -116,6 +117,11 @@ class App extends Component {
                 residents={this.state.residents}
               />
             )}
+          />
+          <Route
+            exact
+            path="/vehicles"
+            render={() => <Vehicles vehicles={this.state.vehicles} />}
           />
         </div>
         <Menu data={menuContents} />
