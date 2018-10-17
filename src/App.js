@@ -31,35 +31,24 @@ class App extends Component {
   }
 
   async fetchAllData() {
-    const peopleData = await getPeopleData();
-
-    // const planetData = await fetchPlanets();
-
-    // const residentData = await getResidentData();
-
-    const speciesData = await getSpeciesData();
-
-    const filmData = await fetchData("https://swapi.co/api/films/");
+    this.showFilmCrawl();
     const vehicleData = await fetchData("https://swapi.co/api/vehicles");
 
-    return Promise.all([
-      peopleData,
-      // planetData,
-      // residentData,
-      speciesData,
-      filmData,
-      vehicleData
-    ]).then(
+    return Promise.all([vehicleData]).then(
       this.setState({
-        films: filmData,
-        people: peopleData,
-        vehicles: vehicleData,
-        // planets: planetData,
-        species: speciesData
-        // residents: residentData
+        vehicles: vehicleData
       })
     );
   }
+
+  showFilmCrawl = async () => {
+    const films = await fetchData("https://swapi.co/api/films/");
+    return Promise.all([films]).then(
+      this.setState({
+        films: films
+      })
+    );
+  };
 
   handlePlanetLink = async () => {
     const planets = await fetchPlanets();
@@ -68,6 +57,19 @@ class App extends Component {
       this.setState({
         planets: planets,
         residents: residents
+      })
+    );
+  };
+
+  handlePeopleLink = async () => {
+    const people = await getPeopleData();
+    const planets = await fetchPlanets();
+    const species = await getSpeciesData();
+    return Promise.all([people, planets, species]).then(
+      this.setState({
+        people: people,
+        planets: planets,
+        species: species
       })
     );
   };
@@ -135,7 +137,10 @@ class App extends Component {
             render={() => <Vehicles vehicles={this.state.vehicles} />}
           />
         </div>
-        <Menu handlePlanetLink={this.handlePlanetLink} />
+        <Menu
+          handlePlanetLink={this.handlePlanetLink}
+          handlePeopleLink={this.handlePeopleLink}
+        />
       </div>
     );
   }
