@@ -5,8 +5,8 @@ import "./Menu.css";
 import { Route, NavLink, Link } from "react-router-dom";
 
 export default class Menu extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       buttonState: ""
     };
@@ -25,7 +25,7 @@ export default class Menu extends Component {
           <ul className={this.state.buttonState}>
             <div>
               <NavLink to="/people" />
-              <NavLink to="/planets" />
+              <NavLink to="/planets" onClick={this.props.handlePlanetLink} />
               <NavLink to="vehicles" />
               <NavLink to="favorites" />
             </div>

@@ -33,9 +33,9 @@ class App extends Component {
   async fetchAllData() {
     const peopleData = await getPeopleData();
 
-    const planetData = await fetchPlanets();
+    // const planetData = await fetchPlanets();
 
-    const residentData = await getResidentData();
+    // const residentData = await getResidentData();
 
     const speciesData = await getSpeciesData();
 
@@ -44,8 +44,8 @@ class App extends Component {
 
     return Promise.all([
       peopleData,
-      planetData,
-      residentData,
+      // planetData,
+      // residentData,
       speciesData,
       filmData,
       vehicleData
@@ -54,17 +54,23 @@ class App extends Component {
         films: filmData,
         people: peopleData,
         vehicles: vehicleData,
-        planets: planetData,
-        species: speciesData,
-        residents: residentData
+        // planets: planetData,
+        species: speciesData
+        // residents: residentData
       })
     );
   }
 
-  // handlePlanetLink = () => {
-  //   const planets
-  //   const residents
-  // }
+  handlePlanetLink = async () => {
+    const planets = await fetchPlanets();
+    const residents = await getResidentData();
+    return Promise.all([planets, residents]).then(
+      this.setState({
+        planets: planets,
+        residents: residents
+      })
+    );
+  };
 
   async componentDidMount() {
     await this.fetchAllData();
@@ -129,7 +135,7 @@ class App extends Component {
             render={() => <Vehicles vehicles={this.state.vehicles} />}
           />
         </div>
-        <Menu data={menuContents} />
+        <Menu handlePlanetLink={this.handlePlanetLink} />
       </div>
     );
   }
