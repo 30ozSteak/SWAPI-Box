@@ -109,5 +109,5 @@
   background: center url(../Assets/rebel-allianceblack.svg);
   background-size: 30px;
   background-repeat: no-repeat;
-  background-color: #ffd700;
+  background-color: var(--starYellow);
 }

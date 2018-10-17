@@ -1,5 +1,5 @@
 h1 {
-  color: #ffd700;
+  color: var(--starYellow);
   display: inline-block;
   font-family: starWar;
   font-size: 3.5rem;
