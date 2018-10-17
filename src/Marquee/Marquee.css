@@ -19,7 +19,7 @@
 }
 
 .marquee-literal {
-  color: #ffd700;
+  color: var(--starYellow);
   position: absolute;
   animation: ⭐ 120s linear infinite;
 }
@@ -35,7 +35,7 @@
 
 .film-title .film-number {
   text-align: center;
-  color: #ffd700;
+  color: var(--starYellow);
 }
 
 .film-crawl {
@@ -47,6 +47,6 @@
     top: 100%;
   }
   100% {
-    top: -450%;
+    top: -550%;
   }
 }

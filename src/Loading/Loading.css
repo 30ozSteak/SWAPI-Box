@@ -5,7 +5,7 @@
 
 .loading-box * {
   font-family: loadingWar;
-  color: #ffd700;
+  color: var(--starYellow);
 }
 
 .loading-box {
@@ -21,7 +21,7 @@
 .loader {
   width: 3px;
   height: 3px;
-  background-color: #ffd700;
+  background-color: var(--starYellow);
   margin: 0 2px;
   display: inline-block;
   animation: 💤 1000ms infinite ease-in-out;
