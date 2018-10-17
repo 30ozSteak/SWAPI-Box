@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import MenuButtons from "../MenuButtons/MenuButtons";
 import "./Menu.css";
+import { Route, NavLink, Link } from "react-router-dom";
 
 export default class Menu extends Component {
   constructor() {
@@ -23,10 +24,10 @@ export default class Menu extends Component {
         <div className="menu-button" onClick={this.toggleActive}>
           <ul className={this.state.buttonState}>
             <div>
-              {this.props.data.map(swRoutes => {
-                return <MenuButtons key={swRoutes.swLink} data={swRoutes} />;
-              })}
-              {/* <NavLink */}
+              <NavLink to="/people" />
+              <NavLink to="/planets" />
+              <NavLink to="vehicles" />
+              <NavLink to="favorites" />
             </div>
           </ul>
         </div>
