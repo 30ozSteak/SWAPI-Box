@@ -30,16 +30,16 @@ class App extends Component {
     };
   }
 
-  async fetchAllData() {
-    this.showFilmCrawl();
-    const vehicleData = await fetchData("https://swapi.co/api/vehicles");
+  // async fetchAllData() {
+  //   this.showFilmCrawl();
+  //   // const vehicleData = await fetchData("https://swapi.co/api/vehicles");
 
-    return Promise.all([vehicleData]).then(
-      this.setState({
-        vehicles: vehicleData
-      })
-    );
-  }
+  //   return Promise.all([vehicleData]).then(
+  //     this.setState({
+  //       // vehicles: vehicleData
+  //     })
+  //   );
+  // }
 
   showFilmCrawl = async () => {
     const films = await fetchData("https://swapi.co/api/films/");
@@ -70,6 +70,15 @@ class App extends Component {
         people: people,
         planets: planets,
         species: species
+      })
+    );
+  };
+
+  handleVehicleLink = async () => {
+    const vehicles = await fetchData("https://swapi.co/api/vehicles");
+    return Promise.all([vehicles]).then(
+      this.setState({
+        vehicles: vehicles
       })
     );
   };
@@ -141,6 +150,7 @@ class App extends Component {
         <Menu
           handlePlanetLink={this.handlePlanetLink}
           handlePeopleLink={this.handlePeopleLink}
+          handleVehicleLink={this.handleVehicleLink}
         />
       </div>
     );
