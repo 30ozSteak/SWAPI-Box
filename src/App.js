@@ -30,17 +30,6 @@ class App extends Component {
     };
   }
 
-  // async fetchAllData() {
-  //   this.showFilmCrawl();
-  //   // const vehicleData = await fetchData("https://swapi.co/api/vehicles");
-
-  //   return Promise.all([vehicleData]).then(
-  //     this.setState({
-  //       // vehicles: vehicleData
-  //     })
-  //   );
-  // }
-
   showFilmCrawl = async () => {
     const films = await fetchData("https://swapi.co/api/films/");
     return Promise.all([films]).then(
@@ -85,29 +74,10 @@ class App extends Component {
 
   async componentDidMount() {
     this.showFilmCrawl();
-    // await this.fetchAllData();
+    // local storage get needs to go here too
   }
 
   render() {
-    const menuContents = [
-      {
-        swLink: "People",
-        link: "/people"
-      },
-      {
-        swLink: "Planets",
-        link: "/planets"
-      },
-      {
-        swLink: "Vehicles",
-        link: "/vehicles"
-      },
-      {
-        swLink: "Favorites",
-        link: "/favorites"
-      }
-    ];
-
     return (
       <div className="App">
         <div className="header-block">
