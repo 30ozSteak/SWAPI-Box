@@ -75,7 +75,8 @@ class App extends Component {
   };
 
   async componentDidMount() {
-    await this.fetchAllData();
+    this.showFilmCrawl();
+    // await this.fetchAllData();
   }
 
   render() {
