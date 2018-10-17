@@ -8,28 +8,16 @@ const PlanetCard = ({ planets, residents, toggleFaves }) => {
     return { url: resident.homeworld, name: resident.name };
   });
 
-  const AllPlanets = planets[0];
-  console.log(AllPlanets);
-  for (let planet in AllPlanets) {
-    let planetInfo = AllPlanets[planet];
-    for (let url in homeworldUrl) {
-      let individualURLs = homeworldUrl[url].url;
-      if (planetInfo.url === individualURLs) {
-        let planetObj = {
-          residents: homeworldUrl[url].name,
-          name: planetInfo.name,
-          climate: planetInfo.climate,
-          terrain: planetInfo.terrain,
-          population: planetInfo.population
-        };
-        planetArray.push(planetObj);
-      }
-    }
-  }
+  const getResidentInfo = residentsUrls => {
+    const foundResidents = residentsUrls.map(url => {
+      const foundResident = residents.find(resident => resident.url === url);
+      return foundResident ? foundResident.name : "";
+    });
+    return foundResidents;
+  };
 
-
-  const planetStats = planetArray.map(data => {
-    console.log('this is data', data)
+  const planetStats = planets[0].map(data => {
+    console.log("this is data", data);
     return (
       <div className="card-literal">
         <h2>{data.name}</h2>
@@ -37,10 +25,11 @@ const PlanetCard = ({ planets, residents, toggleFaves }) => {
         <h4> Climate: {data.climate}</h4>
         <h4> Terrain: {data.terrain}</h4>
         <h4> Population: {data.population}</h4>
-        <h4> Residents: {data.residents} </h4>
+        <h4> Residents: {getResidentInfo(data.residents)} </h4>
       </div>
     );
   });
+
   return <div>{planetStats}</div>;
 };
 export default PlanetCard;
