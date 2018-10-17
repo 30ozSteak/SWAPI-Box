@@ -61,6 +61,11 @@ class App extends Component {
     );
   }
 
+  // handlePlanetLink = () => {
+  //   const planets
+  //   const residents
+  // }
+
   async componentDidMount() {
     await this.fetchAllData();
   }

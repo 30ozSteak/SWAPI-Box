@@ -26,6 +26,7 @@ export default class Menu extends Component {
               {this.props.data.map(swRoutes => {
                 return <MenuButtons key={swRoutes.swLink} data={swRoutes} />;
               })}
+              {/* <NavLink */}
             </div>
           </ul>
         </div>

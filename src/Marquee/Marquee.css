@@ -13,7 +13,7 @@
   font-size: 7.3vw;
   transform-origin: 50% 70%;
   transform: perspective(400px) rotateX(20deg);
-  height: 34rem;
+  height: 50rem;
   text-align: justify;
   overflow: hidden;
 }
@@ -47,6 +47,6 @@
     top: 100%;
   }
   100% {
-    top: -450%;
+    top: -550%;
   }
 }
