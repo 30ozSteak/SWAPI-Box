@@ -23,7 +23,6 @@ class App extends Component {
       films: [],
       people: [],
       residents: [],
-      loading: true,
       vehicles: [],
       planets: [],
       species: [],
@@ -31,85 +30,111 @@ class App extends Component {
     };
   }
 
-  showFilmCrawl = async () => {
-    if (localStorage.getItem("fetchedData") === null) {
-      const films = await fetchData("https://swapi.co/api/films/");
-      return Promise.all([films]).then(
-        this.setState({
-          films: films
-        })
-      );
-    } else {
-      let films = JSON.parse(
-        localStorage.getItem("fetchedData", this.state.films)
-      );
-      this.setState({ films: films });
-    }
-  };
+  updateLocalStorage = (key, data) => {
+  localStorage.setItem(key, JSON.stringify(data));
+}
 
-  handlePlanetLink = async () => {
-    const planets = await fetchPlanets();
-    const residents = await getResidentData();
-    return Promise.all([planets, residents]).then(
-      this.setState({
-        planets: planets,
-        residents: residents,
-        loading: false
+    showFilmCrawl = async () => {
+    if (localStorage.getItem('fetchedFilm') === null){
+        const films = await fetchData("https://swapi.co/api/films/");
+        return Promise.all([films]).then(
+        this.setState({
+        films: films
       })
     );
-  };
+    } else {
+      let films = JSON.parse(localStorage.getItem('fetchedFilm'))
+      this.setState({films: films})
+    }
+}
+
+  handlePlanetLink = async () => {
+    if (localStorage.getItem('fetchedResidents') === null ){
+    console.log('if statement')
+    const planets = await fetchPlanets();
+    const residents = await getResidentData();
+    let promisedData = Promise.all([planets, residents]).then(
+      this.setState({
+        planets: planets,
+        residents: residents
+      }))
+
+    // this.updateLocalStorage('fetchedPlanets', this.state.planets)
+    this.updateLocalStorage('fetchedResidents', this.state.residents)
+
+    return promisedData
+  } else {
+    console.log('else statement')
+    let planetsData = JSON.parse(localStorage.getItem('fetchedPlanets'))
+    let residentsData = JSON.parse(localStorage.getItem('fetchedResidents'))
+    console.log(planetsData)
+      this.setState({
+        residents: residentsData,
+        // planets: planetsData
+      });
+    }
+}
 
   handlePeopleLink = async () => {
+    if (localStorage.getItem('fetchedPeople') === null ){
     const people = await getPeopleData();
     const planets = await fetchPlanets();
     const species = await getSpeciesData();
-    return Promise.all([people, planets, species]).then(
+    let peoplePromise = Promise.all([people, planets, species]).then(
       this.setState({
         people: people,
         planets: planets,
-        species: species,
-        loading: false
-      })
-    );
-  };
+        species: species
+      }));
+        this.updateLocalStorage('fetchedPeople', this.state.people)
+        this.updateLocalStorage('fetchedPlanet', this.state.planets)
+        this.updateLocalStorage('fetchedSpecies', this.state.species)
+        return peoplePromise
+  } else {
+    let peopleData = JSON.parse(localStorage.getItem('fetchedPeople'))
+    let planetsData = JSON.parse(localStorage.getItem('fetchedPlanet'))
+    let speciesData = JSON.parse(localStorage.getItem('fetchedSpecies'))
+    this.setState({
+      people: peopleData,
+      planets: planetsData,
+      species: speciesData
+    })
+  }
+}
 
   handleVehicleLink = async () => {
+    if (localStorage.getItem('fetchedVehicles') === null){
     const vehicles = await fetchData("https://swapi.co/api/vehicles");
-    return Promise.all([vehicles]).then(
+    let promiseVehicles = Promise.all([vehicles]).then(
       this.setState({
-        vehicles: vehicles,
-        loading: false
+        vehicles: vehicles
       })
-    );
-  };
+    )
+    this.updateLocalStorage('fetchedVehicles', this.state.vehicles)
+    return promiseVehicles
+  } else {
+    let vehicleData = localStorage.getItem('fetchedVehicles')
+    let vehicles = JSON.parse(vehicleData)
+    this.setState({
+      vehicles: vehicles
+    })
+  }
+}
 
-  updateLocalStorage = data => {
-    localStorage.setItem("fetchedData", JSON.stringify(data));
-  };
 
-  getLocalStorage = data => {
+getLocalStorage = (data) => {
     this.updateLocalStorage(data);
-  };
+}
+
 
   async componentDidMount() {
     await this.showFilmCrawl();
-    if (localStorage.getItem("fetchedData") === null) {
-      this.updateLocalStorage(this.state.films);
-    } else {
+      if (localStorage.getItem('fetchedFilm') === null) {
+      this.updateLocalStorage('fetchedFilm', this.state.films);
+      } else {
       return;
-    }
   }
-
-  // getFilmData = () => {
-  //     let storedLocation = JSON.parse(localStorage.getItem('fetchedData', this.state.films));
-  //       if(storedLocation){
-  //       let films = storedLocation;
-  //       } else {
-  //       this.getLocalStorage(storedLocation)
-  //       return;
-  //   }
-  // }
-
+}
   render() {
     return (
       <div className="App">
@@ -121,13 +146,7 @@ class App extends Component {
           <Route
             exact
             path="/"
-            render={() => (
-              <Marquee
-                films={this.state.films}
-                getFilmData={this.getFilmData}
-                getLocalStorage={this.getLocalStorage}
-              />
-            )}
+            render={() => <Marquee films={this.state.films} />}
           />
           <Route
             exact
@@ -167,3 +186,4 @@ class App extends Component {
 }
 
 export default App;
+
