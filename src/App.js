@@ -39,8 +39,7 @@ class App extends Component {
     const films = await fetchData("https://swapi.co/api/films/");
     return Promise.all([films]).then(
       this.setState({
-        films: films,
-        loading: false
+        films: films
       })
     );
     // };
@@ -52,7 +51,8 @@ class App extends Component {
     return Promise.all([planets, residents]).then(
       this.setState({
         planets: planets,
-        residents: residents
+        residents: residents,
+        loading: false
       })
     );
   };
@@ -65,7 +65,8 @@ class App extends Component {
       this.setState({
         people: people,
         planets: planets,
-        species: species
+        species: species,
+        loading: false
       })
     );
   };
@@ -74,7 +75,8 @@ class App extends Component {
     const vehicles = await fetchData("https://swapi.co/api/vehicles");
     return Promise.all([vehicles]).then(
       this.setState({
-        vehicles: vehicles
+        vehicles: vehicles,
+        loading: false
       })
     );
   };
