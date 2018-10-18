@@ -9,11 +9,11 @@
   left: 0;
   right: 0;
   margin: 0 auto;
-  bottom: 12rem;
+  bottom: 8rem;
   font-size: 7.3vw;
   transform-origin: 50% 70%;
   transform: perspective(400px) rotateX(20deg);
-  height: 34rem;
+  height: 75%;
   text-align: justify;
   overflow: hidden;
 }
@@ -21,7 +21,7 @@
 .marquee-literal {
   color: var(--starYellow);
   position: absolute;
-  animation: ⭐ 120s linear infinite;
+  animation: ⭐ 220s linear infinite;
 }
 
 .marquee-title-block {
