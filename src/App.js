@@ -31,13 +31,18 @@ class App extends Component {
   }
 
   showFilmCrawl = async () => {
-    const films = await fetchData("https://swapi.co/api/films/");
-    return Promise.all([films]).then(
-      this.setState({
+    // let storedLocation = JSON.parse(localStorage.getItem('fetchedData', this.state.films));
+    //   if(storedLocation){
+    //     this.getLocalStorage(storedLocation);
+    //   } else {
+        const films = await fetchData("https://swapi.co/api/films/");
+        return Promise.all([films]).then(
+        this.setState({
         films: films
       })
     );
-  };
+  // };
+}
 
   handlePlanetLink = async () => {
     const planets = await fetchPlanets();
@@ -82,13 +87,13 @@ getLocalStorage = (data) => {
 
   async componentDidMount() {
     this.showFilmCrawl();
-    let storedLocation = JSON.parse(localStorage.getItem('fetchedData', this.state.films));
-      if(storedLocation){
-      this.getLocalStorage(storedLocation);
-      } else {
+    // let storedLocation = JSON.parse(localStorage.getItem('fetchedData', this.state.films));
+    //   if(storedLocation){
+    //   this.getLocalStorage(storedLocation);
+    //   } else {
       return;
   }
-  }
+
 
   render() {
     return (
