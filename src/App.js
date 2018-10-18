@@ -186,3 +186,4 @@ getLocalStorage = (data) => {
 }
 
 export default App;
+
