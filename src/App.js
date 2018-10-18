@@ -30,18 +30,18 @@ class App extends Component {
     };
   }
 
-  showFilmCrawl = async () => {
-    // let storedLocation = JSON.parse(localStorage.getItem('fetchedData', this.state.films));
-    //   if(storedLocation){
-    //     this.getLocalStorage(storedLocation);
-    //   } else {
+    showFilmCrawl = async () => {
+    if (localStorage.getItem('fetchedData') === null){
         const films = await fetchData("https://swapi.co/api/films/");
         return Promise.all([films]).then(
         this.setState({
         films: films
       })
     );
-  // };
+    } else {
+      let films = JSON.parse(localStorage.getItem('fetchedData', this.state.films))
+      this.setState({films: films})
+    }
 }
 
   handlePlanetLink = async () => {
@@ -77,6 +77,8 @@ class App extends Component {
     );
   };
 
+
+
 updateLocalStorage = (data) => {
   localStorage.setItem('fetchedData', JSON.stringify(data));
 }
@@ -85,15 +87,26 @@ getLocalStorage = (data) => {
     this.updateLocalStorage(data);
 }
 
+
   async componentDidMount() {
-    this.showFilmCrawl();
-    // let storedLocation = JSON.parse(localStorage.getItem('fetchedData', this.state.films));
-    //   if(storedLocation){
-    //   this.getLocalStorage(storedLocation);
-    //   } else {
+    await this.showFilmCrawl();
+      if (localStorage.getItem('fetchedData') === null) {
+      this.updateLocalStorage(this.state.films);
+      } else {
       return;
   }
+}
 
+
+// getFilmData = () => {
+//     let storedLocation = JSON.parse(localStorage.getItem('fetchedData', this.state.films));
+//       if(storedLocation){
+//       let films = storedLocation;
+//       } else {
+//       this.getLocalStorage(storedLocation)
+//       return;
+//   }
+// }
 
   render() {
     return (
@@ -106,7 +119,7 @@ getLocalStorage = (data) => {
           <Route
             exact
             path="/"
-            render={() => <Marquee films={this.state.films} getLocalStorage={this.getLocalStorage} />}
+            render={() => <Marquee films={this.state.films} getFilmData={this.getFilmData} getLocalStorage={this.getLocalStorage} />}
           />
           <Route
             exact

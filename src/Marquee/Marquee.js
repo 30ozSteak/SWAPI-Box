@@ -2,16 +2,18 @@ import React from "react";
 import "./Marquee.css";
 import Loading from "../Loading/Loading";
 
-const Marquee = ({ films, getLocalStorage }) => {
-  // if (true) {
-  //   const films = getLocalStorage()
-  //   console.log('this is films', films)
-  // }
+const Marquee = ({ films, getLocalStorage, getFilmData }) => {
+  let storedLocation = JSON.parse(localStorage.getItem('fetchedData', films))
+
+  console.log(storedLocation)
+    if(storedLocation !== undefined) {
+    
+  }
 
   try {
     let randomnumber = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
     return (
-      <div onLoad={getLocalStorage({films})} className="marquee-block">
+      <div  className="marquee-block">
         <div className="marquee-literal">
           <div className="marquee-title-block">
             <h3 className="film-number">
@@ -27,8 +29,8 @@ const Marquee = ({ films, getLocalStorage }) => {
     );
   } catch (e) {
     console.log('ERROR', e)
-    let data = getLocalStorage()
-    console.log(data)
+    // let data = getLocalStorage()
+    // console.log(data)
     return <Loading />;
   }
 };
