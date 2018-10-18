@@ -65,9 +65,9 @@ class App extends Component {
     return promisedData
   } else {
     console.log('else statement')
-    let planetsData = JSON.parse(localStorage.getItem('fetchedPlanets'))
+    // let planetsData = JSON.parse(localStorage.getItem('fetchedPlanets'))
     let residentsData = JSON.parse(localStorage.getItem('fetchedResidents'))
-    console.log(planetsData)
+    // console.log(planetsData)
       this.setState({
         residents: residentsData,
         // planets: planetsData
@@ -120,14 +120,20 @@ class App extends Component {
     })
   }
 }
-
-
-getLocalStorage = (data) => {
-    this.updateLocalStorage(data);
-}
-
+  checkPathName = () => {
+    if (window.location.pathname === '/') {
+      this.showFilmCrawl()
+    } else if (window.location.pathname === '/people') {
+      this.handlePeopleLink()
+    } else if (window.location.pathname === '/planet') {
+      this.handlePlanetLink()
+    } else if (window.location.pathname === '/vehicles') {
+      this.handleVehicleLink()
+    }
+  }
 
   async componentDidMount() {
+    await this.checkPathName ();
     await this.showFilmCrawl();
       if (localStorage.getItem('fetchedFilm') === null) {
       this.updateLocalStorage('fetchedFilm', this.state.films);
@@ -153,6 +159,7 @@ getLocalStorage = (data) => {
             path="/people"
             render={() => (
               <People
+                handlePeopleLink={this.handlePeopleLink}
                 people={this.state.people}
                 planets={this.state.planets}
                 species={this.state.species}
