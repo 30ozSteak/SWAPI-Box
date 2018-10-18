@@ -25,6 +25,10 @@
   filter: brightness(120%);
 }
 
+.card-literal:hover .caret {
+  display: none;
+}
+
 .text-field {
   position: relative;
   background-color: rgba(0, 0, 0, 0.692);
@@ -32,7 +36,17 @@
   width: 90%;
   padding: 0 5px 5px 0;
   transition: 0.5s;
-  margin-left: -250px;
+  margin-left: -287px;
+}
+
+.caret {
+  height: 20px;
+  width: 20px;
+  background: center / cover url(../Assets/right.svg);
+  position: absolute;
+  right: -14px;
+  bottom: 20px;
+  margin-left: 5rem;
 }
 
 .card-literal:hover .text-field {
@@ -76,4 +90,8 @@
 
 .fave:hover {
   filter: opacity(100%);
+}
+
+.people-container {
+  margin-bottom: 9rem;
 }

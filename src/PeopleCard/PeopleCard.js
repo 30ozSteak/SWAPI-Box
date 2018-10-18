@@ -39,8 +39,9 @@ const PeopleCard = ({ people, planets, species }) => {
           />
           <section className="text-field">
             <h2>{data.name}</h2>
-            <div className="fave" />
+            {/* <div className="fave" /> */}
             <h4>Species: {data.species}</h4>
+            <div className="caret" />
             <h4>HomeWorld: {data.location}</h4>
             <h4>Population: {data.population}</h4>
           </section>
