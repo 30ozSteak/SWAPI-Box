@@ -23,6 +23,7 @@ class App extends Component {
       films: [],
       people: [],
       residents: [],
+      loading: true,
       vehicles: [],
       planets: [],
       species: [],
@@ -35,14 +36,15 @@ class App extends Component {
     //   if(storedLocation){
     //     this.getLocalStorage(storedLocation);
     //   } else {
-        const films = await fetchData("https://swapi.co/api/films/");
-        return Promise.all([films]).then(
-        this.setState({
-        films: films
+    const films = await fetchData("https://swapi.co/api/films/");
+    return Promise.all([films]).then(
+      this.setState({
+        films: films,
+        loading: false
       })
     );
-  // };
-}
+    // };
+  };
 
   handlePlanetLink = async () => {
     const planets = await fetchPlanets();
@@ -77,13 +79,13 @@ class App extends Component {
     );
   };
 
-updateLocalStorage = (data) => {
-  localStorage.setItem('fetchedData', JSON.stringify(data));
-}
+  updateLocalStorage = data => {
+    localStorage.setItem("fetchedData", JSON.stringify(data));
+  };
 
-getLocalStorage = (data) => {
+  getLocalStorage = data => {
     this.updateLocalStorage(data);
-}
+  };
 
   async componentDidMount() {
     this.showFilmCrawl();
@@ -91,9 +93,8 @@ getLocalStorage = (data) => {
     //   if(storedLocation){
     //   this.getLocalStorage(storedLocation);
     //   } else {
-      return;
+    return;
   }
-
 
   render() {
     return (
@@ -106,7 +107,12 @@ getLocalStorage = (data) => {
           <Route
             exact
             path="/"
-            render={() => <Marquee films={this.state.films} getLocalStorage={this.getLocalStorage} />}
+            render={() => (
+              <Marquee
+                films={this.state.films}
+                getLocalStorage={this.getLocalStorage}
+              />
+            )}
           />
           <Route
             exact
