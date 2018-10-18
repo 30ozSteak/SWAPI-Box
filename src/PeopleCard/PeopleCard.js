@@ -31,16 +31,20 @@ const PeopleCard = ({ people, planets, species }) => {
   const peopleStats = characterArray.map(data => {
     return (
       <div className="card-literal">
-        <img
-          className="image-literal"
-          src={Images[data.name]}
-          // alt={data.name}
-        />
-        <h2>{data.name}</h2>
-        <div className="fave" />
-        <h4>Species: {data.species} | </h4>
-        <h4>HomeWorld: {data.location}</h4>
-        <h4>Population: {data.population}</h4>
+        <section className="image">
+          <img
+            className="image-literal"
+            src={Images[data.name]}
+            alt={data.name}
+          />
+          <section className="text-field">
+            <h2>{data.name}</h2>
+            {/* <div className="fave" /> */}
+            <h4>Species: {data.species}</h4>
+            <h4>HomeWorld: {data.location}</h4>
+            <h4>Population: {data.population}</h4>
+          </section>
+        </section>
       </div>
     );
   });

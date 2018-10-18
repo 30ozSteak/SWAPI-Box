@@ -5,7 +5,7 @@ const Images = {
   "Darth Vader": "../peopleimages/vader.png",
   "Leia Organa": "../peopleimages/leia.png",
   "Owen Lars": "../peopleimages/lars.png",
-  "Beru Whitesun Lars": "../peopleimages/beru.png",
+  "Beru Whitesun lars": "../peopleimages/beru.png",
   "R5-D4": "../peopleimages/r5d4.png",
   "Biggs Darklighter": "../peopleimages/biggs.png",
   "Obi-Wan Kenobi": "../peopleimages/obi.png"

@@ -1,28 +1,41 @@
+* {
+  box-sizing: border-box;
+}
+
 @font-face {
   font-family: loadingWar;
   src: url(../Fonts/Starjedi.ttf);
 }
 
 .card-literal {
-  border: 3px solid var(--starYellow);
-  width: 20rem;
-  height: 25rem;
-  border-radius: 5px;
+  border: 5px solid var(--starYellow);
+  width: 20.6rem;
+  height: 25.6rem;
   position: relative;
   background-color: rgba(20, 20, 20, 0.705);
   text-align: right;
-  padding-right: 5px;
+  padding-right: 2px;
   display: inline-block;
   margin: 1rem;
   transition: 0.2s;
 }
 
-.card-literal:last-child {
-  margin-bottom: 10rem;
+.text-field {
+  /* position: absolute; */
+  z-index: 5;
 }
 
 .card-literal:hover {
-  filter: brightness(110%);
+  filter: brightness(130%);
+}
+
+.text-field {
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.692);
+  justify-content: center;
+  margin-left: 3px;
+  border-radius: 0 5px 5px 0;
+  width: 90%;
 }
 
 .card-literal h2 {
@@ -30,7 +43,7 @@
   text-transform: lowercase;
   letter-spacing: 2px;
   font-size: 1rem;
-  margin-top: 18.5rem;
+  margin-top: -5rem;
 }
 
 .card-literal h4 {
@@ -50,6 +63,13 @@
   filter: opacity(20%);
   cursor: pointer;
   transition: 0.2s;
+}
+
+.image-literal {
+  border-radius: 5px;
+  height: 25rem;
+  width: 20rem;
+  position: relative;
 }
 
 .fave:hover {
