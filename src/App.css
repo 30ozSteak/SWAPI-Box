@@ -29,7 +29,7 @@
   right: 0;
   bottom: 0;
   background: transparent url(./Assets/twinkling.png) repeat top center;
-  animation: 🌟 1900s linear infinite;
+  animation: 🌟 2000s linear infinite;
 }
 
 @keyframes 🌟 {
