@@ -7,6 +7,7 @@ const PlanetCard = ({ planets, residents, toggleFaves }) => {
   let homeworldUrl = residents.map(resident => {
     return { url: resident.homeworld, name: resident.name };
   });
+  console.log(homeworldUrl)
 
   const getResidentInfo = residentsUrls => {
     const foundResidents = residentsUrls.map(url => {
@@ -17,7 +18,6 @@ const PlanetCard = ({ planets, residents, toggleFaves }) => {
   };
 
   const planetStats = planets[0].map(data => {
-    console.log("this is data", data);
     return (
       <div className="card-literal">
         <h2>{data.name}</h2>
