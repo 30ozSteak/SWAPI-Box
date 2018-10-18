@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import MenuButtons from "../MenuButtons/MenuButtons";
+// import MenuButtons from "./MenuButtons/MenuButtons";
 import "./Menu.css";
 import { Route, NavLink, Link } from "react-router-dom";
 
