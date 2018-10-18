@@ -48,32 +48,6 @@ class App extends Component {
     }
 }
 
-  handlePlanetLink = async () => {
-    if (localStorage.getItem('fetchedResidents') === null ){
-    console.log('if statement')
-    const planets = await fetchPlanets();
-    const residents = await getResidentData();
-    let promisedData = Promise.all([planets, residents]).then(
-      this.setState({
-        planets: planets,
-        residents: residents
-      }))
-
-    // this.updateLocalStorage('fetchedPlanets', this.state.planets)
-    this.updateLocalStorage('fetchedResidents', this.state.residents)
-
-    return promisedData
-  } else {
-    console.log('else statement')
-    // let planetsData = JSON.parse(localStorage.getItem('fetchedPlanets'))
-    let residentsData = JSON.parse(localStorage.getItem('fetchedResidents'))
-    // console.log(planetsData)
-      this.setState({
-        residents: residentsData,
-        // planets: planetsData
-      });
-    }
-}
 
   handlePeopleLink = async () => {
     if (localStorage.getItem('fetchedPeople') === null ){
@@ -120,15 +94,43 @@ class App extends Component {
     })
   }
 }
-  checkPathName = () => {
+
+  handlePlanetLink = async () => {
+    if (localStorage.getItem('fetchedResidents') === null ){
+    console.log('if statement')
+    const planets = await fetchPlanets();
+    const residents = await getResidentData();
+    let promisedData = Promise.all([planets, residents]).then(
+      this.setState({
+        planets: planets,
+        residents: residents
+      }))
+
+    this.updateLocalStorage('fetchedPlanets', this.state.planets)
+    this.updateLocalStorage('fetchedResidents', this.state.residents)
+
+    return promisedData
+  } else {
+    console.log('else statement')
+    let planetsData = JSON.parse(localStorage.getItem('fetchedPlanets'))
+    let residentsData = JSON.parse(localStorage.getItem('fetchedResidents'))
+    // console.log(planetsData)
+      this.setState({
+        residents: residentsData,
+        planets: planetsData
+      });
+    }
+}
+
+  checkPathName = async () => {
     if (window.location.pathname === '/') {
-      this.showFilmCrawl()
+      await this.showFilmCrawl()
     } else if (window.location.pathname === '/people') {
-      this.handlePeopleLink()
-    } else if (window.location.pathname === '/planet') {
-      this.handlePlanetLink()
+      await this.handlePeopleLink()
+    } else if (window.location.pathname === '/planets') {
+      await this.handlePlanetLink()
     } else if (window.location.pathname === '/vehicles') {
-      this.handleVehicleLink()
+      await this.handleVehicleLink()
     }
   }
 
