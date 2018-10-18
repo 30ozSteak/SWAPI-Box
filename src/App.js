@@ -72,9 +72,22 @@ class App extends Component {
     );
   };
 
+updateLocalStorage = (data) => {
+  localStorage.setItem('fetchedData', JSON.stringify(data));
+}
+
+getLocalStorage = (data) => {
+    this.updateLocalStorage(data);
+}
+
   async componentDidMount() {
     this.showFilmCrawl();
-    // local storage get needs to go here too
+    let storedLocation = JSON.parse(localStorage.getItem('fetchedData', this.state.films));
+      if(storedLocation){
+      this.getLocalStorage(storedLocation);
+      } else {
+      return;
+  }
   }
 
   render() {
@@ -88,7 +101,7 @@ class App extends Component {
           <Route
             exact
             path="/"
-            render={() => <Marquee films={this.state.films} />}
+            render={() => <Marquee films={this.state.films} getLocalStorage={this.getLocalStorage} />}
           />
           <Route
             exact

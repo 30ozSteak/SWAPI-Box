@@ -2,11 +2,11 @@ import React from "react";
 import "./Marquee.css";
 import Loading from "../Loading/Loading";
 
-const Marquee = ({ films }) => {
+const Marquee = ({ films, getLocalStorage }) => {
   try {
     let randomnumber = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
     return (
-      <div className="marquee-block">
+      <div onload={getLocalStorage({films})} className="marquee-block">
         <div className="marquee-literal">
           <div className="marquee-title-block">
             <h3 className="film-number">
