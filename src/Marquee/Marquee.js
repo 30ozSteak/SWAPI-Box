@@ -3,13 +3,6 @@ import "./Marquee.css";
 import Loading from "../Loading/Loading";
 
 const Marquee = ({ films, getLocalStorage, getFilmData }) => {
-  let storedLocation = JSON.parse(localStorage.getItem('fetchedData', films))
-
-  console.log(storedLocation)
-    if(storedLocation !== undefined) {
-    
-  }
-
   try {
     let randomnumber = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
     return (
@@ -27,10 +20,7 @@ const Marquee = ({ films, getLocalStorage, getFilmData }) => {
         </div>
       </div>
     );
-  } catch (e) {
-    console.log('ERROR', e)
-    // let data = getLocalStorage()
-    // console.log(data)
+  } catch {
     return <Loading />;
   }
 };
