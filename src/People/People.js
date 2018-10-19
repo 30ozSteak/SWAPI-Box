@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import PeopleCard from "../PeopleCard/PeopleCard";
 import Loading from "../Loading/Loading";
+import "../PeopleCard/PeopleCard.css";
 
 const People = ({ people, planets, species, handlePeopleLink }) => {
   try {
@@ -8,7 +9,12 @@ const People = ({ people, planets, species, handlePeopleLink }) => {
       <PeopleCard people={people} species={species} planets={planets} />
     ));
     let charactersToRender = characters.slice(0, 1);
-    return <div className="people-container">{charactersToRender}</div>;
+    return (
+      <div className="container-header">
+        <h5>Hover to Learn More</h5>
+        <div className="people-container">{charactersToRender}</div>;
+      </div>
+    );
   } catch {
     return (
       <div>
