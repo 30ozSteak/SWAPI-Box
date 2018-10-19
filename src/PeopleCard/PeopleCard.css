@@ -22,11 +22,15 @@
 }
 
 .card-literal:hover {
+  animation: ❤️ 2s linear infinite;
+}
+
+.card-literal:hover {
   filter: brightness(120%);
 }
 
 .card-literal:hover .caret {
-  display: none;
+  opacity: 0;
 }
 
 .text-field {
@@ -40,13 +44,15 @@
 }
 
 .caret {
-  height: 20px;
+  height: 30px;
   width: 20px;
   background: center / cover url(../Assets/right.svg);
   position: absolute;
   right: -14px;
-  bottom: 20px;
+  bottom: 17px;
   margin-left: 5rem;
+  opacity: 100;
+  transition: 0.8s;
 }
 
 .card-literal:hover .text-field {
@@ -94,4 +100,30 @@
 
 .people-container {
   margin-bottom: 9rem;
+}
+
+.container-header {
+  display: block;
+}
+
+.container-header h5 {
+  color: var(--starYellow);
+  position: relative;
+  top: -1rem;
+  left: 0;
+  right: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@keyframes ❤️ {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 217, 0, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 1px rgb(255, 217, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 4px rgba(255, 217, 0, 0);
+  }
 }
