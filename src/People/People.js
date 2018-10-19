@@ -11,7 +11,7 @@ const People = ({ people, planets, species }) => {
     let charactersToRender = characters.slice(0, 1);
     return (
       <div className="container-header">
-        <h5>Hover to Learn More</h5>
+        <h5>Hover Over a Character to Learn More</h5>
         <div className="people-container">{charactersToRender}</div>;
       </div>
     );

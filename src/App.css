@@ -13,7 +13,7 @@
   text-align: center;
   height: 100vh;
   background: #000 center / cover url(./Assets/stars.png);
-  overflow: scroll;
+  overflow: auto;
 }
 
 .header-block {
