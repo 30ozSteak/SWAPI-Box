@@ -13,7 +13,7 @@
   text-align: center;
   height: 100vh;
   background: #000 center / cover url(./Assets/stars.png);
-  /* overflow: auto; */
+  overflow: auto;
 }
 
 .header-block {
@@ -28,8 +28,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url(./Assets/twinkling.png) repeat top center;
-  animation: 🌟 1500s linear infinite;
+  background: transparent url(./Assets/twinkling.png) repeat top center;
+  animation: 🌟 2000s linear infinite;
 }
 
 @keyframes 🌟 {
