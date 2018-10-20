@@ -29,32 +29,31 @@ ShallowWrapper {
         <div
           className="marquee-container"
         >
-          <Planet
-            planets={Array []}
-            residents={Array []}
+          <Route
+            exact={true}
+            path="/"
+            render={[Function]}
+          />
+          <Route
+            exact={true}
+            path="/people"
+            render={[Function]}
+          />
+          <Route
+            exact={true}
+            path="/planets"
+            render={[Function]}
+          />
+          <Route
+            exact={true}
+            path="/vehicles"
+            render={[Function]}
           />
         </div>,
         <Menu
-          data={
-            Array [
-              Object {
-                "link": "#",
-                "swLink": "People",
-              },
-              Object {
-                "link": "#",
-                "swLink": "Planets",
-              },
-              Object {
-                "link": "#",
-                "swLink": "Vehicles",
-              },
-              Object {
-                "link": "#",
-                "swLink": "Favorites",
-              },
-            ]
-          }
+          handlePeopleLink={[Function]}
+          handlePlanetLink={[Function]}
+          handleVehicleLink={[Function]}
         />,
       ],
       "className": "App",
@@ -97,25 +96,85 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": <Planet
-            planets={Array []}
-            residents={Array []}
-          />,
+          "children": Array [
+            <Route
+              exact={true}
+              path="/"
+              render={[Function]}
+            />,
+            <Route
+              exact={true}
+              path="/people"
+              render={[Function]}
+            />,
+            <Route
+              exact={true}
+              path="/planets"
+              render={[Function]}
+            />,
+            <Route
+              exact={true}
+              path="/vehicles"
+              render={[Function]}
+            />,
+          ],
           "className": "marquee-container",
         },
         "ref": null,
-        "rendered": Object {
-          "instance": null,
-          "key": undefined,
-          "nodeType": "function",
-          "props": Object {
-            "planets": Array [],
-            "residents": Array [],
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "exact": true,
+              "path": "/",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
           },
-          "ref": null,
-          "rendered": null,
-          "type": [Function],
-        },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "exact": true,
+              "path": "/people",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "exact": true,
+              "path": "/planets",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "exact": true,
+              "path": "/vehicles",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
         "type": "div",
       },
       Object {
@@ -123,24 +182,9 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
-          "data": Array [
-            Object {
-              "link": "#",
-              "swLink": "People",
-            },
-            Object {
-              "link": "#",
-              "swLink": "Planets",
-            },
-            Object {
-              "link": "#",
-              "swLink": "Vehicles",
-            },
-            Object {
-              "link": "#",
-              "swLink": "Favorites",
-            },
-          ],
+          "handlePeopleLink": [Function],
+          "handlePlanetLink": [Function],
+          "handleVehicleLink": [Function],
         },
         "ref": null,
         "rendered": null,
@@ -167,32 +211,31 @@ ShallowWrapper {
           <div
             className="marquee-container"
           >
-            <Planet
-              planets={Array []}
-              residents={Array []}
+            <Route
+              exact={true}
+              path="/"
+              render={[Function]}
+            />
+            <Route
+              exact={true}
+              path="/people"
+              render={[Function]}
+            />
+            <Route
+              exact={true}
+              path="/planets"
+              render={[Function]}
+            />
+            <Route
+              exact={true}
+              path="/vehicles"
+              render={[Function]}
             />
           </div>,
           <Menu
-            data={
-              Array [
-                Object {
-                  "link": "#",
-                  "swLink": "People",
-                },
-                Object {
-                  "link": "#",
-                  "swLink": "Planets",
-                },
-                Object {
-                  "link": "#",
-                  "swLink": "Vehicles",
-                },
-                Object {
-                  "link": "#",
-                  "swLink": "Favorites",
-                },
-              ]
-            }
+            handlePeopleLink={[Function]}
+            handlePlanetLink={[Function]}
+            handleVehicleLink={[Function]}
           />,
         ],
         "className": "App",
@@ -235,25 +278,85 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": <Planet
-              planets={Array []}
-              residents={Array []}
-            />,
+            "children": Array [
+              <Route
+                exact={true}
+                path="/"
+                render={[Function]}
+              />,
+              <Route
+                exact={true}
+                path="/people"
+                render={[Function]}
+              />,
+              <Route
+                exact={true}
+                path="/planets"
+                render={[Function]}
+              />,
+              <Route
+                exact={true}
+                path="/vehicles"
+                render={[Function]}
+              />,
+            ],
             "className": "marquee-container",
           },
           "ref": null,
-          "rendered": Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "planets": Array [],
-              "residents": Array [],
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "exact": true,
+                "path": "/",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "exact": true,
+                "path": "/people",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "exact": true,
+                "path": "/planets",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "exact": true,
+                "path": "/vehicles",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
           "type": "div",
         },
         Object {
@@ -261,24 +364,9 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
-            "data": Array [
-              Object {
-                "link": "#",
-                "swLink": "People",
-              },
-              Object {
-                "link": "#",
-                "swLink": "Planets",
-              },
-              Object {
-                "link": "#",
-                "swLink": "Vehicles",
-              },
-              Object {
-                "link": "#",
-                "swLink": "Favorites",
-              },
-            ],
+            "handlePeopleLink": [Function],
+            "handlePlanetLink": [Function],
+            "handleVehicleLink": [Function],
           },
           "ref": null,
           "rendered": null,

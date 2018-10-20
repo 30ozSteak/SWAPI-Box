@@ -18,13 +18,13 @@ const PlanetCard = ({ planets, residents, toggleFaves }) => {
 
   const planetStats = planets[0].map(data => {
     return (
-      <div className="card-literal">
-        <h2>{data.name}</h2>
+      <div key={Math.floor(Math.random() * (100 - 1 + 1)) + 1 + Date.now()} className="card-literal">
+        <h2 key={Math.floor(Math.random() * (30 - 1 + 1)) + 1 + Date.now()}>{data.name}</h2>
         <div className="fave" />
-        <h4> Climate: {data.climate}</h4>
-        <h4> Terrain: {data.terrain}</h4>
-        <h4> Population: {data.population}</h4>
-        <h4> Residents: {getResidentInfo(data.residents)} </h4>
+        <h4 key={Math.floor(Math.random() * (10000 - 1 + 1)) + 1 + Date.now()}> Climate: {data.climate}</h4>
+        <h4 key={Math.floor(Math.random() * (300 - 1 + 1)) + 1 + Date.now()}> Terrain: {data.terrain}</h4>
+        <h4 key={Math.floor(Math.random() * (1080 - 1 + 1)) + 1 + Date.now()}> Population: {data.population}</h4>
+        <h4 key={Math.floor(Math.random() * (4300 - 1 + 1)) + 1 + Date.now()}> Residents: {getResidentInfo(data.residents)} </h4>
       </div>
     );
   });

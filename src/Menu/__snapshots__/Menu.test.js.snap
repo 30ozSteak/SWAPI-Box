@@ -35,20 +35,28 @@ ShallowWrapper {
         <ul
           className=""
         >
-          <MenuButtons
-            data={
-              Object {
-                "service": "people",
-              }
-            }
-          />
-          <MenuButtons
-            data={
-              Object {
-                "service": "planets",
-              }
-            }
-          />
+          <div>
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/people"
+            />
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/planets"
+            />
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/vehicles"
+            />
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="favorites"
+            />
+          </div>
         </ul>
       </div>,
       "className": "menu",
@@ -62,20 +70,28 @@ ShallowWrapper {
         "children": <ul
           className=""
         >
-          <MenuButtons
-            data={
-              Object {
-                "service": "people",
-              }
-            }
-          />
-          <MenuButtons
-            data={
-              Object {
-                "service": "planets",
-              }
-            }
-          />
+          <div>
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/people"
+            />
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/planets"
+            />
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/vehicles"
+            />
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="favorites"
+            />
+          </div>
         </ul>,
         "className": "menu-button",
         "onClick": [Function],
@@ -86,53 +102,119 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "host",
         "props": Object {
-          "children": Array [
-            <MenuButtons
-              data={
-                Object {
-                  "service": "people",
-                }
-              }
-            />,
-            <MenuButtons
-              data={
-                Object {
-                  "service": "planets",
-                }
-              }
-            />,
-          ],
+          "children": <div>
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/people"
+            />
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/planets"
+            />
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="/vehicles"
+            />
+            <NavLink
+              activeClassName="active"
+              aria-current="page"
+              to="favorites"
+            />
+          </div>,
           "className": "",
         },
         "ref": null,
-        "rendered": Array [
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "data": Object {
-                "service": "people",
-              },
-            },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/people"
+              />,
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/planets"
+              />,
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/vehicles"
+              />,
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="favorites"
+              />,
+            ],
           },
-          Object {
-            "instance": null,
-            "key": undefined,
-            "nodeType": "function",
-            "props": Object {
-              "data": Object {
-                "service": "planets",
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "onClick": undefined,
+                "to": "/people",
               },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
             },
-            "ref": null,
-            "rendered": null,
-            "type": [Function],
-          },
-        ],
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "onClick": undefined,
+                "to": "/planets",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "onClick": undefined,
+                "to": "/vehicles",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "activeClassName": "active",
+                "aria-current": "page",
+                "to": "favorites",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
         "type": "ul",
       },
       "type": "div",
@@ -152,20 +234,28 @@ ShallowWrapper {
           <ul
             className=""
           >
-            <MenuButtons
-              data={
-                Object {
-                  "service": "people",
-                }
-              }
-            />
-            <MenuButtons
-              data={
-                Object {
-                  "service": "planets",
-                }
-              }
-            />
+            <div>
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/people"
+              />
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/planets"
+              />
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/vehicles"
+              />
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="favorites"
+              />
+            </div>
           </ul>
         </div>,
         "className": "menu",
@@ -179,20 +269,28 @@ ShallowWrapper {
           "children": <ul
             className=""
           >
-            <MenuButtons
-              data={
-                Object {
-                  "service": "people",
-                }
-              }
-            />
-            <MenuButtons
-              data={
-                Object {
-                  "service": "planets",
-                }
-              }
-            />
+            <div>
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/people"
+              />
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/planets"
+              />
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/vehicles"
+              />
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="favorites"
+              />
+            </div>
           </ul>,
           "className": "menu-button",
           "onClick": [Function],
@@ -203,53 +301,119 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "host",
           "props": Object {
-            "children": Array [
-              <MenuButtons
-                data={
-                  Object {
-                    "service": "people",
-                  }
-                }
-              />,
-              <MenuButtons
-                data={
-                  Object {
-                    "service": "planets",
-                  }
-                }
-              />,
-            ],
+            "children": <div>
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/people"
+              />
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/planets"
+              />
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="/vehicles"
+              />
+              <NavLink
+                activeClassName="active"
+                aria-current="page"
+                to="favorites"
+              />
+            </div>,
             "className": "",
           },
           "ref": null,
-          "rendered": Array [
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "data": Object {
-                  "service": "people",
-                },
-              },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/people"
+                />,
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/planets"
+                />,
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="/vehicles"
+                />,
+                <NavLink
+                  activeClassName="active"
+                  aria-current="page"
+                  to="favorites"
+                />,
+              ],
             },
-            Object {
-              "instance": null,
-              "key": undefined,
-              "nodeType": "function",
-              "props": Object {
-                "data": Object {
-                  "service": "planets",
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "aria-current": "page",
+                  "onClick": undefined,
+                  "to": "/people",
                 },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
               },
-              "ref": null,
-              "rendered": null,
-              "type": [Function],
-            },
-          ],
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "aria-current": "page",
+                  "onClick": undefined,
+                  "to": "/planets",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "aria-current": "page",
+                  "onClick": undefined,
+                  "to": "/vehicles",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "activeClassName": "active",
+                  "aria-current": "page",
+                  "to": "favorites",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+            ],
+            "type": "div",
+          },
           "type": "ul",
         },
         "type": "div",

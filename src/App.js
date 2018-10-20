@@ -31,8 +31,8 @@ class App extends Component {
   }
 
   updateLocalStorage = (key, data) => {
-  localStorage.setItem(key, JSON.stringify(data));
-}
+    localStorage.setItem(key, JSON.stringify(data));
+  }
 
     showFilmCrawl = async () => {
     if (localStorage.getItem('fetchedFilm') === null){
@@ -114,7 +114,6 @@ class App extends Component {
     console.log('else statement')
     let planetsData = JSON.parse(localStorage.getItem('fetchedPlanets'))
     let residentsData = JSON.parse(localStorage.getItem('fetchedResidents'))
-    // console.log(planetsData)
       this.setState({
         residents: residentsData,
         planets: planetsData
