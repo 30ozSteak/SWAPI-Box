@@ -18,5 +18,15 @@
   "Hoth": "../planetsimages/hoth.png",
   "Kamino": "../planetsimages/kamino.png",
   "Naboo": "../planetsimages/naboo.png",
-  "Yavin IV": "../planetsimages/yaviniv.png"
+  "Yavin IV": "../planetsimages/yaviniv.png",
+  "Sand Crawler": "../vehicleimages/sandcrawler.png",
+  "AT-AT": "../vehicleimages/atat.png",
+  "AT-ST": "../vehicleimages/atst.png",
+  "T-16 skyhopper": "../vehicleimages/t16skyhopper.png",
+  "X-34 landspeeder": "../vehicleimages/x34landspeeder.png",
+  "TIE/LN starfighter": "../vehicleimages/tiestarfighter.png",
+  "Sail barge": "../vehicleimages/sailbarge.png",
+  "Snowspeeder": "../vehicleimages/snowspeeder.png",
+  "Storm IV Twin-Pod cloud car": "../vehicleimages/cloudcar.png",
+  "TIE bomber": "../vehicleimages/tiebomber.png"
 }
