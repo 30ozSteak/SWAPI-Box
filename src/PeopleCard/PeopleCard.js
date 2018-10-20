@@ -1,4 +1,4 @@
-  import React, { Component } from "react";
+import React, { Component } from "react";
 import "./PeopleCard.css";
 import Images from "../Images.json";
 
@@ -37,14 +37,24 @@ const PeopleCard = ({ people, planets, species }) => {
             src={Images[data.name]}
             alt={data.name}
           />
+          <div className="fave" />
           <section className="text-field">
-            <h2 key={Math.floor(Math.random() * (200 - 1 + 1)) + 1}>{data.name}</h2>
-            <div className="fave" />
-            <h4 key={Math.floor(Math.random() * (300 - 1 + 1)) + 1}>Species: {data.species}</h4>
-            <div key={Math.floor(Math.random() * (400 - 1 + 1)) + 1} className="caret" />
-            <h4 key={Math.floor(Math.random() * (500 - 1 + 1)) + 1}>HomeWorld: {data.location}</h4>
-            <h4 key={Math.floor(Math.random() * (1000 - 1 + 1)) + 1}>Population: {data.population}</h4>
-
+            <h2 key={Math.floor(Math.random() * (200 - 1 + 1)) + 1}>
+              {data.name}
+            </h2>
+            <h4 key={Math.floor(Math.random() * (300 - 1 + 1)) + 1}>
+              Species: {data.species}
+            </h4>
+            <div
+              key={Math.floor(Math.random() * (400 - 1 + 1)) + 1}
+              className="caret"
+            />
+            <h4 key={Math.floor(Math.random() * (500 - 1 + 1)) + 1}>
+              HomeWorld: {data.location}
+            </h4>
+            <h4 key={Math.floor(Math.random() * (1000 - 1 + 1)) + 1}>
+              Population: {data.population}
+            </h4>
           </section>
         </section>
       </div>
