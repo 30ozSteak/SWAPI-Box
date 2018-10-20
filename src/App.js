@@ -50,9 +50,7 @@ class App extends Component {
       let films = JSON.parse(localStorage.getItem("fetchedFilm"));
       this.setState({ films: films });
     }
-}
-
-
+  }
 
   handlePeopleLink = async () => {
     if (localStorage.getItem("fetchedPeople") === null) {

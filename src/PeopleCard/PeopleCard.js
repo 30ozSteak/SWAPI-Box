@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./PeopleCard.css";
 import Images from "../Images.json";
 
-const PeopleCard = ({ people, planets, species }) => {
+const PeopleCard = ({ people, planets, species, handleFavorites }) => {
   let characterArray = [];
 
   let answer = people.results.map(person => {
@@ -28,32 +28,35 @@ const PeopleCard = ({ people, planets, species }) => {
     });
   });
 
+  let randomizedKey =() => {
+    return Math.floor(Math.random() * (10000 - 1 + 1)) + 1 + Date.now() + Math.random()
+  } 
+
 console.log(characterArray)
   const peopleStats = characterArray.map(data => {
     return (
-      <div className="card-literal">
+      <div key={data.name} className="card-literal">
         <section className="image">
           <img
             className="image-literal"
             src={Images[data.name]}
             alt={data.name}
           />
-          <div className="fave" />
+          <div className="fave" onClick={() => handleFavorites(data)} />
           <section className="text-field">
-            <h2 key={Math.floor(Math.random() * (200 - 1 + 1)) + 1}>
+            <h2>
               {data.name}
             </h2>
-            <h4 key={Math.floor(Math.random() * (300 - 1 + 1)) + 1}>
+            <h4>
               Species: {data.species}
             </h4>
             <div
-              key={Math.floor(Math.random() * (400 - 1 + 1)) + 1}
               className="caret"
             />
-            <h4 key={Math.floor(Math.random() * (500 - 1 + 1)) + 1}>
+            <h4>
               HomeWorld: {data.location}
             </h4>
-            <h4 key={Math.floor(Math.random() * (1000 - 1 + 1)) + 1}>
+            <h4>
               Population: {data.population}
             </h4>
           </section>
