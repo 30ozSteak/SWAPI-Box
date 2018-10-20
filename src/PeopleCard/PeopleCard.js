@@ -1,6 +1,6 @@
   import React, { Component } from "react";
 import "./PeopleCard.css";
-import Images from "../Images.js";
+import Images from "../Images.json";
 
 const PeopleCard = ({ people, planets, species }) => {
   let characterArray = [];
@@ -39,11 +39,12 @@ const PeopleCard = ({ people, planets, species }) => {
           />
           <section className="text-field">
             <h2 key={Math.floor(Math.random() * (200 - 1 + 1)) + 1}>{data.name}</h2>
-            {/* <div className="fave" /> */}
+            <div className="fave" />
             <h4 key={Math.floor(Math.random() * (300 - 1 + 1)) + 1}>Species: {data.species}</h4>
             <div key={Math.floor(Math.random() * (400 - 1 + 1)) + 1} className="caret" />
             <h4 key={Math.floor(Math.random() * (500 - 1 + 1)) + 1}>HomeWorld: {data.location}</h4>
             <h4 key={Math.floor(Math.random() * (1000 - 1 + 1)) + 1}>Population: {data.population}</h4>
+
           </section>
         </section>
       </div>
