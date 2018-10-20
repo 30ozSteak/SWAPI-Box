@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./PeopleCard.css";
-import Images from "../Images.js";
+import Images from "../Images.json";
 
 const PeopleCard = ({ people, planets, species }) => {
   let characterArray = [];
@@ -39,7 +39,7 @@ const PeopleCard = ({ people, planets, species }) => {
           />
           <section className="text-field">
             <h2>{data.name}</h2>
-            {/* <div className="fave" /> */}
+            <div className="fave" />
             <h4>Species: {data.species}</h4>
             <div className="caret" />
             <h4>HomeWorld: {data.location}</h4>
