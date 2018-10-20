@@ -28,6 +28,7 @@ const PeopleCard = ({ people, planets, species }) => {
     });
   });
 
+console.log(characterArray)
   const peopleStats = characterArray.map(data => {
     return (
       <div className="card-literal">

@@ -49,7 +49,9 @@ class App extends Component {
       let films = JSON.parse(localStorage.getItem("fetchedFilm"));
       this.setState({ films: films });
     }
-  };
+}
+
+
 
   handlePeopleLink = async () => {
     if (localStorage.getItem("fetchedPeople") === null) {
@@ -169,6 +171,7 @@ class App extends Component {
             path="/people"
             render={() => (
               <People
+                handleFavorites={this.handleFavorites}
                 handlePeopleLink={this.handlePeopleLink}
                 people={this.state.people}
                 planets={this.state.planets}
@@ -197,7 +200,7 @@ class App extends Component {
             path="/favorites"
             render={() => <Favorites favorites={this.state.favorites} />}
           />
-        </div>s
+        </div>
         <Menu
           handlePlanetLink={this.handlePlanetLink}
           handlePeopleLink={this.handlePeopleLink}
