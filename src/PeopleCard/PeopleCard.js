@@ -28,6 +28,10 @@ const PeopleCard = ({ people, planets, species }) => {
     });
   });
 
+  let randomizedKey =() => {
+    return Math.floor(Math.random() * (10000 - 1 + 1)) + 1 + Date.now() + Math.random()
+  } 
+
   const peopleStats = characterArray.map(data => {
     return (
       <div className="card-literal">
@@ -38,12 +42,12 @@ const PeopleCard = ({ people, planets, species }) => {
             alt={data.name}
           />
           <section className="text-field">
-            <h2 key={Math.floor(Math.random() * (200 - 1 + 1)) + 1}>{data.name}</h2>
+            <h2 key={randomizedKey()}>{data.name}</h2>
             <div className="fave" />
-            <h4 key={Math.floor(Math.random() * (300 - 1 + 1)) + 1}>Species: {data.species}</h4>
-            <div key={Math.floor(Math.random() * (400 - 1 + 1)) + 1} className="caret" />
-            <h4 key={Math.floor(Math.random() * (500 - 1 + 1)) + 1}>HomeWorld: {data.location}</h4>
-            <h4 key={Math.floor(Math.random() * (1000 - 1 + 1)) + 1}>Population: {data.population}</h4>
+            <h4 key={randomizedKey()}>Species: {data.species}</h4>
+            <div key={randomizedKey()} className="caret" />
+            <h4 key={randomizedKey()}>HomeWorld: {data.location}</h4>
+            <h4 key={randomizedKey()}>Population: {data.population}</h4>
 
           </section>
         </section>
