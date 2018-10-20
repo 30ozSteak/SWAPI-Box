@@ -15,6 +15,7 @@ import Loading from "./Loading/Loading";
 import Planets from "./Planets/Planets";
 import Vehicles from "./Vehicles/Vehicles";
 import Favorites from "./Favorites/Favorites";
+import Error from "./Error/Error";
 import { Route, NavLink, Link } from "react-router-dom";
 
 class App extends Component {

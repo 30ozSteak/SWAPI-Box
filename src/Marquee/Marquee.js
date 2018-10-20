@@ -1,12 +1,13 @@
 import React from "react";
 import "./Marquee.css";
 import Loading from "../Loading/Loading";
+import Error from "../Error/Error";
 
 const Marquee = ({ films, getLocalStorage, getFilmData }) => {
   try {
     let randomnumber = Math.floor(Math.random() * (6 - 1 + 1)) + 1;
     return (
-      <div  className="marquee-block">
+      <div className="marquee-block">
         <div className="marquee-literal">
           <div className="marquee-title-block">
             <h3 className="film-number">

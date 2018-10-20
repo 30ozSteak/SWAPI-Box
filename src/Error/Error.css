@@ -1,0 +1,11 @@
+.error {
+  position: relative;
+  height: 15rem;
+  width: 15rem;
+}
+
+.death {
+  background: center / cover url(../Assets/death.svg);
+  position: relative;
+  display: inline;
+}
