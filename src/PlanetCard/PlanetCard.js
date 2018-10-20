@@ -26,14 +26,11 @@ const PlanetCard = ({ planets, residents, toggleFaves, handleFavorites }) => {
     return foundResidents;
   };
 
-  let randomizedKey =() => {
-    return Math.floor(Math.random() * (10000 - 1 + 1)) + 1 + Date.now() + Math.random()
-  } 
 
   const planetStats = planetData.map(data => {
     return (
-    <div key={Math.floor(Math.random() * (100 - 1 + 1)) + 1 + Date.now()} className="card-literal">
-        <h2 key={Math.floor(Math.random() * (30 - 1 + 1)) + 1 + Date.now()}>{data.name}</h2>
+    <div key={data.name} className="card-literal">
+        <h2>{data.name}</h2>
         <div className="image">
           <img
             className="image-literal"
@@ -42,10 +39,10 @@ const PlanetCard = ({ planets, residents, toggleFaves, handleFavorites }) => {
           />
         </div>
         <div className="fave" onClick={() => handleFavorites(data)}/>
-        <h4 key={randomizedKey()}> Climate: {data.climate}</h4>
-        <h4 key={randomizedKey()}> Terrain: {data.terrain}</h4>
-        <h4 key={randomizedKey()}> Population: {data.population}</h4>
-        <h4 key={randomizedKey()}> Residents: {getResidentInfo(data.residents)} </h4>
+        <h4> Climate: {data.climate}</h4>
+        <h4> Terrain: {data.terrain}</h4>
+        <h4> Population: {data.population}</h4>
+        <h4> Residents: {getResidentInfo(data.residents)} </h4>
       </div>
   )
   });
