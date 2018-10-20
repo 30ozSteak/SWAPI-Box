@@ -21,8 +21,6 @@ const PlanetCard = ({ planets, residents, toggleFaves }) => {
     return (
       <div key={Math.floor(Math.random() * (100 - 1 + 1)) + 1 + Date.now()} className="card-literal">
         <h2 key={Math.floor(Math.random() * (30 - 1 + 1)) + 1 + Date.now()}>{data.name}</h2>
-
-      <div className="card-literal">
         <div className="image">
           <img
             className="image-literal"
@@ -30,8 +28,6 @@ const PlanetCard = ({ planets, residents, toggleFaves }) => {
             alt={data.name}
           />
         </div>
-        <h2>{data.name}</h2>
-
         <div className="fave" />
         <h4 key={Math.floor(Math.random() * (10000 - 1 + 1)) + 1 + Date.now()}> Climate: {data.climate}</h4>
         <h4 key={Math.floor(Math.random() * (300 - 1 + 1)) + 1 + Date.now()}> Terrain: {data.terrain}</h4>
