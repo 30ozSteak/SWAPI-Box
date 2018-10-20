@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./PeopleCard.css";
-import Images from "../Images.js";
+import Images from "../Images.json";
 
 const PeopleCard = ({ people, planets, species }) => {
   let characterArray = [];

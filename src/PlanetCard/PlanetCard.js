@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../PeopleCard/PeopleCard.css";
+import Images from "../Images.json";
 
 const PlanetCard = ({ planets, residents, toggleFaves }) => {
   let planetArray = [];
@@ -19,6 +20,13 @@ const PlanetCard = ({ planets, residents, toggleFaves }) => {
   const planetStats = planets[0].map(data => {
     return (
       <div className="card-literal">
+        <div className="image">
+          <img
+            className="image-literal"
+            src={Images[data.name]}
+            alt={data.name}
+          />
+        </div>
         <h2>{data.name}</h2>
         <div className="fave" />
         <h4> Climate: {data.climate}</h4>
