@@ -65,3 +65,4 @@ const PeopleCard = ({ people, planets, species }) => {
 };
 
 export default PeopleCard;
+

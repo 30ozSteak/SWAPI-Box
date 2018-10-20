@@ -113,11 +113,11 @@ class App extends Component {
       this.updateLocalStorage("fetchedPlanets", this.state.planets);
       this.updateLocalStorage("fetchedResidents", this.state.residents);
 
-      return promisedData;
-    } else {
-      console.log("else statement");
-      let planetsData = JSON.parse(localStorage.getItem("fetchedPlanets"));
-      let residentsData = JSON.parse(localStorage.getItem("fetchedResidents"));
+
+    return promisedData
+  } else {
+    let planetsData = JSON.parse(localStorage.getItem('fetchedPlanets'))
+    let residentsData = JSON.parse(localStorage.getItem('fetchedResidents'))
       this.setState({
         residents: residentsData,
         planets: planetsData
@@ -181,6 +181,7 @@ class App extends Component {
             path="/planets"
             render={() => (
               <Planets
+                handleFavorites={this.handleFavorites}
                 planets={this.state.planets}
                 residents={this.state.residents}
               />
@@ -196,7 +197,7 @@ class App extends Component {
             path="/favorites"
             render={() => <Favorites favorites={this.state.favorites} />}
           />
-        </div>
+        </div>s
         <Menu
           handlePlanetLink={this.handlePlanetLink}
           handlePeopleLink={this.handlePeopleLink}
