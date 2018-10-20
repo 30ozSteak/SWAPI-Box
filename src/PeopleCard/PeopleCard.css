@@ -89,11 +89,11 @@
   right: 0;
   padding: 15px;
   cursor: pointer;
+  filter: brightness(80%);
   transition: 0.2s;
 }
 
 .image-literal {
-  border-radius: 5px;
   height: 25rem;
   width: 20rem;
   position: relative;
