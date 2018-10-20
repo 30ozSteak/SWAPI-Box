@@ -14,6 +14,7 @@ import Header from "./Header/Header";
 import Loading from "./Loading/Loading";
 import Planets from "./Planets/Planets";
 import Vehicles from "./Vehicles/Vehicles";
+import Favorites from "./Favorites/Favorites"
 import { Route, NavLink, Link } from "react-router-dom";
 
 class App extends Component {
@@ -26,13 +27,14 @@ class App extends Component {
       vehicles: [],
       planets: [],
       species: [],
-      homeState: "active-main home-main"
-    };
+      homeState: "active-main home-main",
+      favorites: []
+    }
   }
 
   updateLocalStorage = (key, data) => {
-  localStorage.setItem(key, JSON.stringify(data));
-}
+    localStorage.setItem(key, JSON.stringify(data));
+  }
 
     showFilmCrawl = async () => {
     if (localStorage.getItem('fetchedFilm') === null){
@@ -47,6 +49,7 @@ class App extends Component {
       this.setState({films: films})
     }
 }
+
 
 
   handlePeopleLink = async () => {
@@ -114,7 +117,6 @@ class App extends Component {
     console.log('else statement')
     let planetsData = JSON.parse(localStorage.getItem('fetchedPlanets'))
     let residentsData = JSON.parse(localStorage.getItem('fetchedResidents'))
-    // console.log(planetsData)
       this.setState({
         residents: residentsData,
         planets: planetsData
@@ -143,6 +145,11 @@ class App extends Component {
       return;
   }
 }
+
+  handleFavorites = (favorite) => {
+    this.setState({favorites: [favorite, ...this.state.favorites]})
+  }
+
   render() {
     return (
       <div className="App">
@@ -182,6 +189,11 @@ class App extends Component {
             exact
             path="/vehicles"
             render={() => <Vehicles vehicles={this.state.vehicles} />}
+          />
+          <Route
+            exact
+            path="/favorites"
+            render={() => <Favorites favorites={this.state.favorites} />}
           />
         </div>
         <Menu
