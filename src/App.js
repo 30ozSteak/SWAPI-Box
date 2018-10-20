@@ -27,6 +27,7 @@ class App extends Component {
       residents: [],
       vehicles: [],
       planets: [],
+      homeWorld: [],
       species: [],
       homeState: "active-main home-main",
       favorites: []
@@ -100,29 +101,28 @@ class App extends Component {
     }
   };
 
-  handlePlanetLink = async () => {
+ handlePlanetLink = async () => {
     if (localStorage.getItem("fetchedResidents") === null) {
       console.log("if statement");
-      const planets = await fetchPlanets();
+      const homeWorld = await fetchPlanets();
       const residents = await getResidentData();
-      let promisedData = Promise.all([planets, residents]).then(
+      let promisedData = Promise.all([homeWorld, residents]).then(
         this.setState({
-          planets: planets,
+          homeWorld: homeWorld,
           residents: residents
         })
       );
-
-      this.updateLocalStorage("fetchedPlanets", this.state.planets);
+      this.updateLocalStorage("fetchedHomeWorld", this.state.homeWorld);
       this.updateLocalStorage("fetchedResidents", this.state.residents);
 
 
     return promisedData
   } else {
-    let planetsData = JSON.parse(localStorage.getItem('fetchedPlanets'))
+    let homeWorldData = JSON.parse(localStorage.getItem('fetchedHomeWorld'))
     let residentsData = JSON.parse(localStorage.getItem('fetchedResidents'))
       this.setState({
         residents: residentsData,
-        planets: planetsData
+        homeWorld: homeWorldData
       });
     }
   };
@@ -185,7 +185,7 @@ class App extends Component {
             render={() => (
               <Planets
                 handleFavorites={this.handleFavorites}
-                planets={this.state.planets}
+                planets={this.state.homeWorld}
                 residents={this.state.residents}
               />
             )}
