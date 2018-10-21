@@ -16,6 +16,18 @@
   z-index: 1000;
 }
 
+.num-faves {
+  color: white;
+  width: 30rem;
+  padding-bottom: 3rem;
+  left: -215px;
+  margin: 0 auto;
+  bottom: -80px;
+  position: fixed;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 .menu a {
   position: absolute;
   top: 0;
