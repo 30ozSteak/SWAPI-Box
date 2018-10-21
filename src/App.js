@@ -15,6 +15,7 @@ import Loading from "./Loading/Loading";
 import Planets from "./Planets/Planets";
 import Vehicles from "./Vehicles/Vehicles";
 import Favorites from "./Favorites/Favorites";
+import getHomeWorldData from "./Fetch/fetchHomeWorld"
 import Error from "./Error/Error";
 import { Route, NavLink, Link } from "react-router-dom";
 
@@ -68,6 +69,7 @@ class App extends Component {
       this.updateLocalStorage("fetchedPeople", this.state.people);
       this.updateLocalStorage("fetchedPlanet", this.state.planets);
       this.updateLocalStorage("fetchedSpecies", this.state.species);
+      console.log('if statement', this.state.planets)
       return peoplePromise;
     } else {
       let peopleData = JSON.parse(localStorage.getItem("fetchedPeople"));
@@ -78,6 +80,7 @@ class App extends Component {
         planets: planetsData,
         species: speciesData
       });
+      console.log('else statement', this.state.planets)
     }
   };
 
@@ -102,8 +105,7 @@ class App extends Component {
 
   handlePlanetLink = async () => {
     if (localStorage.getItem("fetchedResidents") === null) {
-      console.log("if statement");
-      const homeWorld = await fetchPlanets();
+      const homeWorld = await getHomeWorldData();
       const residents = await getResidentData();
       let promisedData = Promise.all([homeWorld, residents]).then(
         this.setState({
@@ -113,7 +115,7 @@ class App extends Component {
       );
       this.updateLocalStorage("fetchedHomeWorld", this.state.homeWorld);
       this.updateLocalStorage("fetchedResidents", this.state.residents);
-
+      console.log('if statement', this.state.homeWorld)
       return promisedData
     } else {
       let homeWorldData = JSON.parse(localStorage.getItem('fetchedHomeWorld'))
@@ -122,6 +124,7 @@ class App extends Component {
         residents: residentsData,
         homeWorld: homeWorldData
       });
+      console.log('else statement', this.state.homeWorld)
     }
   };
 
@@ -147,9 +150,18 @@ class App extends Component {
     }
   }
 
-  handleFavorites = favorite => {
-    this.setState({ favorites: [favorite, ...this.state.favorites] });
+  handleFavorites = async (favorite) => {
+    const newFavorite = {...favorite, id: favorite.name}
+    await this.setState({ favorites: [newFavorite, ...this.state.favorites] });
+    await this.updateLocalStorage("Favorites", this.state.favorites)
+    let favoritesData = JSON.parse(localStorage.getItem('Favorites'))
+    await this.setState({favorites: favoritesData})
   };
+
+  removeFavorites = (id) => {
+    const favorites = this.state.favorites.filter(fav => fav.id !== id)
+    this.setState({favorites})
+  }
 
   render() {
     return (
@@ -169,6 +181,7 @@ class App extends Component {
             path="/people"
             render={() => (
               <People
+                removeFavorites={this.removeFavorites}
                 handleFavorites={this.handleFavorites}
                 handlePeopleLink={this.handlePeopleLink}
                 people={this.state.people}
@@ -201,9 +214,10 @@ class App extends Component {
           <Route
             exact
             path="/favorites"
-            render={() => <Favorites favorites={this.state.favorites}
+            render={() => <Favorites 
+              removeFavorites={this.removeFavorites}
+              favorites={this.state.favorites}
               error={this.state.error}
-              handleFavorites={this.handleFavorites}
             />}
           />
         </div>
