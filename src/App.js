@@ -128,18 +128,6 @@ class App extends Component {
     }
   };
 
-  checkPathName = async () => {
-    if (window.location.pathname === "/") {
-      await this.showFilmCrawl();
-    } else if (window.location.pathname === "/people") {
-      await this.handlePeopleLink();
-    } else if (window.location.pathname === "/planets") {
-      await this.handlePlanetLink();
-    } else if (window.location.pathname === "/vehicles") {
-      await this.handleVehicleLink();
-    }
-  };
-
   async componentDidMount() {
     await this.checkPathName();
     await this.showFilmCrawl();
@@ -158,10 +146,26 @@ class App extends Component {
     await this.setState({favorites: favoritesData})
   };
 
-  removeFavorites = (id) => {
+  removeFavorites = async (id) => {
     const favorites = this.state.favorites.filter(fav => fav.id !== id)
-    this.setState({favorites})
+    await this.setState({favorites})
+    await this.updateLocalStorage("Favorites", this.state.favorites)
   }
+
+    checkPathName = async () => {
+    if (window.location.pathname === "/") {
+      await this.showFilmCrawl();
+    } else if (window.location.pathname === "/people") {
+      await this.handlePeopleLink();
+    } else if (window.location.pathname === "/planets") {
+      await this.handlePlanetLink();
+    } else if (window.location.pathname === "/vehicles") {
+      await this.handleVehicleLink();
+    } else if (window.location.pathname === "/favorites") {
+      let favoritesData = JSON.parse(localStorage.getItem('Favorites'))
+    await this.setState({favorites: favoritesData})
+    }
+  };
 
   render() {
     return (
