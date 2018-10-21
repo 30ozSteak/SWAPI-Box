@@ -7,7 +7,7 @@ const VehicleCard = ({ vehicle }) => {
 
   const vehicleStats = vehicleArray.map(data => {
     return (
-      <div className="card-literal">
+      <div key={data.name} className="card-literal">
         <section className="image">
           <img
             className="image-literal"
@@ -17,20 +17,20 @@ const VehicleCard = ({ vehicle }) => {
         </section>
         <div className="fave" />
         <section className="text-field">
-          <h2 key={Math.floor(Math.random() * (200 - 1 + 1)) + 1 + Date.now()}>
+          <h2>
             {" "}
             {data.name}
           </h2>
 
-          <h4 key={Math.floor(Math.random() * (500 - 1 + 1)) + 1 + Date.now()}>
+          <h4>
             {" "}
             Model: {data.model}
           </h4>
-          <h4 key={Math.floor(Math.random() * (120 - 1 + 1)) + 1 + Date.now()}>
+          <h4>
             {" "}
             Class: {data.vehicle_class}
           </h4>
-          <h4 key={Math.floor(Math.random() * (700 - 1 + 1)) + 1 + Date.now()}>
+          <h4>
             {" "}
             Capacity: {data.passengers}
           </h4>
