@@ -4,24 +4,24 @@
 }
 
 .marquee-block {
-  position: absolute;
-  width: 85%;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
   bottom: 11rem;
   font-size: 7.3vw;
+  height: 75%;
+  left: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  position: absolute;
+  right: 0;
+  text-align: justify;
   transform-origin: 50% 70%;
   transform: perspective(400px) rotateX(20deg);
-  height: 75%;
-  text-align: justify;
-  overflow: hidden;
+  width: 85%;
 }
 
 .marquee-literal {
+  animation: ⭐ 220s linear infinite;
   color: var(--starYellow);
   position: absolute;
-  animation: ⭐ 220s linear infinite;
 }
 
 .marquee-title-block {

@@ -5,45 +5,45 @@
 }
 
 .menu {
+  bottom: 5%;
+  height: 50px;
+  left: 0;
+  margin: 0 auto;
+  position: fixed;
+  right: 0;
   transform: rotate(0deg);
   width: 50px;
-  height: 50px;
-  position: fixed;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  bottom: 5%;
   z-index: 1000;
 }
 
 .num-faves {
-  color: white;
-  width: 13rem;
-  left: -80px;
-  bottom: -35px;
-  border-bottom: 1px solid var(--starYellow);
-  padding: 3px 0;
-  position: fixed;
-  text-transform: uppercase;
-  font-size: 14px;
-  letter-spacing: 2px;
   background-color: black;
+  border-bottom: 1px solid var(--starYellow);
+  bottom: -35px;
+  color: white;
+  font-size: 14px;
+  left: -80px;
+  letter-spacing: 2px;
+  position: fixed;
+  padding: 3px 0;
+  text-transform: uppercase;
+  width: 13rem;
 }
 
 .menu a {
-  position: absolute;
-  top: 0;
-  left: 0;
-  list-style: none;
-  width: 100%;
-  height: 100%;
   background: black;
   border: 1px solid var(--starYellow);
-  transition: 0.5s;
-  overflow: hidden;
-  transform: scale(0);
   border-radius: 50%;
   background-color: black;
+  left: 0;
+  list-style: none;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  transform: scale(0);
+  transition: 0.5s;
+  width: 100%;
 }
 
 .menu ul.active a {
@@ -51,70 +51,77 @@
 }
 
 .menu ul.active a:nth-child(1) {
-  top: -0%;
-  left: -120%;
-  transition-delay: 0s;
   background: center url(../Assets/boba-fett.png);
+  background-color: black;
   background-size: 30px;
   background-repeat: no-repeat;
-  background-color: black;
+  left: -120%;
+  transition-delay: 0s;
+  top: -0%;
 }
 
 .menu ul.active a:nth-child(2) {
-  top: -110%;
-  left: -60%;
-  transition-delay: 0.2s;
   background: center url(../Assets/death-star.svg);
-  background-size: 30px;
-  background-repeat: no-repeat;
   background-color: black;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  left: -60%;
+  top: -110%;
+  transition-delay: 0.2s;
 }
 
 .menu ul.active a:nth-child(3) {
-  top: -110%;
-  left: 60%;
-  transition-delay: 0.4s;
   background: center url(../Assets/millennium-falcon.svg);
-  background-size: 30px;
-  background-repeat: no-repeat;
   background-color: black;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  left: 60%;
+  top: -110%;
+  transition-delay: 0.4s;
 }
 
 .menu ul.active a:nth-child(4) {
-  top: -0%;
-  left: 120%;
-  transition-delay: 0.6s;
   background: center url(../Assets/mark-as-favorite-star.svg);
-  background-size: 30px;
   background-color: black;
   background-repeat: no-repeat;
+  background-size: 30px;
+  left: 120%;
+  top: -0%;
+  transition-delay: 0.6s;
 }
 
 .menu ul.active + .num-faves {
-  top: -0%;
-  left: 150%;
-  transition-delay: 0.6s;
   background: center url(../Assets/mark-as-favorite-star.svg);
-  background-size: 30px;
   background-color: black;
+  background-size: 30px;
   background-repeat: no-repeat;
+  left: 150%;
+  top: -0%;
+  transition-delay: 0.6s;
 }
 
 .menu-button {
-  position: fixed;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  cursor: pointer;
-  transition: 0.5s;
-  border: 1px solid var(--starYellow);
-  border-radius: 50%;
   animation: ❤️ 1.5s linear infinite;
+  cursor: pointer;
   background: center url(../Assets/rebel-alliancewhite.svg);
-  background-size: 30px;
-  background-repeat: no-repeat;
   background-color: black;
+  border-radius: 50%;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  border: 1px solid var(--starYellow);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  transition: 0.5s;
+  width: 100%;
+  z-index: 1;
+}
+
+.menu-button:hover {
+  background: center url(../Assets/rebel-allianceblack.svg);
+  background-color: var(--starYellow);
+  background-repeat: no-repeat;
+  background-size: 30px;
 }
 
 @keyframes ❤️ {
@@ -129,9 +136,3 @@
   }
 }
 
-.menu-button:hover {
-  background: center url(../Assets/rebel-allianceblack.svg);
-  background-size: 30px;
-  background-repeat: no-repeat;
-  background-color: var(--starYellow);
-}
