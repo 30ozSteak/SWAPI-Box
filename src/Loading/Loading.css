@@ -4,27 +4,27 @@
 }
 
 .loading-box * {
-  font-family: loadingWar;
   color: var(--starYellow);
+  font-family: loadingWar;
 }
 
 .loading-box {
   font-family: loadingWar;
   font-size: 1rem;
-  padding: 0;
-  text-align: center;
-  position: relative;
-  width: 20rem;
   margin: 10rem auto 0 auto;
+  padding: 0;
+  position: relative;
+  text-align: center;
+  width: 20rem;
 }
 
 .loader {
-  width: 3px;
-  height: 3px;
-  background-color: var(--starYellow);
-  margin: 0 2px;
-  display: inline-block;
   animation: 💤 1000ms infinite ease-in-out;
+  background-color: var(--starYellow);
+  display: inline-block;
+  margin: 0 2px;
+  height: 3px;
+  width: 3px;
 }
 
 .dot1 {
@@ -51,8 +51,8 @@
 
 .loading-box h1,
 h2 {
-  padding: 0;
   margin: 0;
+  padding: 0;
   font-family: loadingWar;
 }
 
@@ -61,7 +61,7 @@ h2 {
 }
 
 .loading-box h2 {
-  text-align: right;
   font-size: 1rem;
   padding-right: 1rem;
+  text-align: right;
 }

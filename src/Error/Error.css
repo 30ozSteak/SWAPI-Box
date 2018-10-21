@@ -1,6 +1,6 @@
 .error {
-  position: relative;
   display: inline;
+  position: relative;
 }
 
 .error h1{
@@ -8,14 +8,14 @@
 }
 
 .error h2{
-  position: relative;
   color: var(--starYellow);
+  position: relative;
 }
 
 .death {
   background: center / cover url(../Assets/death.svg);
-  position: relative;
-  height: 15rem;
   display: inline-block;
+  height: 15rem;
+  position: relative;
   width: 15rem;
 }
