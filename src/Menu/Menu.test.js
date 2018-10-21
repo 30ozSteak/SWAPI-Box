@@ -12,7 +12,9 @@ describe("Menu", () => {
         service: "planets"
       }
     ];
-    const wrapper = shallow(<Menu data={mockProps} />);
+
+    const favorites = [{name: 'Luke'}, {name: 'Aldeern'}]
+    const wrapper = shallow(<Menu data={mockProps} favorites={favorites} />);
 
     expect(wrapper).toMatchSnapshot();
   });
@@ -26,9 +28,10 @@ describe("Menu", () => {
         service: "planets"
       }
     ];
-    const wrapper = shallow(<Menu data={mockProps} />);
+    const favorites = [{name: 'Luke'}, {name: 'Aldeern'}]
+    const wrapper = shallow(<Menu data={mockProps} favorites={favorites} />);
     const expected = {
-      buttonState: ""
+      buttonState: "", "favorites": []
     };
     expect(wrapper.state()).toEqual(expected);
   });
@@ -42,16 +45,18 @@ describe("Menu", () => {
         service: "planets"
       }
     ];
+    const favorites = [{name: 'Luke'}, {name: 'Aldeern'}]
     const mockToggle = jest.fn();
     const wrapper = shallow(
-      <Menu mockToggle={mockToggle} data={mockProps} inactive={true} />
+      <Menu mockToggle={mockToggle} favorites={favorites} data={mockProps} inactive={true} />
     );
     expect(wrapper.is(".active")).toBe(false);
   });
 
   it('state change after click', async () => {
     const mockProps = [{service: "people"}, {service: "planets"}];
-    const wrapper = shallow(<Menu data={mockProps} />);
+    const favorites = [{name: 'Luke'}, {name: 'Aldeern'}]
+    const wrapper = shallow(<Menu data={mockProps} favorites={favorites}/>);
       const expected = 'active'
       wrapper.setState({ buttonState: '' })
       await wrapper.instance().toggleActive()

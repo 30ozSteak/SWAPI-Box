@@ -30,5 +30,29 @@ it('should have a default state', async () => {
   expect(filmData).toEqual(expected) 
  })
 
+  it.skip('should retrieve data from local storage on mount', () =>{
+
+    const wrapper = shallow(<App />)
+    const mockfilmData = {
+            "title": "A New Hope", 
+        }
+  
+    wrapper.instance().updateLocalStorage(mockfilmData);
+
+    expect(localStorage).toEqual({ "title": "A New Hope"});
+  });
+
+    it.skip('removeFavorites removes favorite from state', async () => {
+
+    const wrapper = shallow(<App />) 
+    const initialState = [{type: 'person', name: 'Luke', location: 'Mars'}, {type: 'person', name: 'Lea', location: 'Mars'}]
+    console.log(initialState[0].name)
+    const expected = [{type: 'person', name: 'Luke', location: 'Mars'}]
+
+    wrapper.setState({ favorites: initialState })
+    await wrapper.instance().removeFavorites(initialState[0].name)
+
+    expect(wrapper.state('Favorites')).toEqual(expected)
+  })
 
 })  
