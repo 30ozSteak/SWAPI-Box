@@ -2,24 +2,19 @@ h2, h4{
   color: var(--starYellow);
 }
 
-/* .fave-box{
-  margin-left: auto;
-  margin-right: auto;
-} */
-
 .fave-number {
-  font-size: 1rem;
-  position: fixed;
   background: none;
+  background-color: black;
   border: 1px solid var(--starYellow);
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
-  color: white;
-  left: 0;
   bottom: 9.5%;
-  right: -155px;
-  margin: 0 auto;
+  color: white;
   display: inline-block;
-  background-color: black;
+  font-size: 1rem;
+  height: 20px;
+  left: 0;
+  margin: 0 auto;
+  position: fixed;
+  right: -155px;
+  width: 20px;
 };
