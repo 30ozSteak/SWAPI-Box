@@ -1,11 +1,21 @@
 .error {
   position: relative;
-  height: 15rem;
-  width: 15rem;
+  display: inline;
+}
+
+.error h1{
+  font-size: 15rem;
+}
+
+.error h2{
+  position: relative;
+  color: var(--starYellow);
 }
 
 .death {
   background: center / cover url(../Assets/death.svg);
   position: relative;
-  display: inline;
+  height: 15rem;
+  display: inline-block;
+  width: 15rem;
 }

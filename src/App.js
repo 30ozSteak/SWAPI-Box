@@ -29,7 +29,8 @@ class App extends Component {
       planets: [],
       species: [],
       homeState: "active-main home-main",
-      favorites: []
+      favorites: [],
+      error: ''
     };
   }
 
@@ -49,7 +50,7 @@ class App extends Component {
       let films = JSON.parse(localStorage.getItem("fetchedFilm"));
       this.setState({ films: films });
     }
-}
+  }
 
 
 
@@ -116,10 +117,10 @@ class App extends Component {
       this.updateLocalStorage("fetchedResidents", this.state.residents);
 
 
-    return promisedData
-  } else {
-    let planetsData = JSON.parse(localStorage.getItem('fetchedPlanets'))
-    let residentsData = JSON.parse(localStorage.getItem('fetchedResidents'))
+      return promisedData
+    } else {
+      let planetsData = JSON.parse(localStorage.getItem('fetchedPlanets'))
+      let residentsData = JSON.parse(localStorage.getItem('fetchedResidents'))
       this.setState({
         residents: residentsData,
         planets: planetsData
@@ -176,6 +177,7 @@ class App extends Component {
                 people={this.state.people}
                 planets={this.state.planets}
                 species={this.state.species}
+                error={this.state.error}
               />
             )}
           />
@@ -187,18 +189,23 @@ class App extends Component {
                 handleFavorites={this.handleFavorites}
                 planets={this.state.planets}
                 residents={this.state.residents}
+                error={this.state.error}
               />
             )}
           />
           <Route
             exact
             path="/vehicles"
-            render={() => <Vehicles vehicles={this.state.vehicles} />}
+            render={() => <Vehicles vehicles={this.state.vehicles}
+              error={this.state.error}
+            />}
           />
           <Route
             exact
             path="/favorites"
-            render={() => <Favorites favorites={this.state.favorites} />}
+            render={() => <Favorites favorites={this.state.favorites}
+              error={this.state.error}
+            />}
           />
         </div>
         <Menu
