@@ -3,7 +3,8 @@ import "../PeopleCard/PeopleCard.css";
 import Images from "../Images.json";
 
 const PlanetCard = ({ planets, residents, toggleFaves, handleFavorites }) => {
-  const planetData = planets[0].map(planet => {
+  console.log(planets)
+  const planetData = planets.results.map(planet => {
     return {
       type: 'planets',
       name: planet['name'],

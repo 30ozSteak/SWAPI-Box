@@ -2,11 +2,12 @@ import React, { Component } from "react";
 import './Favorites.css'
 import Images from "../Images.json";
 
-const Favorites = ({ favorites, removeFavorites, id }) => {
+const Favorites = ({ favorites, removeFavorites }) => {
+  console.log({favorites})
 
   const FavoritesCards = favorites.map(favorite => {
     return (
-      <div onClick={() => removeFavorites(favorite.name)} key={favorite.name} className="card-literal">
+      <div key={favorite.name} className="card-literal">
         <section className="image">
           <div className="image">
             <img
@@ -14,7 +15,7 @@ const Favorites = ({ favorites, removeFavorites, id }) => {
               src={Images[favorite.name]}
               alt={favorite.name}
             />
-            <div className="fave"/>
+            <div className="fave" onClick={() => removeFavorites(favorite.name)}/>
           </div>
           <section className="text-field">
             <h2>{favorite.name}</h2>

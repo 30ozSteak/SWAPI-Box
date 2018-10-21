@@ -6,7 +6,7 @@ import Error from "../Error/Error";
 
 const Planets = ({ planets, residents, handleFavorites }) => {
   try {
-    const planetData = planets[0].map(planet => (
+    const planetData = planets.results.map(planet => (
       <PlanetCard handleFavorites={handleFavorites} planets={planets} residents={residents} />
     ));
     let planetsToRender = planetData.slice(0, 1);
