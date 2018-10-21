@@ -22,12 +22,22 @@
   bottom: -35px;
   color: white;
   font-size: 14px;
-  left: -80px;
+  left: -65px;
   letter-spacing: 2px;
   position: fixed;
   padding: 3px 0;
   text-transform: uppercase;
-  width: 13rem;
+  width: 11.5rem;
+  transform: scale(0);
+  transition: .2s;
+}
+
+.menu ul.active p{
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  transition-delay: 0.6s;
+  transform: scale(1);
 }
 
 .menu a {
@@ -44,6 +54,7 @@
   transform: scale(0);
   transition: 0.5s;
   width: 100%;
+  
 }
 
 .menu ul.active a {
@@ -88,6 +99,14 @@
   left: 120%;
   top: -0%;
   transition-delay: 0.6s;
+}
+
+.menu ul.active p{
+  background-color: black;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  transition-delay: 0.8s;
+  transform: scale(1);
 }
 
 .menu ul.active + .num-faves {

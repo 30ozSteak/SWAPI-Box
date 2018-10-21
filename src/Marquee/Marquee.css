@@ -39,7 +39,8 @@
 }
 
 .film-crawl {
-  padding-top: 3rem;
+  padding-top: 5rem;
+  z-index: -1;
 }
 
 @keyframes ⭐ {
