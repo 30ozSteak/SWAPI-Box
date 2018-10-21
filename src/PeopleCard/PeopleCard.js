@@ -5,7 +5,7 @@ import Images from "../Images.json";
 const PeopleCard = ({ people, planets, species, handleFavorites }) => {
   let characterArray = [];
 
-  let answer = people.results.map(person => {
+  let peoplResults = people.results.map(person => {
     let personName = person.name;
     let personWorld = person.homeworld;
     planets.map(planet => {
