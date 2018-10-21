@@ -211,6 +211,7 @@ class App extends Component {
           handlePlanetLink={this.handlePlanetLink}
           handlePeopleLink={this.handlePeopleLink}
           handleVehicleLink={this.handleVehicleLink}
+          favorites={this.state.favorites}
         />
       </div>
     );

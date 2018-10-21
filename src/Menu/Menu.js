@@ -4,10 +4,11 @@ import "./Menu.css";
 import { Route, NavLink, Link } from "react-router-dom";
 
 export default class Menu extends Component {
-  constructor(props) {
+  constructor(props, favorites) {
     super(props);
     this.state = {
-      buttonState: ""
+      buttonState: "",
+      favorites: [],
     };
   }
 
@@ -27,7 +28,7 @@ export default class Menu extends Component {
               <NavLink to="/planets" onClick={this.props.handlePlanetLink} />
               <NavLink to="/vehicles" onClick={this.props.handleVehicleLink} />
               <NavLink to="favorites" />
-              <div className="numFaves" />
+              <p className="num-faves"> {this.props.favorites.length} favorites saved </p>
             </div>
           </ul>
         </div>
