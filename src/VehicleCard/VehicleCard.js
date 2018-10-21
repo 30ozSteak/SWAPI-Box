@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "../PeopleCard/PeopleCard.css";
+import PropTypes from "prop-types";
 import Images from "../Images.json";
 
 const VehicleCard = ({ vehicle, handleFavorites }) => {
@@ -40,6 +41,11 @@ const VehicleCard = ({ vehicle, handleFavorites }) => {
   });
 
   return <div>{vehicleStats}</div>;
+};
+
+VehicleCard.propTypes = {
+  vehicle: PropTypes.array,
+  handleFavorites: PropTypes.func
 };
 
 export default VehicleCard;
