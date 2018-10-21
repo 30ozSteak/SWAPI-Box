@@ -27,6 +27,7 @@ export default class Menu extends Component {
               <NavLink to="/planets" onClick={this.props.handlePlanetLink} />
               <NavLink to="/vehicles" onClick={this.props.handleVehicleLink} />
               <NavLink to="favorites" />
+              <div className="numFaves" />
             </div>
           </ul>
         </div>
