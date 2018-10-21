@@ -138,7 +138,7 @@ class App extends Component {
     }
   }
 
-  handleFavorites = async (favorite) => {
+   handleFavorites = async (favorite) => {
     const newFavorite = {...favorite, id: favorite.name}
     await this.setState({ favorites: [newFavorite, ...this.state.favorites] });
     await this.updateLocalStorage("Favorites", this.state.favorites)
@@ -146,6 +146,11 @@ class App extends Component {
     await this.setState({favorites: favoritesData})
   };
 
+  removeFavorites = async (id) => {
+    const favorites = this.state.favorites.filter(fav => fav.id !== id)
+    await this.setState({favorites})
+    await this.updateLocalStorage("Favorites", this.state.favorites)
+  }
   removeFavorites = async (id) => {
     const favorites = this.state.favorites.filter(fav => fav.id !== id)
     await this.setState({favorites})

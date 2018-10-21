@@ -49,8 +49,14 @@ ShallowWrapper {
             path="/vehicles"
             render={[Function]}
           />
+          <Route
+            exact={true}
+            path="/favorites"
+            render={[Function]}
+          />
         </div>,
         <Menu
+          favorites={Array []}
           handlePeopleLink={[Function]}
           handlePlanetLink={[Function]}
           handleVehicleLink={[Function]}
@@ -117,6 +123,11 @@ ShallowWrapper {
               path="/vehicles"
               render={[Function]}
             />,
+            <Route
+              exact={true}
+              path="/favorites"
+              render={[Function]}
+            />,
           ],
           "className": "marquee-container",
         },
@@ -174,6 +185,19 @@ ShallowWrapper {
             "rendered": null,
             "type": [Function],
           },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "exact": true,
+              "path": "/favorites",
+              "render": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
         ],
         "type": "div",
       },
@@ -182,6 +206,7 @@ ShallowWrapper {
         "key": undefined,
         "nodeType": "class",
         "props": Object {
+          "favorites": Array [],
           "handlePeopleLink": [Function],
           "handlePlanetLink": [Function],
           "handleVehicleLink": [Function],
@@ -231,8 +256,14 @@ ShallowWrapper {
               path="/vehicles"
               render={[Function]}
             />
+            <Route
+              exact={true}
+              path="/favorites"
+              render={[Function]}
+            />
           </div>,
           <Menu
+            favorites={Array []}
             handlePeopleLink={[Function]}
             handlePlanetLink={[Function]}
             handleVehicleLink={[Function]}
@@ -299,6 +330,11 @@ ShallowWrapper {
                 path="/vehicles"
                 render={[Function]}
               />,
+              <Route
+                exact={true}
+                path="/favorites"
+                render={[Function]}
+              />,
             ],
             "className": "marquee-container",
           },
@@ -356,6 +392,19 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "exact": true,
+                "path": "/favorites",
+                "render": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
           ],
           "type": "div",
         },
@@ -364,6 +413,7 @@ ShallowWrapper {
           "key": undefined,
           "nodeType": "class",
           "props": Object {
+            "favorites": Array [],
             "handlePeopleLink": [Function],
             "handlePlanetLink": [Function],
             "handleVehicleLink": [Function],
