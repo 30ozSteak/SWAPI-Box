@@ -4,7 +4,7 @@ import Images from "../Images.json";
 
 const Favorites = ({ favorites, handleFavorites }) => {
 
-  const planetFavorites = favorites.map(favorite => {
+  const FavoritesCards = favorites.map(favorite => {
     return (
       <div key={favorite.name} className="card-literal">
         <section className="image">
@@ -17,11 +17,17 @@ const Favorites = ({ favorites, handleFavorites }) => {
             <div className="fave" onClick={() => handleFavorites(favorites)} />
           </div>
           <section className="text-field">
-            <h2>name: {favorite.name}</h2>
-            <h4>climate: {favorite.climate}</h4>
+            <h2>{favorite.name}</h2>
+            <h4>{favorite.climate}</h4>
             <div className="caret" />
-            <h4>population: {favorite.population}</h4>
-            <h4>terrain: {favorite.terrain}</h4>
+            <h4>{favorite.population}</h4>
+            <h4>{favorite.terrain}</h4>
+            <h4>{favorite.location}</h4>
+            <h4>{favorite.species}</h4>
+            <h4>{favorite.vehicle_class}</h4>
+            <h4>{favorite.model}</h4>
+            <h4>{favorite.passengers}</h4>
+            <h4>{favorite.capacity}</h4>
           </section>
         </section>
       </div>
@@ -30,7 +36,7 @@ const Favorites = ({ favorites, handleFavorites }) => {
 
   return (
     <div>
-      {planetFavorites}
+      {FavoritesCards}
     </div>
   )
 }

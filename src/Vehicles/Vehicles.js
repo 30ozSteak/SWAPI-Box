@@ -4,10 +4,10 @@ import Loading from "../Loading/Loading";
 import Error from "../Error/Error";
 
 
-const Vehicles = ({ vehicles }) => {
+const Vehicles = ({ vehicles, handleFavorites }) => {
   try {
     const vroomVrooms = vehicles.results.map(vehicle => (
-      <VehicleCard vehicle={vehicles} />
+      <VehicleCard handleFavorites={handleFavorites} vehicle={vehicles} />
     ));
     let vehiclesToRender = vroomVrooms.slice(0, 1);
     return <div className="people-container">{vehiclesToRender}</div>;
