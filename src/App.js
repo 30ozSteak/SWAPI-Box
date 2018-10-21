@@ -54,6 +54,12 @@ class App extends Component {
     }
   }
 
+  toggleFavoriteClass = () => {
+    this.state.buttonState === ""
+      ? this.setState({ buttonState: "favd" })
+      : this.setState({ buttonState: "" });
+  };
+
   handlePeopleLink = async () => {
     if (localStorage.getItem("fetchedPeople") === null) {
       const people = await getPeopleData();
@@ -138,26 +144,21 @@ class App extends Component {
     }
   }
 
-   handleFavorites = async (favorite) => {
-    const newFavorite = {...favorite, id: favorite.name}
+  handleFavorites = async (favorite) => {
+    const newFavorite = { ...favorite, id: favorite.name }
     await this.setState({ favorites: [newFavorite, ...this.state.favorites] });
     await this.updateLocalStorage("Favorites", this.state.favorites)
     let favoritesData = JSON.parse(localStorage.getItem('Favorites'))
-    await this.setState({favorites: favoritesData})
+    await this.setState({ favorites: favoritesData })
   };
 
   removeFavorites = async (id) => {
     const favorites = this.state.favorites.filter(fav => fav.id !== id)
-    await this.setState({favorites})
-    await this.updateLocalStorage("Favorites", this.state.favorites)
-  }
-  removeFavorites = async (id) => {
-    const favorites = this.state.favorites.filter(fav => fav.id !== id)
-    await this.setState({favorites})
+    await this.setState({ favorites })
     await this.updateLocalStorage("Favorites", this.state.favorites)
   }
 
-    checkPathName = async () => {
+  checkPathName = async () => {
     if (window.location.pathname === "/") {
       await this.showFilmCrawl();
     } else if (window.location.pathname === "/people") {
@@ -168,7 +169,7 @@ class App extends Component {
       await this.handleVehicleLink();
     } else if (window.location.pathname === "/favorites") {
       let favoritesData = JSON.parse(localStorage.getItem('Favorites'))
-    await this.setState({favorites: favoritesData})
+      await this.setState({ favorites: favoritesData })
     }
   };
 
@@ -192,6 +193,7 @@ class App extends Component {
               <People
                 removeFavorites={this.removeFavorites}
                 handleFavorites={this.handleFavorites}
+                toggleFavoriteClass={this.toggleFavoriteClass}
                 handlePeopleLink={this.handlePeopleLink}
                 people={this.state.people}
                 planets={this.state.planets}
@@ -209,6 +211,7 @@ class App extends Component {
                 planets={this.state.homeWorld}
                 residents={this.state.residents}
                 error={this.state.error}
+                toggleFavoriteClass={this.toggleFavoriteClass}
               />
             )}
           />
@@ -218,15 +221,17 @@ class App extends Component {
             render={() => <Vehicles vehicles={this.state.vehicles}
               error={this.state.error}
               handleFavorites={this.handleFavorites}
+              toggleFavoriteClass={this.toggleFavoriteClass}
             />}
           />
           <Route
             exact
             path="/favorites"
-            render={() => <Favorites 
+            render={() => <Favorites
               removeFavorites={this.removeFavorites}
               favorites={this.state.favorites}
               error={this.state.error}
+              toggleFavoriteClass={this.toggleFavoriteClass}
             />}
           />
         </div>
