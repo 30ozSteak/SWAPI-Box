@@ -28,11 +28,11 @@ const PeopleCard = ({ people, planets, species, handleFavorites }) => {
     });
   });
 
-  let randomizedKey =() => {
+  let randomizedKey = () => {
     return Math.floor(Math.random() * (10000 - 1 + 1)) + 1 + Date.now() + Math.random()
-  } 
+  }
 
-console.log(characterArray)
+  console.log(characterArray)
   const peopleStats = characterArray.map(data => {
     return (
       <div key={data.name} className="card-literal">
@@ -44,21 +44,11 @@ console.log(characterArray)
           />
           <div className="fave" onClick={() => handleFavorites(data)} />
           <section className="text-field">
-            <h2>
-              {data.name}
-            </h2>
-            <h4>
-              Species: {data.species}
-            </h4>
-            <div
-              className="caret"
-            />
-            <h4>
-              HomeWorld: {data.location}
-            </h4>
-            <h4>
-              Population: {data.population}
-            </h4>
+            <h2>{data.name}</h2>
+            <h4>Species: {data.species}</h4>
+            <div className="caret" />
+            <h4>HomeWorld: {data.location}</h4>
+            <h4>Population: {data.population}</h4>
           </section>
         </section>
       </div>

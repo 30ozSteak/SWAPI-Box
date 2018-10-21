@@ -22,12 +22,8 @@
 }
 
 .card-literal:hover {
-  animation: ❤️ 2s linear infinite;
-}
-
-.card-literal:hover {
-  filter: brightness(105%);
-  cursor: pointer;
+  animation: ❤️ 2s linear infinite; 
+   filter: brightness(105%);
 }
 
 .card-literal:hover .caret {
@@ -38,10 +34,11 @@
   position: relative;
   background-color: rgba(0, 0, 0, 0.692);
   border-radius: 0 5px 5px 0;
-  width: 90%;
+  width: 95%;
   padding: 0 5px 5px 0;
+  bottom: 5px;
   transition: 0.5s;
-  margin-left: -287px;
+  margin-left: -302px;
 }
 
 .caret {
@@ -50,7 +47,7 @@
   background: center / cover url(../Assets/right.svg);
   position: absolute;
   right: -14px;
-  bottom: 17px;
+  bottom: 20px;
   margin-left: 5rem;
   opacity: 100;
   transition: 0.8s;
@@ -58,7 +55,7 @@
 
 .card-literal:hover .text-field {
   margin-left: 0;
-  width: 90%;
+  width: 95%;
 }
 
 .card-literal h2 {
@@ -90,7 +87,7 @@
   padding: 15px;
   cursor: pointer;
   filter: brightness(80%);
-  transition: 0.2s;
+  transition: 0.3s;
 }
 
 .image-literal {
@@ -100,7 +97,7 @@
 }
 
 .fave:hover {
-  filter: opacity(100%);
+  filter: brightness(100%);
 }
 
 .people-container {

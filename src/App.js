@@ -100,7 +100,7 @@ class App extends Component {
     }
   };
 
- handlePlanetLink = async () => {
+  handlePlanetLink = async () => {
     if (localStorage.getItem("fetchedResidents") === null) {
       console.log("if statement");
       const homeWorld = await fetchPlanets();
@@ -114,10 +114,10 @@ class App extends Component {
       this.updateLocalStorage("fetchedHomeWorld", this.state.homeWorld);
       this.updateLocalStorage("fetchedResidents", this.state.residents);
 
-    return promisedData
-  } else {
-    let homeWorldData = JSON.parse(localStorage.getItem('fetchedHomeWorld'))
-    let residentsData = JSON.parse(localStorage.getItem('fetchedResidents'))
+      return promisedData
+    } else {
+      let homeWorldData = JSON.parse(localStorage.getItem('fetchedHomeWorld'))
+      let residentsData = JSON.parse(localStorage.getItem('fetchedResidents'))
       this.setState({
         residents: residentsData,
         homeWorld: homeWorldData
@@ -195,6 +195,7 @@ class App extends Component {
             path="/vehicles"
             render={() => <Vehicles vehicles={this.state.vehicles}
               error={this.state.error}
+              handleFavorites={this.handleFavorites}
             />}
           />
           <Route
@@ -202,6 +203,7 @@ class App extends Component {
             path="/favorites"
             render={() => <Favorites favorites={this.state.favorites}
               error={this.state.error}
+              handleFavorites={this.handleFavorites}
             />}
           />
         </div>
