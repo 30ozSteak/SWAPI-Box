@@ -151,11 +151,6 @@ class App extends Component {
     await this.setState({favorites})
     await this.updateLocalStorage("Favorites", this.state.favorites)
   }
-  removeFavorites = async (id) => {
-    const favorites = this.state.favorites.filter(fav => fav.id !== id)
-    await this.setState({favorites})
-    await this.updateLocalStorage("Favorites", this.state.favorites)
-  }
 
     checkPathName = async () => {
     if (window.location.pathname === "/") {

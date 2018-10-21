@@ -4,7 +4,6 @@ import Images from "../Images.json";
 import PropTypes from "prop-types";
 
 const Favorites = ({ favorites, removeFavorites }) => {
-  console.log({favorites})
 
   const FavoritesCards = favorites.map(favorite => {
     return (
