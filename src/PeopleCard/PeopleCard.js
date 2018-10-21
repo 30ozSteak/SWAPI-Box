@@ -15,6 +15,7 @@ const PeopleCard = ({ people, planets, species, handleFavorites }) => {
           for (let i in species) {
             if (species[i].people.includes(person.url)) {
               let peopleObject = {
+                type: 'person',
                 name: personName,
                 location: planet[indexPosition].name,
                 species: species[i].name,
@@ -28,11 +29,6 @@ const PeopleCard = ({ people, planets, species, handleFavorites }) => {
     });
   });
 
-  let randomizedKey = () => {
-    return Math.floor(Math.random() * (10000 - 1 + 1)) + 1 + Date.now() + Math.random()
-  }
-
-  console.log(characterArray)
   const peopleStats = characterArray.map(data => {
     return (
       <div key={data.name} className="card-literal">

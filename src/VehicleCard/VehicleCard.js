@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../PeopleCard/PeopleCard.css";
 import Images from "../Images.json";
 
-const VehicleCard = ({ vehicle }) => {
+const VehicleCard = ({ vehicle, handleFavorites }) => {
   let vehicleArray = vehicle.results;
 
   const vehicleStats = vehicleArray.map(data => {
@@ -15,7 +15,7 @@ const VehicleCard = ({ vehicle }) => {
             alt={data.name}
           />
         </section>
-        <div className="fave" />
+        <div className="fave" onClick={() => handleFavorites(data)}/>
         <section className="text-field">
           <h2>
             {" "}
