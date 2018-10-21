@@ -38,7 +38,9 @@ const PeopleCard = ({ people, planets, species, handleFavorites }) => {
             src={Images[data.name]}
             alt={data.name}
           />
-          <div className="fave" onClick={() => handleFavorites(data)} />
+          <div className="fave" 
+          onClick={() => handleFavorites(data)} 
+          />
           <section className="text-field">
             <h2>{data.name}</h2>
             <h4>Species: {data.species}</h4>
