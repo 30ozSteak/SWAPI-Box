@@ -14,6 +14,16 @@ ShallowWrapper {
         },
       ]
     }
+    favorites={
+      Array [
+        Object {
+          "name": "Luke",
+        },
+        Object {
+          "name": "Aldeern",
+        },
+      ]
+    }
   />,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
@@ -56,6 +66,13 @@ ShallowWrapper {
               aria-current="page"
               to="favorites"
             />
+            <p
+              className="num-faves"
+            >
+               
+              2
+               favorites saved 
+            </p>
           </div>
         </ul>
       </div>,
@@ -91,6 +108,13 @@ ShallowWrapper {
               aria-current="page"
               to="favorites"
             />
+            <p
+              className="num-faves"
+            >
+               
+              2
+               favorites saved 
+            </p>
           </div>
         </ul>,
         "className": "menu-button",
@@ -123,6 +147,13 @@ ShallowWrapper {
               aria-current="page"
               to="favorites"
             />
+            <p
+              className="num-faves"
+            >
+               
+              2
+               favorites saved 
+            </p>
           </div>,
           "className": "",
         },
@@ -153,6 +184,13 @@ ShallowWrapper {
                 aria-current="page"
                 to="favorites"
               />,
+              <p
+                className="num-faves"
+              >
+                 
+                2
+                 favorites saved 
+              </p>,
             ],
           },
           "ref": null,
@@ -212,6 +250,26 @@ ShallowWrapper {
               "rendered": null,
               "type": [Function],
             },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  " ",
+                  2,
+                  " favorites saved ",
+                ],
+                "className": "num-faves",
+              },
+              "ref": null,
+              "rendered": Array [
+                " ",
+                2,
+                " favorites saved ",
+              ],
+              "type": "p",
+            },
           ],
           "type": "div",
         },
@@ -255,6 +313,13 @@ ShallowWrapper {
                 aria-current="page"
                 to="favorites"
               />
+              <p
+                className="num-faves"
+              >
+                 
+                2
+                 favorites saved 
+              </p>
             </div>
           </ul>
         </div>,
@@ -290,6 +355,13 @@ ShallowWrapper {
                 aria-current="page"
                 to="favorites"
               />
+              <p
+                className="num-faves"
+              >
+                 
+                2
+                 favorites saved 
+              </p>
             </div>
           </ul>,
           "className": "menu-button",
@@ -322,6 +394,13 @@ ShallowWrapper {
                 aria-current="page"
                 to="favorites"
               />
+              <p
+                className="num-faves"
+              >
+                 
+                2
+                 favorites saved 
+              </p>
             </div>,
             "className": "",
           },
@@ -352,6 +431,13 @@ ShallowWrapper {
                   aria-current="page"
                   to="favorites"
                 />,
+                <p
+                  className="num-faves"
+                >
+                   
+                  2
+                   favorites saved 
+                </p>,
               ],
             },
             "ref": null,
@@ -410,6 +496,26 @@ ShallowWrapper {
                 "ref": null,
                 "rendered": null,
                 "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    2,
+                    " favorites saved ",
+                  ],
+                  "className": "num-faves",
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  2,
+                  " favorites saved ",
+                ],
+                "type": "p",
               },
             ],
             "type": "div",
