@@ -30,7 +30,8 @@ class App extends Component {
       homeWorld: [],
       species: [],
       homeState: "active-main home-main",
-      favorites: []
+      favorites: [],
+      error: ''
     };
   }
 
@@ -113,7 +114,6 @@ class App extends Component {
       this.updateLocalStorage("fetchedHomeWorld", this.state.homeWorld);
       this.updateLocalStorage("fetchedResidents", this.state.residents);
 
-
     return promisedData
   } else {
     let homeWorldData = JSON.parse(localStorage.getItem('fetchedHomeWorld'))
@@ -174,6 +174,7 @@ class App extends Component {
                 people={this.state.people}
                 planets={this.state.planets}
                 species={this.state.species}
+                error={this.state.error}
               />
             )}
           />
@@ -185,18 +186,23 @@ class App extends Component {
                 handleFavorites={this.handleFavorites}
                 planets={this.state.homeWorld}
                 residents={this.state.residents}
+                error={this.state.error}
               />
             )}
           />
           <Route
             exact
             path="/vehicles"
-            render={() => <Vehicles vehicles={this.state.vehicles} />}
+            render={() => <Vehicles vehicles={this.state.vehicles}
+              error={this.state.error}
+            />}
           />
           <Route
             exact
             path="/favorites"
-            render={() => <Favorites favorites={this.state.favorites} />}
+            render={() => <Favorites favorites={this.state.favorites}
+              error={this.state.error}
+            />}
           />
         </div>
         <Menu
