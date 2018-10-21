@@ -3,8 +3,6 @@ import './Favorites.css'
 import Images from "../Images.json";
 
 const Favorites = ({ favorites, removeFavorites }) => {
-  console.log({favorites})
-
   const FavoritesCards = favorites.map(favorite => {
     return (
       <div key={favorite.name} className="card-literal">
@@ -15,7 +13,7 @@ const Favorites = ({ favorites, removeFavorites }) => {
               src={Images[favorite.name]}
               alt={favorite.name}
             />
-            <div className="fave" onClick={() => removeFavorites(favorite.name)}/>
+            <div className="fave" onClick={() => removeFavorites(favorite.name)} />
           </div>
           <section className="text-field">
             <h2>{favorite.name}</h2>
