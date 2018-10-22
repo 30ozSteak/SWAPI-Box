@@ -3,6 +3,9 @@
 Swapi-box is an interactive Star Wars application made using React.js, React-Router, and the Star Wars API. 
 The app is fully responsive to handle popular devices sizes.
 
+## This app is deployed on Netlify
+https://stupefied-heyrovsky-ff0684.netlify.com/
+
 ## Set Up Instructions
 
 * npm install 
