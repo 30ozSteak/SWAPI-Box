@@ -42,17 +42,30 @@ it('should have a default state', async () => {
     expect(localStorage).toEqual({ "title": "A New Hope"});
   });
 
-    it.skip('removeFavorites removes favorite from state', async () => {
+    it('removeFavorites removes favorite from state', async () => {
 
     const wrapper = shallow(<App />) 
-    const initialState = [{type: 'person', name: 'Luke', location: 'Mars'}, {type: 'person', name: 'Lea', location: 'Mars'}]
+    const initialState = [{id: 'Luke', name: 'Luke', location: 'Mars'}, {id: 'Lea', name: 'Lea', location: 'Mars'}]
     console.log(initialState[0].name)
-    const expected = [{type: 'person', name: 'Luke', location: 'Mars'}]
+    const expected = [{id: 'Luke', name: 'Luke', location: 'Mars'}]
 
     wrapper.setState({ favorites: initialState })
-    await wrapper.instance().removeFavorites(initialState[0].name)
+    await wrapper.instance().removeFavorites('Lea')
 
-    expect(wrapper.state('Favorites')).toEqual(expected)
+    expect(wrapper.state('favorites')).toEqual(expected)
+  })
+
+  it('handleFavorites adds a Favorite to state', () => {
+    const wrapper = shallow(<App />) 
+    const initialState = []
+    const mockFavorite = {name: 'Luke', type:'person'}
+    const expected = [{id: 'Luke', name: 'Luke', type:'person'}]
+
+    wrapper.setState({ favorites: initialState })
+    wrapper.instance().handleFavorites(mockFavorite)
+
+    expect(wrapper.state('favorites')).toEqual(expected)
+    expect(wrapper.state('favorites').length).toEqual(1)
   })
 
 })  
