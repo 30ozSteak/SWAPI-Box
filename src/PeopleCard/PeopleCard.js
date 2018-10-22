@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./PeopleCard.css";
+import PropTypes from "prop-types";
 import Images from "../Images.json";
 
 const PeopleCard = ({ people, planets, species, handleFavorites }) => {
@@ -55,6 +56,14 @@ const PeopleCard = ({ people, planets, species, handleFavorites }) => {
 
   return <div>{peopleStats}</div>;
 };
+
+PeopleCard.propTypes = {
+  people: PropTypes.array,
+  planets: PropTypes.array,
+  species: PropTypes.array,
+  handleFavorites: PropTypes.func
+};
+
 
 export default PeopleCard;
 

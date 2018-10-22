@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import './Favorites.css'
 import Images from "../Images.json";
+import PropTypes from "prop-types";
 
 const Favorites = ({ favorites, removeFavorites }) => {
-  console.log({favorites})
 
   const FavoritesCards = favorites.map(favorite => {
     return (
@@ -41,5 +41,10 @@ const Favorites = ({ favorites, removeFavorites }) => {
     </div>
   )
 }
+
+Favorites.propTypes = {
+  favorites: PropTypes.array,
+  removeFavorites: PropTypes.func
+};
 
 export default Favorites;

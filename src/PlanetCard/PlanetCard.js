@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import "../PeopleCard/PeopleCard.css";
 import Images from "../Images.json";
+import PropTypes from "prop-types";
 
 const PlanetCard = ({ planets, residents, toggleFaves, handleFavorites }) => {
-  console.log(planets)
   const planetData = planets.results.map(planet => {
     return {
       type: 'planets',
@@ -52,5 +52,13 @@ const PlanetCard = ({ planets, residents, toggleFaves, handleFavorites }) => {
   });
 
   return <div>{planetStats}</div>;
+};
+
+PlanetCard.propTypes = {
+  residents: PropTypes.array,
+  planets: PropTypes.array,
+  species: PropTypes.array,
+  handleFavorites: PropTypes.func,
+  toggleFaves: PropTypes.func
 };
 export default PlanetCard;
