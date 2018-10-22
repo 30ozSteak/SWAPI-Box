@@ -16,11 +16,11 @@ https://swapi-box.netlify.com/
 Laura Shamus and Nick Dambrosio
 
 ## Progress
+<img width="601" alt="wireframe-swapibox" src="https://user-images.githubusercontent.com/39738807/47273784-effce700-d557-11e8-98ed-1e2aade0d99f.png">
 <img width="397" alt="<img width="397" alt="mobileview" src="https://user-images.githubusercontent.com/34214595/47309929-e5dbf680-d5f2-11e8-896b-fd499769b0ae.jpg">
 <img width="397" alt="<img width="397" alt="mobileview" src="https://user-images.githubusercontent.com/34214595/47309943-eb394100-d5f2-11e8-9b81-23e2bf17d7c8.jpg">
 <img width="1435" alt="swapibox-welcomepage" src="https://user-images.githubusercontent.com/39738807/47273786-f4c19b00-d557-11e8-905f-f2b713f86caa.png">
 <img width="1432" alt="swapibox-peoplepage" src="https://user-images.githubusercontent.com/39738807/47273787-f8552200-d557-11e8-8d73-b8d2f8c0596a.png">
-<img width="601" alt="wireframe-swapibox" src="https://user-images.githubusercontent.com/39738807/47273784-effce700-d557-11e8-98ed-1e2aade0d99f.png">
 <img width="797" alt="mobileview" src="https://user-images.githubusercontent.com/34214595/47298264-8c64cf00-d5d4-11e8-8b2a-9f00f24e30a3.png">
 <img width="397" alt="<img width="397" alt="mobileview" src="https://user-images.githubusercontent.com/34214595/47297788-5c68fc00-d5d3-11e8-81c9-14887e03ac52.png">
 
