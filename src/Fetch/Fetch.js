@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from 'react';
 
 const fetchData = async url => {
   const data = await fetch(url);

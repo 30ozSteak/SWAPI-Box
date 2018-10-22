@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from 'react';
 import VehicleCard from "../VehicleCard/VehicleCard";
 import Loading from "../Loading/Loading";
 import Error from "../Error/Error";

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from 'react';
 import "../PeopleCard/PeopleCard.css";
 import Images from "../Images.json";
 import PropTypes from "prop-types";

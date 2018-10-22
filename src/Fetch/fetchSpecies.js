@@ -1,4 +1,3 @@
-import React, { Component } from "react";
 import fetchData from "./Fetch";
 
 let getSpeciesData = async () => {

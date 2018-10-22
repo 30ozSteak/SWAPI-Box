@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from 'react';
 import "./PeopleCard.css";
 import PropTypes from "prop-types";
 import Images from "../Images.json";
@@ -39,8 +39,8 @@ const PeopleCard = ({ people, planets, species, handleFavorites }) => {
             src={Images[data.name]}
             alt={data.name}
           />
-          <div className="fave" 
-          onClick={() => handleFavorites(data)} 
+          <div className="fave"
+            onClick={() => handleFavorites(data)}
           />
           <section className="text-field">
             <h2>{data.name}</h2>

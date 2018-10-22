@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from 'react';
 import fetchData from "./Fetch";
 
 let url = "https://swapi.co/api/planets";

@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from 'react';
 import PeopleCard from "../PeopleCard/PeopleCard";
 import Loading from "../Loading/Loading";
 import "../PeopleCard/PeopleCard.css";
-import Error from "../Error/Error";
 
 const People = ({ people, planets, species, handlePeopleLink, handleFavorites, removeFavorites }) => {
   try {

@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from 'react';
 import "../PeopleCard/PeopleCard.css";
 import PropTypes from "prop-types";
 import Images from "../Images.json";
@@ -16,7 +16,7 @@ const VehicleCard = ({ vehicle, handleFavorites }) => {
             alt={data.name}
           />
         </section>
-        <div className="fave" onClick={() => handleFavorites(data)}/>
+        <div className="fave" onClick={() => handleFavorites(data)} />
         <section className="text-field">
           <h2>
             {" "}

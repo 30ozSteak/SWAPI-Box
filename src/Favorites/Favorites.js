@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from 'react';
 import './Favorites.css'
 import Images from "../Images.json";
 import PropTypes from "prop-types";
@@ -15,7 +15,7 @@ const Favorites = ({ favorites, removeFavorites }) => {
               src={Images[favorite.name]}
               alt={favorite.name}
             />
-            <div className="fave" onClick={() => removeFavorites(favorite.name)}/>
+            <div className="fave" onClick={() => removeFavorites(favorite.name)} />
           </div>
           <section className="text-field">
             <h2>{favorite.name}</h2>
