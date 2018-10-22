@@ -31,6 +31,7 @@ class App extends Component {
       homeWorld: [],
       species: [],
       homeState: "active-main home-main",
+      faveClassName: "fave",
       favorites: [],
       error: ''
     };
@@ -53,12 +54,6 @@ class App extends Component {
       this.setState({ films: films });
     }
   }
-
-  toggleFavoriteClass = () => {
-    this.state.buttonState === ""
-      ? this.setState({ buttonState: "favd" })
-      : this.setState({ buttonState: "" });
-  };
 
   handlePeopleLink = async () => {
     if (localStorage.getItem("fetchedPeople") === null) {
@@ -150,6 +145,14 @@ class App extends Component {
     await this.updateLocalStorage("Favorites", this.state.favorites)
     let favoritesData = JSON.parse(localStorage.getItem('Favorites'))
     await this.setState({ favorites: favoritesData })
+    this.toggleFavoriteClass();
+  };
+
+  toggleFavoriteClass = () => {
+    this.state.faveClassName === "fave"
+      ? this.setState({ faveClassName: "fave faved" })
+      : this.setState({ faveClassName: "fave" });
+    console.log(this.state.faveClassName);
   };
 
   removeFavorites = async (id) => {
@@ -193,12 +196,12 @@ class App extends Component {
               <People
                 removeFavorites={this.removeFavorites}
                 handleFavorites={this.handleFavorites}
-                toggleFavoriteClass={this.toggleFavoriteClass}
                 handlePeopleLink={this.handlePeopleLink}
                 people={this.state.people}
                 planets={this.state.planets}
                 species={this.state.species}
                 error={this.state.error}
+                faveClassName={this.state.faveClassName}
               />
             )}
           />
@@ -211,7 +214,6 @@ class App extends Component {
                 planets={this.state.homeWorld}
                 residents={this.state.residents}
                 error={this.state.error}
-                toggleFavoriteClass={this.toggleFavoriteClass}
               />
             )}
           />
@@ -221,7 +223,6 @@ class App extends Component {
             render={() => <Vehicles vehicles={this.state.vehicles}
               error={this.state.error}
               handleFavorites={this.handleFavorites}
-              toggleFavoriteClass={this.toggleFavoriteClass}
             />}
           />
           <Route

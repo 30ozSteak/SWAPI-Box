@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./PeopleCard.css";
 import Images from "../Images.json";
 
-const PeopleCard = ({ people, planets, species, handleFavorites, toggleFavoriteClass }) => {
+const PeopleCard = ({ people, planets, species, handleFavorites, faveClassName }) => {
   let characterArray = [];
 
   let answer = people.results.map(person => {
@@ -38,7 +38,7 @@ const PeopleCard = ({ people, planets, species, handleFavorites, toggleFavoriteC
             src={Images[data.name]}
             alt={data.name}
           />
-          <div className="fave"
+          <div className={faveClassName}
             onClick={() => handleFavorites(data)}
           />
           <section className="text-field">

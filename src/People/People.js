@@ -4,10 +4,10 @@ import Loading from "../Loading/Loading";
 import "../PeopleCard/PeopleCard.css";
 import Error from "../Error/Error";
 
-const People = ({ people, planets, species, handlePeopleLink, handleFavorites, removeFavorites }) => {
+const People = ({ people, planets, species, handlePeopleLink, handleFavorites, removeFavorites, faveClassName }) => {
   try {
     const characters = people.results.map(person => (
-      <PeopleCard handleFavorites={handleFavorites} removeFavorites={removeFavorites} people={people} species={species} planets={planets} />
+      <PeopleCard handleFavorites={handleFavorites} removeFavorites={removeFavorites} people={people} species={species} planets={planets} faveClassName={faveClassName} />
     ))
     let charactersToRender = characters.slice(0, 1)
     return (
