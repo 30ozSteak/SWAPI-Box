@@ -18,12 +18,10 @@ describe('App', () => {
   })
 
   it('should match the screenshot', () => {
-    // const wrapper = shallow(<App />)
     expect(wrapper).toMatchSnapshot()
   })
 
   it('should have a default state', async () => {
-    // const wrapper = shallow(<App />)
     const expected = { films: [], homeState: 'active-main home-main', people: [], vehicles: [], planets: [], homeWorld: [], favorites: [], error: '', residents: [], species: [] }
     expect(wrapper.state()).toEqual(expected)
   })
@@ -44,7 +42,6 @@ describe('App', () => {
 
   it.skip('should retrieve data from local storage on mount', () => {
 
-    // const wrapper = shallow(<App />)
     const mockfilmData = {
       "title": "A New Hope",
     }
@@ -56,7 +53,6 @@ describe('App', () => {
 
   it.skip('removeFavorites removes favorite from state', async () => {
 
-    // const wrapper = shallow(<App />)
     const initialState = [{ type: 'person', name: 'Luke', location: 'Mars' }, { type: 'person', name: 'Lea', location: 'Mars' }]
     console.log(initialState[0].name)
     const expected = [{ type: 'person', name: 'Luke', location: 'Mars' }]
