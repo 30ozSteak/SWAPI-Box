@@ -1,5 +1,5 @@
 .marquee-container {
-  height: 53vh;
+  /* height: 53vh; */
   padding-bottom: 3rem;
 }
 
@@ -49,5 +49,11 @@
   }
   100% {
     top: -550%;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+      background-color: lightblue;
   }
 }
