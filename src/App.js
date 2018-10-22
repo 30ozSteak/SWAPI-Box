@@ -16,7 +16,6 @@ import Planets from "./Planets/Planets";
 import Vehicles from "./Vehicles/Vehicles";
 import Favorites from "./Favorites/Favorites";
 import getHomeWorldData from "./Fetch/fetchHomeWorld"
-import Error from "./Error/Error";
 import { Route, NavLink } from "react-router-dom";
 
 class App extends Component {
