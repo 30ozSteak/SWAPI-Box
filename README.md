@@ -15,7 +15,7 @@ Laura Shamus and Nick Dambrosio
 <img width="1435" alt="swapibox-welcomepage" src="https://user-images.githubusercontent.com/39738807/47273786-f4c19b00-d557-11e8-905f-f2b713f86caa.png">
 <img width="1432" alt="swapibox-peoplepage" src="https://user-images.githubusercontent.com/39738807/47273787-f8552200-d557-11e8-8d73-b8d2f8c0596a.png">
 <img width="601" alt="wireframe-swapibox" src="https://user-images.githubusercontent.com/39738807/47273784-effce700-d557-11e8-98ed-1e2aade0d99f.png">
-![44396280_401737720365006_3601585769984032768_n](https://user-images.githubusercontent.com/34214595/47297785-5b37cf00-d5d3-11e8-949e-480f56342a09.jpg)
+<img width="397" alt="mobileview" src="https://i.imgur.com/undefined.jpg">
 <img width="397" alt="mobileview" src="https://user-images.githubusercontent.com/34214595/47297788-5c68fc00-d5d3-11e8-81c9-14887e03ac52.png">
 
 
