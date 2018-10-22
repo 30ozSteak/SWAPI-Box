@@ -2,16 +2,26 @@ import React from "react";
 import PlanetCard from "./PlanetCard";
 import { shallow } from "enzyme";
 
-describe.skip("PeopleCard", () => {
+describe("PlanetCard", () => {
 
-  it("should match the screenshot", () => {
-    const people = [{results: [{name: "Luke"}, {name: 'Darth Vador'}]}]
+  it.skip('should exist', () => {
+    const planet = [{ results: [{ name: "Endor" }, { name: 'Hoth' }] }]
+    const mockClimate = [{ climate: "hot af" }]
+    const mockTerrain = [{ terrain: "its a giant ball of fire" }]
+    const mockPopulation = [{ population: "zero, probably" }]
+    const mockResidents = [{ residents: 'fire-man' }]
+    const wrapper = shallow(<PlanetCard planet={planet} climate={mockClimate} terrain={mockTerrain} population={mockPopulation} residents={mockResidents} />);
+    expect(wrapper).toBeDefined();
+  })
 
-    const mockPlanets = [{homeworld: "Moon"}]
-    const mockSpecies = [{species: "driod"}]
-    const characterArray = [people, mockPlanets, mockSpecies] 
+  it.skip("should match the snapshot", () => {
+    const planet = [{ results: [{ name: "Hoth" }, { name: 'Not Hoth' }] }]
 
-    const wrapper = shallow(<PeopleCard people={people} planets={mockPlanets} species={mockSpecies} />);
+    const mockClimate = [{ climate: "hot af" }]
+    const mockTerrain = [{ terrain: "its a giant ball of fire" }]
+    const mockPopulation = [{ population: "zero, probably" }]
+    const mockResidents = [{ residents: 'fire-man' }]
+    const wrapper = shallow(<PlanetCard planet={planet} climate={mockClimate} terrain={mockTerrain} population={mockPopulation} residents={mockResidents} />);
 
     expect(wrapper).toMatchSnapshot();
   });
