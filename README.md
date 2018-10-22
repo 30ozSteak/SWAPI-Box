@@ -20,7 +20,7 @@ Laura Shamus and Nick Dambrosio
 <img width="601" alt="wireframe-swapibox" src="https://user-images.githubusercontent.com/39738807/47273784-effce700-d557-11e8-98ed-1e2aade0d99f.png">
 <img width="797" alt="mobileview" src="https://user-images.githubusercontent.com/34214595/47298264-8c64cf00-d5d4-11e8-8b2a-9f00f24e30a3.png">
 <img width="397" alt="<img width="397" alt="mobileview" src="https://user-images.githubusercontent.com/34214595/47297788-5c68fc00-d5d3-11e8-81c9-14887e03ac52.png">
-<img width="697" alt="<img width="397" alt="mobileview" src="https://user-images.githubusercontent.com/34214595/47306123-ca6bee00-d5e8-11e8-8f4b-be595a4b59a8.gif">
+<img width="397" alt="<img width="397" alt="mobileview" src="https://user-images.githubusercontent.com/34214595/47306123-ca6bee00-d5e8-11e8-8f4b-be595a4b59a8.gif">
 
 
 
