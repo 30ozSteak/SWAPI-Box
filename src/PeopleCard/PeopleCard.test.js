@@ -4,7 +4,7 @@ import { shallow } from "enzyme";
 import {people} from './mockData';
 import {planets} from './mockData'
 
-describe("PeopleCard", () => {
+describe.skip("PeopleCard", () => {
 
   it('should exist', () => {
     const mockSpecies = [{species: "driod"}]

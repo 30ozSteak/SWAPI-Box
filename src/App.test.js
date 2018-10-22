@@ -68,4 +68,38 @@ it('should have a default state', async () => {
     expect(wrapper.state('favorites').length).toEqual(1)
   })
 
-})  
+    it.skip('should set state once its called', async () => {
+    const wrapper = shallow(<App />)
+    wrapper.instance().fetchCall = jest.fn()
+    let localStorage = new LocalStorage
+    window.localStorage = localStorage
+      const mockFetchCall = jest.fn(() => {
+        return Promise.resolve([{ hero: 'Luke' }, { hero: 'r2d2' }]);
+      });
+      const mockPeople = { handlePeople: mockFetchCall };
+      wrapper.state().handlePeopleLink = mockPeople;
+
+      await wrapper.instance().handlePeopleLink();
+      expect(wrapper.state().people).toEqual([{ hero: 'Luke' }, { hero: 'r2d2' }])
+    })
+
+
+  describe('componentDidMount', () => {
+    it.skip('should call showFilmCrawl() on componentDidMount', () => {
+    const wrapper = shallow(<App />)
+    wrapper.instance().fetchCall = jest.fn()
+    let localStorage = new LocalStorage
+    window.localStorage = localStorage
+      wrapper.instance().showFilmCrawl = jest.fn();
+      wrapper.instance().componentDidMount();
+      expect(wrapper.instance().showFilmCrawl).toHaveBeenCalled();
+    })
+
+    it.skip('should call checkPathName() on componentDidMount', () => {
+      const wrapper = shallow(<App />) 
+      wrapper.instance().checkPathName = jest.fn();
+      wrapper.instance().checkPathName();
+      expect(wrapper.instance().checkPathName).toHaveBeenCalled();
+    })
+  });
+})
