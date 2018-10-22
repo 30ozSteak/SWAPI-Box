@@ -1,12 +1,11 @@
 .marquee-container {
-  /* height: 53vh; */
   padding-bottom: 3rem;
 }
 
 .marquee-block {
   bottom: 11rem;
   font-size: 7.3vw;
-  height: 70vh;
+  height: 35rem;
   left: 0;
   margin: 0 auto;
   overflow: hidden;
