@@ -1,7 +1,6 @@
 import React from 'react';
 import PlanetCard from "../PlanetCard/PlanetCard";
 import Loading from "../Loading/Loading";
-import Error from "../Error/Error";
 
 
 const Planets = ({ planets, residents, handleFavorites }) => {

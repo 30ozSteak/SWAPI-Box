@@ -17,7 +17,7 @@ import Vehicles from "./Vehicles/Vehicles";
 import Favorites from "./Favorites/Favorites";
 import getHomeWorldData from "./Fetch/fetchHomeWorld"
 import Error from "./Error/Error";
-import { Route, NavLink, Link } from "react-router-dom";
+import { Route, NavLink } from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -138,21 +138,21 @@ class App extends Component {
     }
   }
 
-   handleFavorites = async (favorite) => {
-    const newFavorite = {...favorite, id: favorite.name}
+  handleFavorites = async (favorite) => {
+    const newFavorite = { ...favorite, id: favorite.name }
     await this.setState({ favorites: [newFavorite, ...this.state.favorites] });
     await this.updateLocalStorage("Favorites", this.state.favorites)
     let favoritesData = JSON.parse(localStorage.getItem('Favorites'))
-    await this.setState({favorites: favoritesData})
+    await this.setState({ favorites: favoritesData })
   };
 
   removeFavorites = async (id) => {
     const favorites = this.state.favorites.filter(fav => fav.id !== id)
-    await this.setState({favorites})
+    await this.setState({ favorites })
     await this.updateLocalStorage("Favorites", this.state.favorites)
   }
 
-    checkPathName = async () => {
+  checkPathName = async () => {
     if (window.location.pathname === "/") {
       await this.showFilmCrawl();
     } else if (window.location.pathname === "/people") {
@@ -163,7 +163,7 @@ class App extends Component {
       await this.handleVehicleLink();
     } else if (window.location.pathname === "/favorites") {
       let favoritesData = JSON.parse(localStorage.getItem('Favorites'))
-    await this.setState({favorites: favoritesData})
+      await this.setState({ favorites: favoritesData })
     }
   };
 
@@ -218,7 +218,7 @@ class App extends Component {
           <Route
             exact
             path="/favorites"
-            render={() => <Favorites 
+            render={() => <Favorites
               removeFavorites={this.removeFavorites}
               favorites={this.state.favorites}
               error={this.state.error}

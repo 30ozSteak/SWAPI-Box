@@ -1,7 +1,6 @@
 import React from "react";
 import "./Marquee.css";
 import Loading from "../Loading/Loading";
-import Error from "../Error/Error";
 
 const Marquee = ({ films, getLocalStorage, getFilmData }) => {
   try {

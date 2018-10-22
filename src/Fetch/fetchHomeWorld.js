@@ -1,4 +1,3 @@
-import React from 'react';
 import fetchData from "./Fetch";
 
 let getHomeWorldData = () => {
