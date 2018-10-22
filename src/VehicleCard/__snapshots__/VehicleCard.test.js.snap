@@ -1,0 +1,1060 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`VehicleCard should match the screenshot 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <VehicleCard
+    vehicle={
+      Object {
+        "count": 39,
+        "next": "https://swapi.co/api/vehicles/?page=2",
+        "previous": null,
+        "results": Array [
+          Object {
+            "cargo_capacity": "50000",
+            "consumables": "2 months",
+            "cost_in_credits": "150000",
+            "created": "2014-12-10T15:36:25.724000Z",
+            "crew": "46",
+            "edited": "2014-12-22T18:21:15.523587Z",
+            "films": Array [
+              "https://swapi.co/api/films/5/",
+              "https://swapi.co/api/films/1/",
+            ],
+            "length": "36.8",
+            "manufacturer": "Corellia Mining Corporation",
+            "max_atmosphering_speed": "30",
+            "model": "Digger Crawler",
+            "name": "Sand Crawler",
+            "passengers": "30",
+            "pilots": Array [],
+            "url": "https://swapi.co/api/vehicles/4/",
+            "vehicle_class": "wheeled",
+          },
+          Object {
+            "cargo_capacity": "50",
+            "consumables": "0",
+            "cost_in_credits": "14500",
+            "created": "2014-12-10T16:01:52.434000Z",
+            "crew": "1",
+            "edited": "2014-12-22T18:21:15.552614Z",
+            "films": Array [
+              "https://swapi.co/api/films/1/",
+            ],
+            "length": "10.4",
+            "manufacturer": "Incom Corporation",
+            "max_atmosphering_speed": "1200",
+            "model": "T-16 skyhopper",
+            "name": "T-16 skyhopper",
+            "passengers": "1",
+            "pilots": Array [],
+            "url": "https://swapi.co/api/vehicles/6/",
+            "vehicle_class": "repulsorcraft",
+          },
+        ],
+      }
+    }
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <div
+          className="card-literal"
+        >
+          <section
+            className="image"
+          >
+            <img
+              alt="Sand Crawler"
+              className="image-literal"
+              src="../vehicleimages/sandcrawler.png"
+            />
+          </section>
+          <div
+            className="fave"
+            onClick={[Function]}
+          />
+          <section
+            className="text-field"
+          >
+            <h2>
+               
+              Sand Crawler
+            </h2>
+            <h4>
+               
+              Model: 
+              Digger Crawler
+            </h4>
+            <h4>
+               
+              Class: 
+              wheeled
+            </h4>
+            <h4>
+               
+              Capacity: 
+              30
+            </h4>
+          </section>
+        </div>,
+        <div
+          className="card-literal"
+        >
+          <section
+            className="image"
+          >
+            <img
+              alt="T-16 skyhopper"
+              className="image-literal"
+              src="../vehicleimages/t16skyhopper.png"
+            />
+          </section>
+          <div
+            className="fave"
+            onClick={[Function]}
+          />
+          <section
+            className="text-field"
+          >
+            <h2>
+               
+              T-16 skyhopper
+            </h2>
+            <h4>
+               
+              Model: 
+              T-16 skyhopper
+            </h4>
+            <h4>
+               
+              Class: 
+              repulsorcraft
+            </h4>
+            <h4>
+               
+              Capacity: 
+              1
+            </h4>
+          </section>
+        </div>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "Sand Crawler",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <section
+              className="image"
+            >
+              <img
+                alt="Sand Crawler"
+                className="image-literal"
+                src="../vehicleimages/sandcrawler.png"
+              />
+            </section>,
+            <div
+              className="fave"
+              onClick={[Function]}
+            />,
+            <section
+              className="text-field"
+            >
+              <h2>
+                 
+                Sand Crawler
+              </h2>
+              <h4>
+                 
+                Model: 
+                Digger Crawler
+              </h4>
+              <h4>
+                 
+                Class: 
+                wheeled
+              </h4>
+              <h4>
+                 
+                Capacity: 
+                30
+              </h4>
+            </section>,
+          ],
+          "className": "card-literal",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                alt="Sand Crawler"
+                className="image-literal"
+                src="../vehicleimages/sandcrawler.png"
+              />,
+              "className": "image",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "Sand Crawler",
+                "className": "image-literal",
+                "src": "../vehicleimages/sandcrawler.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fave",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h2>
+                   
+                  Sand Crawler
+                </h2>,
+                <h4>
+                   
+                  Model: 
+                  Digger Crawler
+                </h4>,
+                <h4>
+                   
+                  Class: 
+                  wheeled
+                </h4>,
+                <h4>
+                   
+                  Capacity: 
+                  30
+                </h4>,
+              ],
+              "className": "text-field",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "Sand Crawler",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "Sand Crawler",
+                ],
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "Model: ",
+                    "Digger Crawler",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "Model: ",
+                  "Digger Crawler",
+                ],
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "Class: ",
+                    "wheeled",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "Class: ",
+                  "wheeled",
+                ],
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "Capacity: ",
+                    "30",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "Capacity: ",
+                  "30",
+                ],
+                "type": "h4",
+              },
+            ],
+            "type": "section",
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": "T-16 skyhopper",
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <section
+              className="image"
+            >
+              <img
+                alt="T-16 skyhopper"
+                className="image-literal"
+                src="../vehicleimages/t16skyhopper.png"
+              />
+            </section>,
+            <div
+              className="fave"
+              onClick={[Function]}
+            />,
+            <section
+              className="text-field"
+            >
+              <h2>
+                 
+                T-16 skyhopper
+              </h2>
+              <h4>
+                 
+                Model: 
+                T-16 skyhopper
+              </h4>
+              <h4>
+                 
+                Class: 
+                repulsorcraft
+              </h4>
+              <h4>
+                 
+                Capacity: 
+                1
+              </h4>
+            </section>,
+          ],
+          "className": "card-literal",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": <img
+                alt="T-16 skyhopper"
+                className="image-literal"
+                src="../vehicleimages/t16skyhopper.png"
+              />,
+              "className": "image",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "T-16 skyhopper",
+                "className": "image-literal",
+                "src": "../vehicleimages/t16skyhopper.png",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            "type": "section",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "className": "fave",
+              "onClick": [Function],
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <h2>
+                   
+                  T-16 skyhopper
+                </h2>,
+                <h4>
+                   
+                  Model: 
+                  T-16 skyhopper
+                </h4>,
+                <h4>
+                   
+                  Class: 
+                  repulsorcraft
+                </h4>,
+                <h4>
+                   
+                  Capacity: 
+                  1
+                </h4>,
+              ],
+              "className": "text-field",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "T-16 skyhopper",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "T-16 skyhopper",
+                ],
+                "type": "h2",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "Model: ",
+                    "T-16 skyhopper",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "Model: ",
+                  "T-16 skyhopper",
+                ],
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "Class: ",
+                    "repulsorcraft",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "Class: ",
+                  "repulsorcraft",
+                ],
+                "type": "h4",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    " ",
+                    "Capacity: ",
+                    "1",
+                  ],
+                },
+                "ref": null,
+                "rendered": Array [
+                  " ",
+                  "Capacity: ",
+                  "1",
+                ],
+                "type": "h4",
+              },
+            ],
+            "type": "section",
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <div
+            className="card-literal"
+          >
+            <section
+              className="image"
+            >
+              <img
+                alt="Sand Crawler"
+                className="image-literal"
+                src="../vehicleimages/sandcrawler.png"
+              />
+            </section>
+            <div
+              className="fave"
+              onClick={[Function]}
+            />
+            <section
+              className="text-field"
+            >
+              <h2>
+                 
+                Sand Crawler
+              </h2>
+              <h4>
+                 
+                Model: 
+                Digger Crawler
+              </h4>
+              <h4>
+                 
+                Class: 
+                wheeled
+              </h4>
+              <h4>
+                 
+                Capacity: 
+                30
+              </h4>
+            </section>
+          </div>,
+          <div
+            className="card-literal"
+          >
+            <section
+              className="image"
+            >
+              <img
+                alt="T-16 skyhopper"
+                className="image-literal"
+                src="../vehicleimages/t16skyhopper.png"
+              />
+            </section>
+            <div
+              className="fave"
+              onClick={[Function]}
+            />
+            <section
+              className="text-field"
+            >
+              <h2>
+                 
+                T-16 skyhopper
+              </h2>
+              <h4>
+                 
+                Model: 
+                T-16 skyhopper
+              </h4>
+              <h4>
+                 
+                Class: 
+                repulsorcraft
+              </h4>
+              <h4>
+                 
+                Capacity: 
+                1
+              </h4>
+            </section>
+          </div>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "Sand Crawler",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <section
+                className="image"
+              >
+                <img
+                  alt="Sand Crawler"
+                  className="image-literal"
+                  src="../vehicleimages/sandcrawler.png"
+                />
+              </section>,
+              <div
+                className="fave"
+                onClick={[Function]}
+              />,
+              <section
+                className="text-field"
+              >
+                <h2>
+                   
+                  Sand Crawler
+                </h2>
+                <h4>
+                   
+                  Model: 
+                  Digger Crawler
+                </h4>
+                <h4>
+                   
+                  Class: 
+                  wheeled
+                </h4>
+                <h4>
+                   
+                  Capacity: 
+                  30
+                </h4>
+              </section>,
+            ],
+            "className": "card-literal",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  alt="Sand Crawler"
+                  className="image-literal"
+                  src="../vehicleimages/sandcrawler.png"
+                />,
+                "className": "image",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "Sand Crawler",
+                  "className": "image-literal",
+                  "src": "../vehicleimages/sandcrawler.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fave",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h2>
+                     
+                    Sand Crawler
+                  </h2>,
+                  <h4>
+                     
+                    Model: 
+                    Digger Crawler
+                  </h4>,
+                  <h4>
+                     
+                    Class: 
+                    wheeled
+                  </h4>,
+                  <h4>
+                     
+                    Capacity: 
+                    30
+                  </h4>,
+                ],
+                "className": "text-field",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "Sand Crawler",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "Sand Crawler",
+                  ],
+                  "type": "h2",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "Model: ",
+                      "Digger Crawler",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "Model: ",
+                    "Digger Crawler",
+                  ],
+                  "type": "h4",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "Class: ",
+                      "wheeled",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "Class: ",
+                    "wheeled",
+                  ],
+                  "type": "h4",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "Capacity: ",
+                      "30",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "Capacity: ",
+                    "30",
+                  ],
+                  "type": "h4",
+                },
+              ],
+              "type": "section",
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": "T-16 skyhopper",
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <section
+                className="image"
+              >
+                <img
+                  alt="T-16 skyhopper"
+                  className="image-literal"
+                  src="../vehicleimages/t16skyhopper.png"
+                />
+              </section>,
+              <div
+                className="fave"
+                onClick={[Function]}
+              />,
+              <section
+                className="text-field"
+              >
+                <h2>
+                   
+                  T-16 skyhopper
+                </h2>
+                <h4>
+                   
+                  Model: 
+                  T-16 skyhopper
+                </h4>
+                <h4>
+                   
+                  Class: 
+                  repulsorcraft
+                </h4>
+                <h4>
+                   
+                  Capacity: 
+                  1
+                </h4>
+              </section>,
+            ],
+            "className": "card-literal",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": <img
+                  alt="T-16 skyhopper"
+                  className="image-literal"
+                  src="../vehicleimages/t16skyhopper.png"
+                />,
+                "className": "image",
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "alt": "T-16 skyhopper",
+                  "className": "image-literal",
+                  "src": "../vehicleimages/t16skyhopper.png",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "img",
+              },
+              "type": "section",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "className": "fave",
+                "onClick": [Function],
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <h2>
+                     
+                    T-16 skyhopper
+                  </h2>,
+                  <h4>
+                     
+                    Model: 
+                    T-16 skyhopper
+                  </h4>,
+                  <h4>
+                     
+                    Class: 
+                    repulsorcraft
+                  </h4>,
+                  <h4>
+                     
+                    Capacity: 
+                    1
+                  </h4>,
+                ],
+                "className": "text-field",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "T-16 skyhopper",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "T-16 skyhopper",
+                  ],
+                  "type": "h2",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "Model: ",
+                      "T-16 skyhopper",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "Model: ",
+                    "T-16 skyhopper",
+                  ],
+                  "type": "h4",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "Class: ",
+                      "repulsorcraft",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "Class: ",
+                    "repulsorcraft",
+                  ],
+                  "type": "h4",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": Array [
+                      " ",
+                      "Capacity: ",
+                      "1",
+                    ],
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    " ",
+                    "Capacity: ",
+                    "1",
+                  ],
+                  "type": "h4",
+                },
+              ],
+              "type": "section",
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
